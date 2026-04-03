@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LABELIQ</string>
+    <string name="subtitle">Smart Ingredient Scanner</string>
+    <string name="btn_scan">Scan Ingredients</string>
+    <string name="title_scan">Scan</string>
+    <string name="scan_placeholder">Camera preview coming soon…</string>
+    <string name="camera_permission_denied">Camera permission is required.\nPlease grant it in Settings.</string>
+    <string name="btn_retake">↺  Retake</string>
+    <string name="btn_confirm">✓  Confirm</string>
+</resources>

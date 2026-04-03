@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Backgrounds -->
+    <color name="background_dark">#0D1117</color>
+    <color name="surface_dark">#161B22</color>
+    <color name="surface_elevated">#21262D</color>
+
+    <!-- Accent -->
+    <color name="accent_green">#39D353</color>
+    <color name="accent_green_dim">#238636</color>
+
+    <!-- Text -->
+    <color name="text_primary">#E6EDF3</color>
+    <color name="text_secondary">#8B949E</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Status -->
+    <color name="error">#F85149</color>
+</resources>
