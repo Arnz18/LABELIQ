@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    tools:context=".presentation.activities.ScanActivity">
+
+    <!-- LAYER 1 — live camera feed -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/preview_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:scaleType="fillCenter" />
+
+    <!-- LAYER 2 — captured image (hidden until a photo is taken) -->
+    <ImageView
+        android:id="@+id/iv_captured"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:background="@color/background_dark"
+        android:visibility="gone"
+        tools:src="@android:drawable/ic_menu_camera" />
+
+    <!-- LAYER 3 — permission-denied message -->
+    <TextView
+        android:id="@+id/tv_permission_denied"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/camera_permission_denied"
+        android:textColor="@color/text_secondary"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <!-- LAYER 4 — capture button (shown during preview) -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_capture"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="36dp"
+        android:elevation="12dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cornerRadius="36dp"
+        app:strokeColor="@color/white"
+        app:strokeWidth="3dp"
+        app:backgroundTint="@color/accent_green"
+        app:icon="@android:drawable/ic_menu_camera"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="32dp"
+        app:iconTint="@color/white" />
+
+    <!-- LAYER 5 — Loading spinner (shown while OCR runs) -->
+    <ProgressBar
+        android:id="@+id/progress_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="12dp"
+        android:visibility="gone" />
+
+    <!-- LAYER 6 — Analysis result card (shown after Confirm) -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="120dp"
+        android:elevation="8dp"
+        android:visibility="gone"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <!-- Icon / emoji -->
+            <TextView
+                android:id="@+id/tv_result_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="36sp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tv_result_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="6dp" />
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/tv_result_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.3" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- LAYER 6 — Retake + Confirm buttons (shown after capture) -->
+
+    <LinearLayout
+        android:id="@+id/layout_review_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="36dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:elevation="12dp"
+        android:visibility="gone">
+
+        <!-- Retake -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_retake"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_marginEnd="12dp"
+            android:text="@string/btn_retake"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:backgroundTint="@color/surface_elevated"
+            app:cornerRadius="28dp"
+            app:strokeColor="@color/text_secondary"
+            app:strokeWidth="2dp" />
+
+        <!-- Confirm -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:text="@string/btn_confirm"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:backgroundTint="@color/accent_green"
+            app:cornerRadius="28dp"
+            app:strokeColor="@color/accent_green"
+            app:strokeWidth="2dp" />
+
+    </LinearLayout>
+
+</FrameLayout>
