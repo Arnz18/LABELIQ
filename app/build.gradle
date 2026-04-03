@@ -69,6 +69,9 @@ dependencies {
     // ML Kit — on-device text recognition (OCR)
     implementation 'com.google.mlkit:text-recognition:16.0.0'
 
+    // Gson — JSON serialisation for scan history
+    implementation 'com.google.code.gson:gson:2.10.1'
+
     // Testing
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

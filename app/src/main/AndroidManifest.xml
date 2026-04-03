@@ -25,6 +25,11 @@
             android:exported="false"
             android:label="@string/title_scan" />
 
+        <activity
+            android:name=".presentation.activities.ResultActivity"
+            android:exported="false"
+            android:label="Analysis Result" />
+
     </application>
 
 </manifest>
