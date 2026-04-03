@@ -55,7 +55,7 @@ class ScanActivity : AppCompatActivity() {
         binding.btnConfirm.setOnClickListener {
             lastCapturedFile?.let { file ->
                 binding.cardResult.visibility = View.GONE
-                binding.progressLoading.visibility = View.VISIBLE
+                binding.layoutLoading.visibility = View.VISIBLE
                 runOcr(file)
             }
         }
@@ -113,7 +113,7 @@ class ScanActivity : AppCompatActivity() {
 
     // ── UI state — review screen ─────────────────────────────────────────────
     private fun showCapturedImage(file: File) {
-        lastCapturedFile = file                              // store for Confirm
+        lastCapturedFile = file
 
         val raw = BitmapFactory.decodeFile(file.absolutePath) ?: return
         val bitmap = rotateBitmapToUpright(file, raw)
@@ -122,17 +122,18 @@ class ScanActivity : AppCompatActivity() {
         binding.previewView.visibility = View.GONE
         binding.btnCapture.visibility = View.GONE
         binding.ivCaptured.visibility = View.VISIBLE
-        binding.layoutReviewActions.visibility = View.VISIBLE  // shows Retake + Confirm
+        binding.layoutReviewActions.visibility = View.VISIBLE
     }
 
     // ── UI state — back to preview ───────────────────────────────────────────
     private fun showPreview() {
         lastCapturedFile = null
-        binding.ivCaptured.setImageBitmap(null)              // free bitmap
+        binding.ivCaptured.setImageBitmap(null)
 
         binding.ivCaptured.visibility = View.GONE
         binding.layoutReviewActions.visibility = View.GONE
         binding.cardResult.visibility = View.GONE
+        binding.layoutLoading.visibility = View.GONE
         binding.previewView.visibility = View.VISIBLE
         binding.btnCapture.visibility = View.VISIBLE
     }
@@ -151,6 +152,11 @@ class ScanActivity : AppCompatActivity() {
                     Log.d("OCR", "Detected: $resultText")
                 }
 
+                // ── Parse ingredients ────────────────────────────────────
+                val parsedIngredients = parseIngredients(resultText)
+                Log.d("PARSED", parsedIngredients.toString())
+
+                // ── Harmful ingredient analysis ──────────────────────────
                 val text = resultText.lowercase()
 
                 val harmfulIngredients = listOf(
@@ -170,30 +176,56 @@ class ScanActivity : AppCompatActivity() {
                     }
                 }
 
+                // ── Update result card ───────────────────────────────────
                 if (detected.isNotEmpty()) {
-                    binding.cardResult.setCardBackgroundColor(0xFFFFEBEE.toInt()) // light red
+                    binding.cardResult.setCardBackgroundColor(0xFFB71C1C.toInt()) // deep red
                     binding.tvResultIcon.text = "⚠️"
                     binding.tvResultTitle.text = "Harmful Ingredients Found"
-                    binding.tvResultTitle.setTextColor(0xFFC62828.toInt())
+                    binding.tvResultTitle.setTextColor(0xFFFFCDD2.toInt())
                     binding.tvResultDescription.text = detected.joinToString("\n")
-                    binding.tvResultDescription.setTextColor(0xFFB71C1C.toInt())
+                    binding.tvResultDescription.setTextColor(0xFFEF9A9A.toInt())
                 } else {
                     Log.d("ANALYSIS", "No harmful ingredients detected")
-                    binding.cardResult.setCardBackgroundColor(0xFFE8F5E9.toInt()) // light green
+                    binding.cardResult.setCardBackgroundColor(0xFF1B5E20.toInt()) // dark emerald
                     binding.tvResultIcon.text = "✅"
                     binding.tvResultTitle.text = "Safe"
-                    binding.tvResultTitle.setTextColor(0xFF1B5E20.toInt())
+                    binding.tvResultTitle.setTextColor(0xFFA5D6A7.toInt())
                     binding.tvResultDescription.text = "No harmful ingredients detected"
-                    binding.tvResultDescription.setTextColor(0xFF2E7D32.toInt())
+                    binding.tvResultDescription.setTextColor(0xFFC8E6C9.toInt())
                 }
-                binding.progressLoading.visibility = View.GONE
+
+                // ── Show card with scale + fade animation ────────────────
+                binding.layoutLoading.visibility = View.GONE
                 binding.cardResult.alpha = 0f
+                binding.cardResult.scaleX = 0.9f
+                binding.cardResult.scaleY = 0.9f
                 binding.cardResult.visibility = View.VISIBLE
-                binding.cardResult.animate().alpha(1f).setDuration(300).start()
+                binding.cardResult.animate()
+                    .alpha(1f)
+                    .scaleX(1f)
+                    .scaleY(1f)
+                    .setDuration(300)
+                    .start()
             }
             .addOnFailureListener { e ->
                 Log.e("OCR", "Failed", e)
+                binding.layoutLoading.visibility = View.GONE
             }
+    }
+
+    // ── Ingredient parser ────────────────────────────────────────────────────
+    private fun parseIngredients(resultText: String): List<String> {
+        val cleanText = resultText.lowercase()
+            .replace("(", "")
+            .replace(")", "")
+            .replace("%", "")
+            .replace("[", "")
+            .replace("]", "")
+            .replace(Regex("\\s+"), " ")
+
+        return cleanText.split(",", "\n", ".")
+            .map { it.trim() }
+            .filter { it.isNotEmpty() }
     }
 
     // ── EXIF rotation ─────────────────────────────────────────────────────────
