@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#1E1E1E"
+        android:title="Scan History"
+        android:titleTextColor="#FFFFFF"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+    <!-- Empty state -->
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No scans yet.\nScan a product label to see history here."
+        android:textColor="#9E9E9E"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:padding="48dp"
+        android:visibility="gone" />
+
+    <!-- History list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:clipToPadding="false" />
+
+</LinearLayout>

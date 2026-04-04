@@ -25,6 +25,7 @@ import com.google.mlkit.vision.text.latin.TextRecognizerOptions
 import com.labeliq.app.data.local.ScanResult
 import com.labeliq.app.data.local.loadUserProfile
 import com.labeliq.app.data.local.saveScanResult
+import com.labeliq.app.data.local.loadScanHistory
 import com.labeliq.app.databinding.ActivityScanBinding
 import java.io.File
 
@@ -61,6 +62,13 @@ class ScanActivity : AppCompatActivity() {
                 binding.layoutLoading.visibility = View.VISIBLE
                 runOcr(file)
             }
+        }
+
+        // ── Temporary: verify scan history persistence ───────────────────────
+        val history = loadScanHistory(this)
+        Log.d("HISTORY", "Loaded history size: ${history.size}")
+        for (item in history) {
+            Log.d("HISTORY_ITEM", item.toString())
         }
     }
 

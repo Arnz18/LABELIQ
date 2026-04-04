@@ -28,11 +28,20 @@ class MainActivity : AppCompatActivity() {
                 viewModel.onNavigated()
             }
         }
+        viewModel.navigateToHistory.observe(this) { shouldNavigate ->
+            if (shouldNavigate == true) {
+                startActivity(Intent(this, HistoryActivity::class.java))
+                viewModel.onNavigated()
+            }
+        }
     }
 
     private fun setupClickListeners() {
         binding.btnScanIngredients.setOnClickListener {
             viewModel.onScanClicked()
+        }
+        binding.btnViewHistory.setOnClickListener {
+            viewModel.onHistoryClicked()
         }
     }
 }

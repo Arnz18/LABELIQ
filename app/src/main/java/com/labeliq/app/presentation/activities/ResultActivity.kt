@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.labeliq.app.data.local.loadUserProfile
+import com.labeliq.app.data.local.loadScanHistory
 import com.labeliq.app.databinding.ActivityResultBinding
 
 class ResultActivity : AppCompatActivity() {
@@ -31,6 +32,13 @@ class ResultActivity : AppCompatActivity() {
         // ── Load user profile (backend test) ────────────────────────
         val profile = loadUserProfile(this)
         Log.d("PROFILE", profile.toString())
+
+        // ── Temporary: verify scan history loading ───────────────────────────
+        val history = loadScanHistory(this)
+        Log.d("HISTORY", "Loaded history size: ${history.size}")
+        for (item in history) {
+            Log.d("HISTORY_ITEM", item.toString())
+        }
 
         // ── Receive data ─────────────────────────────────────────────
         val status    = intent.getStringExtra(EXTRA_STATUS)    ?: "✅ Safe"

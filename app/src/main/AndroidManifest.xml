@@ -30,6 +30,11 @@
             android:exported="false"
             android:label="Analysis Result" />
 
+        <activity
+            android:name=".presentation.activities.HistoryActivity"
+            android:exported="false"
+            android:label="Scan History" />
+
     </application>
 
 </manifest>
