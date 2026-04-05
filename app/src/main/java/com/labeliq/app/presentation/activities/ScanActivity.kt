@@ -212,7 +212,8 @@ class ScanActivity : AppCompatActivity() {
                     highRisk = highRisk,
                     moderate = moderateRisk,
                     safe = safeList,
-                    timestamp = System.currentTimeMillis()
+                    timestamp = System.currentTimeMillis(),
+                    imagePath = lastCapturedFile?.absolutePath ?: ""
                 )
                 saveScanResult(this@ScanActivity, result)
                 Log.d("SAVE", "Scan saved")

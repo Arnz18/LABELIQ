@@ -12,7 +12,8 @@ data class ScanResult(
     val highRisk: List<String>,
     val moderate: List<String>,
     val safe: List<String>,
-    val timestamp: Long
+    val timestamp: Long,
+    val imagePath: String = ""
 )
 
 // ── Constants ─────────────────────────────────────────────────────────────────
