@@ -35,6 +35,21 @@
             android:exported="false"
             android:label="Scan History" />
 
+        <activity
+            android:name=".presentation.activities.ResultDetailActivity"
+            android:exported="false"
+            android:label="Scan Detail" />
+
+        <activity
+            android:name=".presentation.activities.SetupActivity"
+            android:exported="false"
+            android:label="Setup" />
+
+        <activity
+            android:name=".presentation.activities.ProfileActivity"
+            android:exported="false"
+            android:label="My Profile" />
+
     </application>
 
 </manifest>

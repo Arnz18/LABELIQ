@@ -14,6 +14,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // ── First-time setup gate ────────────────────────────────────
+        if (SetupActivity.isFirstTime(this)) {
+            startActivity(Intent(this, SetupActivity::class.java))
+            finish()
+            return
+        }
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -34,6 +42,12 @@ class MainActivity : AppCompatActivity() {
                 viewModel.onNavigated()
             }
         }
+        viewModel.navigateToProfile.observe(this) { shouldNavigate ->
+            if (shouldNavigate == true) {
+                startActivity(Intent(this, ProfileActivity::class.java))
+                viewModel.onNavigated()
+            }
+        }
     }
 
     private fun setupClickListeners() {
@@ -42,6 +56,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnViewHistory.setOnClickListener {
             viewModel.onHistoryClicked()
+        }
+        binding.btnProfile.setOnClickListener {
+            viewModel.onProfileClicked()
         }
     }
 }

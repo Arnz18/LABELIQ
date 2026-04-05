@@ -4,6 +4,7 @@
     <string name="subtitle">Smart Ingredient Scanner</string>
     <string name="btn_scan">Scan Ingredients</string>
     <string name="btn_history">View History</string>
+    <string name="btn_profile">My Profile</string>
     <string name="title_scan">Scan</string>
     <string name="scan_placeholder">Camera preview coming soon…</string>
     <string name="camera_permission_denied">Camera permission is required.\nPlease grant it in Settings.</string>

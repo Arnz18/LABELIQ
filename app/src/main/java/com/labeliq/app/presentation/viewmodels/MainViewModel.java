@@ -11,6 +11,7 @@ public class MainViewModel extends ViewModel {
 
     private final MutableLiveData<Boolean> _navigateToScan = new MutableLiveData<>(false);
     private final MutableLiveData<Boolean> _navigateToHistory = new MutableLiveData<>(false);
+    private final MutableLiveData<Boolean> _navigateToProfile = new MutableLiveData<>(false);
 
     /** Observed by MainActivity to trigger navigation. */
     public MutableLiveData<Boolean> getNavigateToScan() {
@@ -19,6 +20,10 @@ public class MainViewModel extends ViewModel {
 
     public MutableLiveData<Boolean> getNavigateToHistory() {
         return _navigateToHistory;
+    }
+
+    public MutableLiveData<Boolean> getNavigateToProfile() {
+        return _navigateToProfile;
     }
 
     /** Call when the user taps "Scan Ingredients". */
@@ -30,9 +35,14 @@ public class MainViewModel extends ViewModel {
         _navigateToHistory.setValue(true);
     }
 
+    public void onProfileClicked() {
+        _navigateToProfile.setValue(true);
+    }
+
     /** Reset after navigation has been handled to avoid re-triggering on config change. */
     public void onNavigated() {
         _navigateToScan.setValue(false);
         _navigateToHistory.setValue(false);
+        _navigateToProfile.setValue(false);
     }
 }
