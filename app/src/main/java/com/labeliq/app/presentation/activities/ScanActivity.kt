@@ -23,16 +23,22 @@ import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions
 import com.labeliq.app.data.local.ScanResult
+import com.labeliq.app.data.local.loadScanHistory
 import com.labeliq.app.data.local.loadUserProfile
 import com.labeliq.app.data.local.saveScanResult
-import com.labeliq.app.data.local.loadScanHistory
+import com.labeliq.app.data.repository.IngredientRepository
 import com.labeliq.app.databinding.ActivityScanBinding
+import com.labeliq.app.domain.usecase.IngredientTextProcessor
+import com.labeliq.app.domain.usecase.RiskEngine
 import java.io.File
 
 class ScanActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityScanBinding
     private var imageCapture: ImageCapture? = null
+    private lateinit var ingredientRepository: IngredientRepository
+    private lateinit var riskEngine: RiskEngine
+    private lateinit var ingredientTextProcessor: IngredientTextProcessor
 
     /** Holds the last captured file so Confirm can reference it. */
     private var lastCapturedFile: File? = null
@@ -48,6 +54,10 @@ class ScanActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityScanBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        ingredientRepository = IngredientRepository.getInstance(applicationContext)
+        riskEngine = RiskEngine(ingredientRepository)
+        ingredientTextProcessor = IngredientTextProcessor(ingredientRepository)
 
         if (hasCameraPermission()) {
             startCamera()
@@ -162,56 +172,37 @@ class ScanActivity : AppCompatActivity() {
                     Log.d("OCR", "Detected: $resultText")
                 }
 
-                // ── Parse + filter ingredients ─────────────────────────────
-                val parsedIngredients = parseIngredients(resultText)
-                    .filter { isValidIngredient(it) }
-                Log.d("CLEANED", parsedIngredients.toString())
+                // ── Parse + clean ingredients ─────────────────────────────
+                val extractedIngredients = ingredientTextProcessor.extractIngredients(resultText)
+                val matchedIngredients = ingredientTextProcessor.processIngredients(resultText)
+                val matchedIngredientList = matchedIngredients.map { it.name }
+                Log.d("OCR_INGREDIENTS_EXTRACTED", extractedIngredients.toString())
+                Log.d("OCR_INGREDIENTS_MATCHED", matchedIngredientList.toString())
 
                 // ── Load user profile ─────────────────────────────────────
                 val profile = loadUserProfile(this@ScanActivity)
                 Log.d("PROFILE", "Using profile: $profile")
 
-                // ── Classify ingredients by risk ──────────────────────────
-                val (highRisk, moderateRisk, safeList) = classifyIngredients(parsedIngredients, profile)
-                Log.d("CLASSIFY", "High: $highRisk")
-                Log.d("CLASSIFY", "Moderate: $moderateRisk")
-                Log.d("CLASSIFY", "Safe: $safeList")
-
-                // ── Weighted risk score ──────────────────────────────────
-                val total = highRisk.size + moderateRisk.size + safeList.size
-                val status = if (total == 0) {
-                    "✅ Safe"
-                } else {
-                    val score = (highRisk.size * 3 +
-                                 moderateRisk.size * 2 +
-                                 safeList.size * 1).toDouble() / total
-                    when {
-                        highRisk.isNotEmpty() && score >= 2.3 -> "❌ High Risk"
-                        highRisk.isNotEmpty()                 -> "⚠️ Moderate Risk"
-                        moderateRisk.isNotEmpty()             -> "⚠️ Moderate Risk"
-                        else                                  -> "✅ Safe"
-                    }
-                }
-
-                // ── Summary sentence ─────────────────────────────────────
-                val summary = when (status) {
-                    "❌ High Risk"     -> "This product contains harmful additives."
-                    "⚠️ Moderate Risk" -> "This product contains some processed or risky ingredients."
-                    else               -> "This product is generally safe to consume."
-                }
-
-                // ── Clean + normalize ingredient lists ──────────────────────
-                val cleanHigh     = ArrayList(highRisk.map     { normalizeIngredient(it) }.distinct())
-                val cleanModerate = ArrayList(moderateRisk.map { normalizeIngredient(it) }.distinct())
-                val cleanSafe     = ArrayList(safeList.map     { normalizeIngredient(it) }.distinct())
+                // ── Evaluate risk using local knowledge base ──────────────
+                val report = riskEngine.evaluate(extractedIngredients, profile)
+                val concerns = ArrayList(report.concerns)
+                val benefits = ArrayList(report.benefits)
+                val neutral = ArrayList(report.neutral)
+                val unknowns = ArrayList(report.unknowns)
+                Log.d("CLASSIFY", "Concerns: $concerns")
+                Log.d("CLASSIFY", "Benefits: $benefits")
+                Log.d("CLASSIFY", "Neutral: $neutral")
+                Log.d("CLASSIFY", "Unknowns: $unknowns")
 
                 // ── Save scan result ─────────────────────────────────────────────
                 val result = ScanResult(
-                    status = if (highRisk.isNotEmpty()) "HIGH_RISK" else "SAFE",
-                    summary = "Scan completed",
-                    highRisk = highRisk,
-                    moderate = moderateRisk,
-                    safe = safeList,
+                    status = report.verdict,
+                    summary = report.advice,
+                    highRisk = concerns,
+                    moderate = ArrayList(neutral + unknowns),
+                    safe = benefits,
+                    score = report.score,
+                    advice = report.advice,
                     timestamp = System.currentTimeMillis(),
                     imagePath = lastCapturedFile?.absolutePath ?: ""
                 )
@@ -221,11 +212,13 @@ class ScanActivity : AppCompatActivity() {
                 // ── Navigate to ResultActivity ───────────────────────────
                 binding.layoutLoading.visibility = View.GONE
                 val intent = Intent(this@ScanActivity, ResultActivity::class.java).apply {
-                    putExtra(ResultActivity.EXTRA_STATUS,    status)
-                    putExtra(ResultActivity.EXTRA_SUMMARY,   summary)
-                    putStringArrayListExtra(ResultActivity.EXTRA_HIGH_RISK, cleanHigh)
-                    putStringArrayListExtra(ResultActivity.EXTRA_MODERATE,  cleanModerate)
-                    putStringArrayListExtra(ResultActivity.EXTRA_SAFE,      cleanSafe)
+                    putExtra(ResultActivity.EXTRA_VERDICT, report.verdict)
+                    putExtra(ResultActivity.EXTRA_ADVICE, report.advice)
+                    putExtra(ResultActivity.EXTRA_SCORE, report.score)
+                    putStringArrayListExtra(ResultActivity.EXTRA_CONCERNS, concerns)
+                    putStringArrayListExtra(ResultActivity.EXTRA_BENEFITS, benefits)
+                    putStringArrayListExtra(ResultActivity.EXTRA_NEUTRAL, neutral)
+                    putStringArrayListExtra(ResultActivity.EXTRA_UNKNOWNS, unknowns)
                 }
                 startActivity(intent)
             }
@@ -233,153 +226,6 @@ class ScanActivity : AppCompatActivity() {
                 Log.e("OCR", "Failed", e)
                 binding.layoutLoading.visibility = View.GONE
             }
-    }
-
-    // ── Ingredient classifier ───────────────────────────────────────
-    private fun classifyIngredients(
-        ingredients: List<String>,
-        profile: com.labeliq.app.data.local.UserProfile
-    ): Triple<List<String>, List<String>, List<String>> {
-
-        // Base high-risk keywords (always applied)
-        val baseHighRisk = mutableListOf(
-            "artificial", "preservative", "aspartame",
-            "sodium benzoate", "msg", "color", "colour"
-        )
-
-        // Profile-driven extensions
-        if (profile.isDiabetic)    baseHighRisk += listOf("sugar")
-        if (profile.hasNutAllergy) baseHighRisk += listOf("nuts", "peanut", "almond", "cashew")
-        if (profile.isVegan)       baseHighRisk += listOf("milk", "egg", "gelatin", "dairy")
-
-        val highRiskKeywords = baseHighRisk.toList()
-
-        val moderateRiskKeywords = listOf(
-            "sugar", "maltodextrin", "refined", "syrup"
-        )
-        val safeKeywords = listOf(
-            "oats", "whole", "natural"
-        )
-
-        val high     = mutableListOf<String>()
-        val moderate = mutableListOf<String>()
-        val safe     = mutableListOf<String>()
-
-        for (item in ingredients) {
-            when {
-                highRiskKeywords.any     { item.contains(it) } -> high.add(item)
-                moderateRiskKeywords.any { item.contains(it) } -> moderate.add(item)
-                safeKeywords.any         { item.contains(it) } -> safe.add(item)
-            }
-        }
-
-        return Triple(high, moderate, safe)
-    }
-
-    // ── Ingredient text cleaner ────────────────────────────────────────────────
-    /**
-     * Strips common OCR filler words ("contains", "permitted", "added", etc.) from
-     * the front of the string, then returns at most 3 words of whatever remains.
-     * Example: "contains permitted natural food colour 110" → "food colour 110"
-     */
-    private fun cleanIngredient(item: String): String {
-        val fillerPrefixes = setOf(
-            "contains", "permitted", "added",
-            "and", "or", "with", "as", "a", "an", "the", "no", "not",
-            "less", "than", "of", "from", "for", "in", "processed"
-        )
-
-        val words = item.trim().split(" ").filter { it.isNotEmpty() }
-
-        // Drop leading filler words to surface the meaningful keyword
-        val meaningful = words.dropWhile { it.lowercase() in fillerPrefixes }
-            .ifEmpty { words }   // fallback: keep original if everything was filler
-
-        // Cap at 3 words so the card never overflows
-        return if (meaningful.size > 3) meaningful.take(3).joinToString(" ") + "…"
-        else meaningful.joinToString(" ")
-    }
-
-    // ── Ingredient name normalizer ────────────────────────────────────────────
-    /**
-     * 1. Checks a keyword map — if the item contains a known keyword,
-     *    returns the human-readable label directly.
-     * 2. Falls back to cleanIngredient() (strips fillers + caps at 4 words)
-     *    so even unmapped items look tidy.
-     */
-    private fun normalizeIngredient(item: String): String {
-        // Step 1: strip digits to avoid "colour 110", "e102" noise
-        val cleaned = item.replace(Regex("\\d+"), "").trim()
-
-        val replacements = mapOf(
-            "colour"       to "artificial colour",
-            "color"        to "artificial colour",
-            "flavour"      to "added flavour",
-            "flavor"       to "added flavour",
-            "artificial"   to "artificial additive",
-            "preservative" to "preservative",
-            "maltodextrin" to "maltodextrin",
-            "sugar"        to "sugar",
-            "syrup"        to "syrup"
-        )
-
-        // Step 2: keyword map lookup on digit-stripped text
-        val lower = cleaned.lowercase()
-        for ((keyword, label) in replacements) {
-            if (lower.contains(keyword)) return label
-        }
-
-        // Step 3: fallback — strip fillers, remove digits, cap at 3 words
-        val fallback = cleanIngredient(cleaned)
-        val words = fallback.split(" ").filter { it.isNotEmpty() && it != "…" }
-        return if (words.size > 3) words.take(3).joinToString(" ") + "…"
-        else fallback
-    }
-
-    // ── Noise filter ─────────────────────────────────────────────────
-    /**
-     * Returns true only if the item looks like an actual ingredient.
-     * Rejects nutrition-facts lines, URLs, digit-only tokens, and
-     * anything that is clearly a sentence rather than a keyword.
-     */
-    private fun isValidIngredient(item: String): Boolean {
-        val invalidKeywords = listOf(
-            "per", "serving", "value", "energy", "api",
-            "system", "number", "code", "www", "http"
-        )
-
-        // Too short to be meaningful
-        if (item.length < 3) return false
-
-        // Pure digits (e.g. "110", "200")
-        if (item.all { it.isDigit() || it.isWhitespace() }) return false
-
-        // Contains a URL or path separator
-        if (item.contains("/") || item.contains("http")) return false
-
-        // Too many words — it's a sentence, not an ingredient
-        if (item.split(" ").size > 6) return false
-
-        // Contains a known noise keyword
-        val lower = item.lowercase()
-        if (invalidKeywords.any { lower.contains(it) }) return false
-
-        return true
-    }
-
-    // ── Ingredient parser ─────────────────────────────────────────────────
-    private fun parseIngredients(resultText: String): List<String> {
-        val cleanText = resultText.lowercase()
-            .replace("(", "")
-            .replace(")", "")
-            .replace("%", "")
-            .replace("[", "")
-            .replace("]", "")
-            .replace(Regex("\\s+"), " ")
-
-        return cleanText.split(",", "\n", ".")
-            .map { it.trim() }
-            .filter { it.isNotEmpty() }
     }
 
     // ── EXIF rotation ─────────────────────────────────────────────────────────

@@ -1,0 +1,5929 @@
+{
+  "maida": {
+    "name": "maida",
+    "aliases": [
+      "refined wheat flour",
+      "refined wheat flour (maida)",
+      "maida flour",
+      "wheat flour (maida)",
+      "refined flour",
+      "white flour",
+      "all purpose flour",
+      "plain flour",
+      "maida (refined wheat flour)",
+      "flour (wheat)"
+    ],
+    "category": "flour",
+    "tags": [
+      "grain",
+      "processed",
+      "high_glycemic"
+    ],
+    "badFor": [
+      "diabetes",
+      "fat_loss",
+      "gluten_sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Refined wheat flour used in biscuits, namkeen and snacks."
+  },
+  "whole wheat flour": {
+    "name": "whole wheat flour",
+    "aliases": [
+      "whole wheat flour",
+      "atta",
+      "wheat atta",
+      "whole grain wheat flour",
+      "gehun ka atta",
+      "chakki fresh atta",
+      "whole meal flour",
+      "wholemeal flour",
+      "100% whole wheat",
+      "whole wheat (atta)"
+    ],
+    "category": "flour",
+    "tags": [
+      "grain",
+      "fiber"
+    ],
+    "badFor": [
+      "gluten_sensitivity"
+    ],
+    "goodFor": [
+      "heart_health",
+      "balanced"
+    ],
+    "description": "Whole grain wheat flour with higher fiber content."
+  },
+  "besan": {
+    "name": "besan",
+    "aliases": [
+      "gram flour",
+      "besan (gram flour)",
+      "chickpea flour",
+      "gram flour (besan)",
+      "chana flour",
+      "bengal gram flour",
+      "chick pea flour",
+      "pulse flour (chickpea)",
+      "besan flour",
+      "chickpea flour (besan)"
+    ],
+    "category": "flour",
+    "tags": [
+      "grain",
+      "protein",
+      "plant"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced",
+      "muscle_gain"
+    ],
+    "description": "Flour made from ground chickpeas, used in boondi, sev and namkeen."
+  },
+  "rice flour": {
+    "name": "rice flour",
+    "aliases": [
+      "rice flour",
+      "chawal ka atta",
+      "rice powder",
+      "rice starch flour",
+      "finely milled rice flour",
+      "rice flour (chawal)",
+      "white rice flour",
+      "rice flour (fine)",
+      "milled rice flour",
+      "rice meal"
+    ],
+    "category": "flour",
+    "tags": [
+      "grain",
+      "gluten_free"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced"
+    ],
+    "description": "Flour milled from rice, common in south Indian snacks."
+  },
+  "corn flour": {
+    "name": "corn flour",
+    "aliases": [
+      "corn flour",
+      "maize flour",
+      "corn starch",
+      "cornflour",
+      "maize starch",
+      "corn meal",
+      "maize meal",
+      "cornmeal",
+      "corn flour (maize)",
+      "maize corn flour"
+    ],
+    "category": "flour",
+    "tags": [
+      "grain",
+      "processed"
+    ],
+    "badFor": [
+      "diabetes",
+      "fat_loss"
+    ],
+    "goodFor": [],
+    "description": "Fine flour or starch derived from maize, used as thickener and in snacks."
+  },
+  "sooji": {
+    "name": "sooji",
+    "aliases": [
+      "semolina",
+      "sooji",
+      "rava",
+      "suji",
+      "semolina (sooji)",
+      "sooji (semolina)",
+      "rava (semolina)",
+      "wheat semolina",
+      "durum wheat semolina",
+      "fine semolina",
+      "coarse semolina"
+    ],
+    "category": "flour",
+    "tags": [
+      "grain"
+    ],
+    "badFor": [
+      "gluten_sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Coarsely milled wheat, used in upma mixes and snacks."
+  },
+  "tapioca starch": {
+    "name": "tapioca starch",
+    "aliases": [
+      "tapioca starch",
+      "tapioca flour",
+      "cassava starch",
+      "tapioca (starch)",
+      "sabudana starch",
+      "sago starch",
+      "tapioca starch (e1400)",
+      "modified tapioca starch",
+      "tapioca",
+      "sabudana"
+    ],
+    "category": "starch",
+    "tags": [
+      "grain",
+      "gluten_free",
+      "processed"
+    ],
+    "badFor": [
+      "diabetes",
+      "fat_loss"
+    ],
+    "goodFor": [],
+    "description": "Starch from cassava root, used as thickener and in fryums."
+  },
+  "modified starch": {
+    "name": "modified starch",
+    "aliases": [
+      "modified starch",
+      "modified food starch",
+      "modified corn starch",
+      "modified maize starch",
+      "modified tapioca starch",
+      "acetylated starch",
+      "hydroxypropyl starch",
+      "cross-linked starch",
+      "starch (modified)",
+      "e1422"
+    ],
+    "category": "starch",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Chemically or physically altered starch used as thickener."
+  },
+  "starch": {
+    "name": "starch",
+    "aliases": [
+      "starch",
+      "food starch",
+      "edible starch",
+      "corn starch",
+      "wheat starch",
+      "potato starch",
+      "starch (wheat)",
+      "starch (corn)",
+      "starch (potato)",
+      "native starch"
+    ],
+    "category": "starch",
+    "tags": [
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Starch used as thickener or texture agent in processed foods."
+  },
+  "potato starch": {
+    "name": "potato starch",
+    "aliases": [
+      "potato starch",
+      "potato flour",
+      "potato powder",
+      "dehydrated potato",
+      "potato starch flour",
+      "potato (starch)",
+      "dried potato starch",
+      "potato meal"
+    ],
+    "category": "starch",
+    "tags": [
+      "grain",
+      "processed"
+    ],
+    "badFor": [
+      "diabetes",
+      "fat_loss"
+    ],
+    "goodFor": [],
+    "description": "Starch derived from potatoes."
+  },
+  "palm oil": {
+    "name": "palm oil",
+    "aliases": [
+      "palm oil",
+      "refined palm oil",
+      "edible palm oil",
+      "palm oil (refined)",
+      "RBD palm oil",
+      "fractionated palm oil",
+      "palm kernel oil",
+      "vegetable oil (palm)",
+      "palmein",
+      "palm olein"
+    ],
+    "category": "oil",
+    "tags": [
+      "oil",
+      "processed"
+    ],
+    "badFor": [
+      "heart",
+      "fat_loss"
+    ],
+    "goodFor": [],
+    "description": "High saturated fat oil widely used in Indian snacks and biscuits."
+  },
+  "palmolein": {
+    "name": "palmolein",
+    "aliases": [
+      "palmolein",
+      "palm olein",
+      "palmolein oil",
+      "refined palmolein",
+      "palmolein (vegetable oil)",
+      "edible palmolein",
+      "RBD palmolein",
+      "vegetable oil (palmolein)",
+      "refined palm olein",
+      "palm superolein"
+    ],
+    "category": "oil",
+    "tags": [
+      "oil",
+      "processed"
+    ],
+    "badFor": [
+      "heart",
+      "fat_loss"
+    ],
+    "goodFor": [],
+    "description": "Liquid fraction of palm oil commonly used as frying medium."
+  },
+  "sunflower oil": {
+    "name": "sunflower oil",
+    "aliases": [
+      "sunflower oil",
+      "refined sunflower oil",
+      "sunflower seed oil",
+      "edible sunflower oil",
+      "sunflower oil (refined)",
+      "high oleic sunflower oil",
+      "vegetable oil (sunflower)",
+      "sunflower cooking oil",
+      "refined sunflower seed oil",
+      "sunola oil"
+    ],
+    "category": "oil",
+    "tags": [
+      "oil"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "heart_health"
+    ],
+    "description": "Common vegetable oil rich in polyunsaturated fats."
+  },
+  "mustard oil": {
+    "name": "mustard oil",
+    "aliases": [
+      "mustard oil",
+      "sarson ka tel",
+      "mustard seed oil",
+      "edible mustard oil",
+      "refined mustard oil",
+      "kachi ghani mustard oil",
+      "cold pressed mustard oil",
+      "mustard oil (kachi ghani)",
+      "mustard cooking oil",
+      "sarson oil"
+    ],
+    "category": "oil",
+    "tags": [
+      "oil"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "heart_health"
+    ],
+    "description": "Pungent oil from mustard seeds, popular in North and East Indian cooking."
+  },
+  "groundnut oil": {
+    "name": "groundnut oil",
+    "aliases": [
+      "groundnut oil",
+      "peanut oil",
+      "refined groundnut oil",
+      "edible groundnut oil",
+      "moongphali ka tel",
+      "groundnut cooking oil",
+      "peanut cooking oil",
+      "groundnut oil (refined)",
+      "filtered groundnut oil",
+      "kachi ghani groundnut oil"
+    ],
+    "category": "oil",
+    "tags": [
+      "oil"
+    ],
+    "badFor": [
+      "nut_allergy"
+    ],
+    "goodFor": [
+      "heart_health"
+    ],
+    "description": "Oil pressed from peanuts, used in traditional Indian frying."
+  },
+  "rice bran oil": {
+    "name": "rice bran oil",
+    "aliases": [
+      "rice bran oil",
+      "refined rice bran oil",
+      "RBO",
+      "rice oil",
+      "edible rice bran oil",
+      "rice bran cooking oil",
+      "vegetable oil (rice bran)",
+      "rice bran oil (refined)",
+      "rice bran & sunflower oil blend"
+    ],
+    "category": "oil",
+    "tags": [
+      "oil"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "heart_health"
+    ],
+    "description": "Oil extracted from rice bran with balanced fatty acid profile."
+  },
+  "vegetable oil": {
+    "name": "vegetable oil",
+    "aliases": [
+      "vegetable oil",
+      "edible vegetable oil",
+      "refined vegetable oil",
+      "blended vegetable oil",
+      "vegetable oil (palmolein)",
+      "vegetable oil (sunflower)",
+      "vegetable oil (palm & sunflower)",
+      "cooking oil",
+      "edible oil",
+      "vegetable cooking oil"
+    ],
+    "category": "oil",
+    "tags": [
+      "oil",
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Generic blended cooking oil declared on many Indian labels."
+  },
+  "coconut oil": {
+    "name": "coconut oil",
+    "aliases": [
+      "coconut oil",
+      "refined coconut oil",
+      "edible coconut oil",
+      "copra oil",
+      "virgin coconut oil",
+      "coconut oil (refined)",
+      "nariyal tel",
+      "coconut cooking oil",
+      "RBD coconut oil",
+      "partially hydrogenated coconut oil"
+    ],
+    "category": "oil",
+    "tags": [
+      "oil",
+      "energy"
+    ],
+    "badFor": [
+      "heart"
+    ],
+    "goodFor": [
+      "athlete"
+    ],
+    "description": "Oil from coconut, high in medium-chain triglycerides."
+  },
+  "soybean oil": {
+    "name": "soybean oil",
+    "aliases": [
+      "soybean oil",
+      "soya oil",
+      "refined soybean oil",
+      "soya bean oil",
+      "edible soybean oil",
+      "vegetable oil (soybean)",
+      "soy oil",
+      "refined soy oil",
+      "soyabean oil",
+      "soyabean cooking oil"
+    ],
+    "category": "oil",
+    "tags": [
+      "oil",
+      "soy"
+    ],
+    "badFor": [
+      "soy_allergy"
+    ],
+    "goodFor": [
+      "heart_health"
+    ],
+    "description": "Refined oil from soybeans."
+  },
+  "canola oil": {
+    "name": "canola oil",
+    "aliases": [
+      "canola oil",
+      "rapeseed oil",
+      "refined canola oil",
+      "canola cooking oil",
+      "vegetable oil (canola)",
+      "low erucic rapeseed oil",
+      "LEAR oil",
+      "canola (rapeseed) oil"
+    ],
+    "category": "oil",
+    "tags": [
+      "oil"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "heart_health"
+    ],
+    "description": "Low saturated fat oil from rapeseed."
+  },
+  "ghee": {
+    "name": "ghee",
+    "aliases": [
+      "ghee",
+      "clarified butter",
+      "desi ghee",
+      "pure ghee",
+      "cow ghee",
+      "buffalo ghee",
+      "ghee (clarified butter)",
+      "vanaspati ghee",
+      "vegetable ghee",
+      "dalda"
+    ],
+    "category": "fat",
+    "tags": [
+      "dairy",
+      "energy"
+    ],
+    "badFor": [
+      "lactose_intolerance",
+      "heart"
+    ],
+    "goodFor": [
+      "athlete"
+    ],
+    "description": "Clarified butter used in traditional Indian sweets and snacks."
+  },
+  "vanaspati": {
+    "name": "vanaspati",
+    "aliases": [
+      "vanaspati",
+      "vanaspati ghee",
+      "hydrogenated vegetable oil",
+      "partially hydrogenated vegetable oil",
+      "vegetable shortening",
+      "vanaspati (hydrogenated vegetable oil)",
+      "dalda",
+      "bakery shortening",
+      "hydrogenated fat",
+      "shortening"
+    ],
+    "category": "fat",
+    "tags": [
+      "oil",
+      "processed",
+      "trans_fat"
+    ],
+    "badFor": [
+      "heart",
+      "fat_loss"
+    ],
+    "goodFor": [],
+    "description": "Hydrogenated vegetable fat, contains trans fats."
+  },
+  "butter": {
+    "name": "butter",
+    "aliases": [
+      "butter",
+      "salted butter",
+      "unsalted butter",
+      "dairy butter",
+      "table butter",
+      "butter (milk)",
+      "white butter",
+      "makhan",
+      "butter (pasteurised)",
+      "cooking butter"
+    ],
+    "category": "fat",
+    "tags": [
+      "dairy"
+    ],
+    "badFor": [
+      "lactose_intolerance",
+      "vegan",
+      "heart"
+    ],
+    "goodFor": [],
+    "description": "Dairy fat used in baked goods and snacks."
+  },
+  "turmeric": {
+    "name": "turmeric",
+    "aliases": [
+      "turmeric",
+      "haldi",
+      "turmeric powder",
+      "haldi powder",
+      "turmeric (curcuma longa)",
+      "ground turmeric",
+      "turmeric (haldi)",
+      "dried turmeric",
+      "turmeric extract",
+      "curcuma longa"
+    ],
+    "category": "spice",
+    "tags": [
+      "spice",
+      "natural",
+      "antioxidant"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced",
+      "anti_inflammatory"
+    ],
+    "description": "Yellow spice with anti-inflammatory properties, used in almost all Indian snacks."
+  },
+  "chilli": {
+    "name": "chilli",
+    "aliases": [
+      "chilli",
+      "red chilli",
+      "chilli powder",
+      "red chilli powder",
+      "mirchi",
+      "lal mirch",
+      "chili powder",
+      "dried red chilli",
+      "chilli (capsicum annuum)",
+      "cayenne pepper",
+      "paprika",
+      "chilli flakes",
+      "green chilli",
+      "chilli (mirchi)"
+    ],
+    "category": "spice",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Spice that adds heat, ubiquitous on Indian snack labels."
+  },
+  "cumin": {
+    "name": "cumin",
+    "aliases": [
+      "cumin",
+      "jeera",
+      "cumin powder",
+      "jeera powder",
+      "cumin seeds",
+      "cumin (cuminum cyminum)",
+      "ground cumin",
+      "roasted cumin",
+      "cumin seed powder",
+      "cumin (jeera)"
+    ],
+    "category": "spice",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "digestion"
+    ],
+    "description": "Aromatic spice used in namkeen and savoury snacks."
+  },
+  "coriander": {
+    "name": "coriander",
+    "aliases": [
+      "coriander",
+      "dhania",
+      "coriander powder",
+      "dhania powder",
+      "ground coriander",
+      "coriander seed powder",
+      "coriander (coriandrum sativum)",
+      "coriander seeds",
+      "coriander (dhania)",
+      "dried coriander"
+    ],
+    "category": "spice",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "digestion"
+    ],
+    "description": "Common Indian spice used in masala blends."
+  },
+  "black pepper": {
+    "name": "black pepper",
+    "aliases": [
+      "black pepper",
+      "kali mirch",
+      "pepper",
+      "black pepper powder",
+      "ground black pepper",
+      "black pepper (piper nigrum)",
+      "pepper powder",
+      "cracked black pepper",
+      "whole black pepper",
+      "black pepper (kali mirch)"
+    ],
+    "category": "spice",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Pungent spice used in savoury snacks."
+  },
+  "garam masala": {
+    "name": "garam masala",
+    "aliases": [
+      "garam masala",
+      "mixed spices",
+      "spice mix",
+      "masala",
+      "garam masala powder",
+      "Indian spice mix",
+      "spice blend",
+      "whole spices",
+      "aromatic spices",
+      "spice mixture"
+    ],
+    "category": "spice",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Blend of warming spices used in savoury Indian snacks."
+  },
+  "ajwain": {
+    "name": "ajwain",
+    "aliases": [
+      "ajwain",
+      "carom seeds",
+      "ajwain seeds",
+      "bishops weed",
+      "carom seed",
+      "ajwain (trachyspermum ammi)",
+      "ajwain powder",
+      "thymol seeds",
+      "omam",
+      "ajmo"
+    ],
+    "category": "spice",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "digestion"
+    ],
+    "description": "Pungent seeds used in mathri and chakli."
+  },
+  "hing": {
+    "name": "hing",
+    "aliases": [
+      "hing",
+      "asafoetida",
+      "asafetida",
+      "hing (asafoetida)",
+      "compounded asafoetida",
+      "asafoetida powder",
+      "heeng",
+      "ferula asafoetida",
+      "hing powder",
+      "asafoetida (hing)"
+    ],
+    "category": "spice",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "digestion"
+    ],
+    "description": "Pungent spice resin used in dal and namkeen."
+  },
+  "amchur": {
+    "name": "amchur",
+    "aliases": [
+      "amchur",
+      "dry mango powder",
+      "amchur powder",
+      "dried mango powder",
+      "amchoor",
+      "mango powder",
+      "raw mango powder",
+      "aamchur",
+      "dry raw mango",
+      "amchur (dried mango)"
+    ],
+    "category": "spice",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Sour dried mango powder used in chaat and namkeen."
+  },
+  "kasuri methi": {
+    "name": "kasuri methi",
+    "aliases": [
+      "kasuri methi",
+      "dried fenugreek leaves",
+      "fenugreek leaves",
+      "kasoori methi",
+      "kasuri methi (dried fenugreek)",
+      "dried methi leaves",
+      "methi leaves",
+      "fenugreek (dried leaves)",
+      "kasturi methi",
+      "dried fenugreek"
+    ],
+    "category": "spice",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Dried fenugreek leaves used in snacks and biscuits."
+  },
+  "fenugreek": {
+    "name": "fenugreek",
+    "aliases": [
+      "fenugreek",
+      "methi",
+      "fenugreek seeds",
+      "methi seeds",
+      "fenugreek seed",
+      "fenugreek (trigonella foenum-graecum)",
+      "methi powder",
+      "fenugreek powder",
+      "fenugreek (methi)",
+      "dried fenugreek seeds"
+    ],
+    "category": "spice",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "digestion"
+    ],
+    "description": "Bitter seeds used in spice blends and Indian snacks."
+  },
+  "cardamom": {
+    "name": "cardamom",
+    "aliases": [
+      "cardamom",
+      "elaichi",
+      "green cardamom",
+      "cardamom powder",
+      "elaichi powder",
+      "cardamom seeds",
+      "cardamom (elettaria cardamomum)",
+      "small cardamom",
+      "choti elaichi",
+      "cardamom (elaichi)"
+    ],
+    "category": "spice",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Aromatic spice used in sweet snacks and biscuits."
+  },
+  "cinnamon": {
+    "name": "cinnamon",
+    "aliases": [
+      "cinnamon",
+      "dalchini",
+      "cinnamon powder",
+      "ground cinnamon",
+      "cinnamon (cinnamomum)",
+      "cinnamon bark",
+      "cinnamon sticks",
+      "dalchini powder",
+      "cinnamon extract",
+      "cinnamon (dalchini)"
+    ],
+    "category": "spice",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Sweet aromatic spice used in bakery and sweet snacks."
+  },
+  "cloves": {
+    "name": "cloves",
+    "aliases": [
+      "cloves",
+      "laung",
+      "clove",
+      "clove powder",
+      "ground cloves",
+      "dried cloves",
+      "laung (cloves)",
+      "cloves (eugenia caryophyllus)",
+      "clove extract"
+    ],
+    "category": "spice",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Strong aromatic spice used in masala blends."
+  },
+  "dry ginger": {
+    "name": "dry ginger",
+    "aliases": [
+      "dry ginger",
+      "saunth",
+      "ginger powder",
+      "dried ginger",
+      "ginger (dried)",
+      "sunth",
+      "dry ginger powder",
+      "dried ginger powder",
+      "saunth powder",
+      "ginger (zingiber officinale)"
+    ],
+    "category": "spice",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "digestion"
+    ],
+    "description": "Dried ginger used in spice blends and biscuits."
+  },
+  "black salt": {
+    "name": "black salt",
+    "aliases": [
+      "black salt",
+      "kala namak",
+      "rock salt (black)",
+      "sendha namak (black)",
+      "sanchal",
+      "black rock salt",
+      "kala namak (black salt)",
+      "Indian black salt",
+      "volcanic black salt"
+    ],
+    "category": "mineral",
+    "tags": [
+      "sodium",
+      "high_sodium"
+    ],
+    "badFor": [
+      "hypertension"
+    ],
+    "goodFor": [],
+    "description": "Sulphurous black salt used in chaat masala and snacks."
+  },
+  "rock salt": {
+    "name": "rock salt",
+    "aliases": [
+      "rock salt",
+      "sendha namak",
+      "saindhav namak",
+      "pink salt",
+      "Himalayan rock salt",
+      "pink Himalayan salt",
+      "lahori namak",
+      "sendha salt",
+      "rock salt (sendha namak)"
+    ],
+    "category": "mineral",
+    "tags": [
+      "sodium",
+      "high_sodium"
+    ],
+    "badFor": [
+      "hypertension"
+    ],
+    "goodFor": [],
+    "description": "Unprocessed mineral salt used in traditional Indian recipes."
+  },
+  "salt": {
+    "name": "salt",
+    "aliases": [
+      "salt",
+      "common salt",
+      "table salt",
+      "iodised salt",
+      "iodized salt",
+      "sea salt",
+      "edible salt",
+      "sodium chloride",
+      "cooking salt",
+      "refined salt",
+      "iodised common salt"
+    ],
+    "category": "mineral",
+    "tags": [
+      "sodium",
+      "high_sodium"
+    ],
+    "badFor": [
+      "hypertension"
+    ],
+    "goodFor": [],
+    "description": "Common seasoning used in almost all packaged foods."
+  },
+  "chaat masala": {
+    "name": "chaat masala",
+    "aliases": [
+      "chaat masala",
+      "chat masala",
+      "chaat spice mix",
+      "chaat powder",
+      "chaaat masala",
+      "chaat masala powder",
+      "tangy spice mix"
+    ],
+    "category": "spice",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [
+      "hypertension"
+    ],
+    "goodFor": [],
+    "description": "Tangy spice blend used on namkeen and snacks."
+  },
+  "pepper powder": {
+    "name": "pepper powder",
+    "aliases": [
+      "pepper powder",
+      "white pepper",
+      "white pepper powder",
+      "ground white pepper",
+      "white pepper (piper nigrum)",
+      "pepper (white)",
+      "piper nigrum",
+      "black pepper powder",
+      "mixed pepper"
+    ],
+    "category": "spice",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Ground pepper used as flavouring in snacks."
+  },
+  "sugar": {
+    "name": "sugar",
+    "aliases": [
+      "sugar",
+      "sucrose",
+      "refined sugar",
+      "cane sugar",
+      "beet sugar",
+      "white sugar",
+      "table sugar",
+      "powdered sugar",
+      "icing sugar",
+      "sugar (sucrose)",
+      "granulated sugar"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "high_glycemic",
+      "energy"
+    ],
+    "badFor": [
+      "diabetes",
+      "fat_loss"
+    ],
+    "goodFor": [
+      "athlete"
+    ],
+    "description": "Fast-absorbing sweetener used across Indian biscuits and sweets."
+  },
+  "jaggery": {
+    "name": "jaggery",
+    "aliases": [
+      "jaggery",
+      "gur",
+      "gud",
+      "palm jaggery",
+      "jaggery powder",
+      "powdered jaggery",
+      "organic jaggery",
+      "cane jaggery",
+      "jaggery (gur)",
+      "unrefined cane sugar"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "high_glycemic",
+      "energy",
+      "natural"
+    ],
+    "badFor": [
+      "diabetes",
+      "fat_loss"
+    ],
+    "goodFor": [],
+    "description": "Unrefined cane sugar used in traditional Indian sweets and snacks."
+  },
+  "glucose syrup": {
+    "name": "glucose syrup",
+    "aliases": [
+      "glucose syrup",
+      "liquid glucose",
+      "corn syrup",
+      "glucose",
+      "dextrose syrup",
+      "glucose-fructose syrup",
+      "glucose (dextrose)",
+      "glucose syrup (wheat)",
+      "glucose syrup (corn)",
+      "edible glucose"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "processed",
+      "high_glycemic"
+    ],
+    "badFor": [
+      "diabetes",
+      "fat_loss"
+    ],
+    "goodFor": [
+      "athlete"
+    ],
+    "description": "Liquid sweetener made from starch hydrolysis."
+  },
+  "dextrose": {
+    "name": "dextrose",
+    "aliases": [
+      "dextrose",
+      "glucose",
+      "dextrose monohydrate",
+      "D-glucose",
+      "dextrose (glucose)",
+      "corn dextrose",
+      "dextrose anhydrous",
+      "grape sugar",
+      "dextrose syrup",
+      "food grade dextrose"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "high_glycemic",
+      "energy"
+    ],
+    "badFor": [
+      "diabetes",
+      "fat_loss"
+    ],
+    "goodFor": [
+      "athlete"
+    ],
+    "description": "Simple sugar used as sweetener and energy source."
+  },
+  "maltodextrin": {
+    "name": "maltodextrin",
+    "aliases": [
+      "maltodextrin",
+      "maltodextrine",
+      "malto dextrin",
+      "corn maltodextrin",
+      "wheat maltodextrin",
+      "maltodextrin (corn)",
+      "maltodextrin (wheat)",
+      "maltodextrin (tapioca)",
+      "modified maltodextrin",
+      "food maltodextrin"
+    ],
+    "category": "carbohydrate",
+    "tags": [
+      "processed",
+      "high_glycemic",
+      "energy"
+    ],
+    "badFor": [
+      "diabetes",
+      "fat_loss"
+    ],
+    "goodFor": [
+      "athlete"
+    ],
+    "description": "Rapidly absorbed carbohydrate used in flavour coatings and snacks."
+  },
+  "high fructose corn syrup": {
+    "name": "high fructose corn syrup",
+    "aliases": [
+      "high fructose corn syrup",
+      "HFCS",
+      "fructose corn syrup",
+      "corn syrup (high fructose)",
+      "isoglucose",
+      "fructose syrup",
+      "high-fructose corn syrup",
+      "glucose-fructose syrup",
+      "fructose-glucose syrup"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "processed",
+      "high_glycemic"
+    ],
+    "badFor": [
+      "diabetes",
+      "fat_loss"
+    ],
+    "goodFor": [],
+    "description": "Processed liquid sweetener high in fructose."
+  },
+  "honey": {
+    "name": "honey",
+    "aliases": [
+      "honey",
+      "natural honey",
+      "pure honey",
+      "wildflower honey",
+      "organic honey",
+      "bee honey",
+      "processed honey",
+      "raw honey",
+      "shehad",
+      "honey (natural)"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "natural",
+      "high_glycemic",
+      "energy"
+    ],
+    "badFor": [
+      "diabetes",
+      "fat_loss"
+    ],
+    "goodFor": [],
+    "description": "Natural sweetener from bees used in energy bars and cookies."
+  },
+  "milk solids": {
+    "name": "milk solids",
+    "aliases": [
+      "milk solids",
+      "skimmed milk powder",
+      "full cream milk powder",
+      "dairy solids",
+      "milk powder",
+      "whole milk powder",
+      "SMP",
+      "milk solids (dairy)",
+      "dried milk solids",
+      "reconstituted milk solids"
+    ],
+    "category": "dairy",
+    "tags": [
+      "dairy",
+      "protein"
+    ],
+    "badFor": [
+      "lactose_intolerance",
+      "vegan"
+    ],
+    "goodFor": [],
+    "description": "Dried dairy solids used in chocolates, biscuits and sweets."
+  },
+  "whey powder": {
+    "name": "whey powder",
+    "aliases": [
+      "whey powder",
+      "whey solids",
+      "dried whey",
+      "whey protein",
+      "whey (milk)",
+      "whey powder (dairy)",
+      "whey solids (milk)",
+      "demineralised whey",
+      "whey permeate",
+      "whey protein concentrate"
+    ],
+    "category": "dairy",
+    "tags": [
+      "dairy",
+      "protein"
+    ],
+    "badFor": [
+      "lactose_intolerance",
+      "vegan"
+    ],
+    "goodFor": [
+      "muscle_gain"
+    ],
+    "description": "By-product of cheese making used in biscuits and chocolates."
+  },
+  "milk": {
+    "name": "milk",
+    "aliases": [
+      "milk",
+      "dairy",
+      "full cream milk",
+      "toned milk",
+      "skimmed milk",
+      "double toned milk",
+      "pasteurised milk",
+      "UHT milk",
+      "milk (cow)",
+      "milk solids not fat"
+    ],
+    "category": "allergen",
+    "tags": [
+      "dairy"
+    ],
+    "badFor": [
+      "lactose_intolerance",
+      "vegan"
+    ],
+    "goodFor": [],
+    "description": "Common dairy ingredient and allergen."
+  },
+  "lactose": {
+    "name": "lactose",
+    "aliases": [
+      "lactose",
+      "milk sugar",
+      "lactose (milk)",
+      "anhydrous lactose",
+      "lactose monohydrate",
+      "dairy lactose",
+      "lactose (dairy)",
+      "milk lactose",
+      "edible lactose"
+    ],
+    "category": "allergen",
+    "tags": [
+      "dairy",
+      "high_glycemic"
+    ],
+    "badFor": [
+      "lactose_intolerance"
+    ],
+    "goodFor": [],
+    "description": "Natural milk sugar that can cause intolerance."
+  },
+  "casein": {
+    "name": "casein",
+    "aliases": [
+      "casein",
+      "milk protein",
+      "caseinate",
+      "sodium caseinate",
+      "calcium caseinate",
+      "casein (milk)",
+      "milk casein",
+      "casein protein",
+      "micellar casein",
+      "milk protein (casein)"
+    ],
+    "category": "protein",
+    "tags": [
+      "dairy",
+      "protein"
+    ],
+    "badFor": [
+      "lactose_intolerance"
+    ],
+    "goodFor": [
+      "muscle_gain"
+    ],
+    "description": "Slow-digesting dairy protein used in food products."
+  },
+  "cocoa butter": {
+    "name": "cocoa butter",
+    "aliases": [
+      "cocoa butter",
+      "cacao butter",
+      "cocoa fat",
+      "theobroma oil",
+      "cocoa butter (deodorised)",
+      "refined cocoa butter",
+      "cocoa butter equivalent",
+      "CBE",
+      "cocoa butter replacer",
+      "CBR"
+    ],
+    "category": "fat",
+    "tags": [
+      "energy",
+      "plant"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Fat from cocoa beans used in chocolates."
+  },
+  "cocoa powder": {
+    "name": "cocoa powder",
+    "aliases": [
+      "cocoa powder",
+      "cocoa",
+      "cacao powder",
+      "natural cocoa powder",
+      "Dutch processed cocoa",
+      "alkalized cocoa",
+      "cocoa powder (defatted)",
+      "dark cocoa powder",
+      "cocoa (cacao)",
+      "unsweetened cocoa powder"
+    ],
+    "category": "plant extract",
+    "tags": [
+      "antioxidant",
+      "energy"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced"
+    ],
+    "description": "Powdered cocoa used in chocolates and flavoured biscuits."
+  },
+  "cocoa solids": {
+    "name": "cocoa solids",
+    "aliases": [
+      "cocoa solids",
+      "cocoa mass",
+      "cacao mass",
+      "cocoa liquor",
+      "chocolate liquor",
+      "cocoa extract",
+      "dark chocolate solids",
+      "cocoa (solids)",
+      "cacao solids",
+      "100% cocoa"
+    ],
+    "category": "plant extract",
+    "tags": [
+      "antioxidant",
+      "energy"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced"
+    ],
+    "description": "Concentrated cocoa component rich in polyphenols."
+  },
+  "soy lecithin": {
+    "name": "soy lecithin",
+    "aliases": [
+      "soy lecithin",
+      "lecithin",
+      "soya lecithin",
+      "lecithin (soya)",
+      "soybean lecithin",
+      "emulsifier (soy lecithin)",
+      "soy phospholipids",
+      "lecithin (e322)",
+      "sunflower lecithin",
+      "lecithin (ins322)"
+    ],
+    "category": "emulsifier",
+    "tags": [
+      "additive",
+      "processed",
+      "soy"
+    ],
+    "badFor": [
+      "soy_allergy"
+    ],
+    "goodFor": [],
+    "description": "Emulsifier from soy used in chocolates and biscuits."
+  },
+  "wheat": {
+    "name": "wheat",
+    "aliases": [
+      "wheat",
+      "whole wheat",
+      "wheat grain",
+      "wheat (triticum)",
+      "durum wheat",
+      "hard wheat",
+      "soft wheat",
+      "wheat flour",
+      "wheat (contains gluten)",
+      "wheat products"
+    ],
+    "category": "allergen",
+    "tags": [
+      "grain",
+      "gluten_sensitivity"
+    ],
+    "badFor": [
+      "gluten_sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Common grain allergen found in most Indian baked snacks."
+  },
+  "soy": {
+    "name": "soy",
+    "aliases": [
+      "soy",
+      "soya",
+      "soybean",
+      "soya bean",
+      "soy (glycine max)",
+      "soy protein",
+      "soy products",
+      "soya products",
+      "soy (allergen)",
+      "soya (allergen)"
+    ],
+    "category": "allergen",
+    "tags": [
+      "soy",
+      "plant"
+    ],
+    "badFor": [
+      "soy_allergy"
+    ],
+    "goodFor": [
+      "vegan"
+    ],
+    "description": "Common allergen and plant protein source."
+  },
+  "peanut": {
+    "name": "peanut",
+    "aliases": [
+      "peanut",
+      "groundnut",
+      "moongphali",
+      "peanuts",
+      "roasted peanuts",
+      "groundnuts",
+      "peanut (arachis hypogaea)",
+      "whole peanuts",
+      "peanut pieces",
+      "groundnut (peanut)"
+    ],
+    "category": "allergen",
+    "tags": [
+      "nuts",
+      "protein",
+      "energy"
+    ],
+    "badFor": [
+      "nut_allergy"
+    ],
+    "goodFor": [
+      "muscle_gain"
+    ],
+    "description": "Common nut used in Indian namkeen and chikki."
+  },
+  "cashew": {
+    "name": "cashew",
+    "aliases": [
+      "cashew",
+      "kaju",
+      "cashew nuts",
+      "cashewnuts",
+      "cashew (anacardium occidentale)",
+      "roasted cashew",
+      "whole cashews",
+      "cashew pieces",
+      "kaju (cashew)",
+      "cashew kernel"
+    ],
+    "category": "allergen",
+    "tags": [
+      "nuts",
+      "healthy_fat"
+    ],
+    "badFor": [
+      "nut_allergy"
+    ],
+    "goodFor": [
+      "energy"
+    ],
+    "description": "Tree nut used in Indian sweets and snacks."
+  },
+  "almond": {
+    "name": "almond",
+    "aliases": [
+      "almond",
+      "badam",
+      "almonds",
+      "almond (prunus dulcis)",
+      "whole almonds",
+      "almond pieces",
+      "almond slivers",
+      "blanched almonds",
+      "roasted almond",
+      "almond kernel"
+    ],
+    "category": "allergen",
+    "tags": [
+      "nuts",
+      "healthy_fat"
+    ],
+    "badFor": [
+      "nut_allergy"
+    ],
+    "goodFor": [
+      "heart_health"
+    ],
+    "description": "Tree nut rich in healthy fats used in Indian sweets."
+  },
+  "walnut": {
+    "name": "walnut",
+    "aliases": [
+      "walnut",
+      "akhrot",
+      "walnuts",
+      "walnut (juglans regia)",
+      "walnut pieces",
+      "walnut kernels",
+      "whole walnuts",
+      "akhrot (walnut)",
+      "chopped walnuts"
+    ],
+    "category": "allergen",
+    "tags": [
+      "nuts",
+      "healthy_fat"
+    ],
+    "badFor": [
+      "nut_allergy"
+    ],
+    "goodFor": [
+      "heart_health"
+    ],
+    "description": "Omega-3 rich tree nut."
+  },
+  "pistachio": {
+    "name": "pistachio",
+    "aliases": [
+      "pistachio",
+      "pista",
+      "pistachios",
+      "pistachio nut",
+      "pistachio (pistacia vera)",
+      "pistachio kernel",
+      "roasted pistachio",
+      "salted pistachio",
+      "pista (pistachio)"
+    ],
+    "category": "allergen",
+    "tags": [
+      "nuts",
+      "healthy_fat"
+    ],
+    "badFor": [
+      "nut_allergy"
+    ],
+    "goodFor": [
+      "energy"
+    ],
+    "description": "Tree nut used in Indian sweets and ice cream."
+  },
+  "egg": {
+    "name": "egg",
+    "aliases": [
+      "egg",
+      "whole egg",
+      "egg powder",
+      "dried egg",
+      "egg (albumen)",
+      "egg white",
+      "egg yolk",
+      "egg solids",
+      "powdered egg",
+      "whole egg powder",
+      "egg (allergen)"
+    ],
+    "category": "allergen",
+    "tags": [
+      "protein",
+      "animal"
+    ],
+    "badFor": [
+      "egg_allergy",
+      "vegan"
+    ],
+    "goodFor": [
+      "muscle_gain"
+    ],
+    "description": "Common protein and allergen used in biscuits and cakes."
+  },
+  "gelatin": {
+    "name": "gelatin",
+    "aliases": [
+      "gelatin",
+      "gelatine",
+      "edible gelatin",
+      "food grade gelatin",
+      "beef gelatin",
+      "pork gelatin",
+      "fish gelatin",
+      "bovine gelatin",
+      "gelatin (bovine)",
+      "gelatin (porcine)"
+    ],
+    "category": "stabilizer",
+    "tags": [
+      "animal",
+      "protein"
+    ],
+    "badFor": [
+      "vegan"
+    ],
+    "goodFor": [],
+    "description": "Animal-derived gelling agent used in marshmallows and jellies."
+  },
+  "poha": {
+    "name": "poha",
+    "aliases": [
+      "poha",
+      "beaten rice",
+      "flattened rice",
+      "rice flakes",
+      "chura",
+      "aval",
+      "pawa",
+      "poha (beaten rice)",
+      "rice (flattened)",
+      "beaten rice flakes"
+    ],
+    "category": "grain",
+    "tags": [
+      "grain",
+      "gluten_free",
+      "energy"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Flattened rice used in Indian namkeen like chivda."
+  },
+  "sev": {
+    "name": "sev",
+    "aliases": [
+      "sev",
+      "fine sev",
+      "thick sev",
+      "besan sev",
+      "noodles (besan)",
+      "gram flour noodles",
+      "fried sev",
+      "sev (besan)",
+      "omapodi",
+      "gathiya"
+    ],
+    "category": "snack",
+    "tags": [
+      "grain",
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Fried gram flour noodle used in bhujia and chivda."
+  },
+  "boondi": {
+    "name": "boondi",
+    "aliases": [
+      "boondi",
+      "bundi",
+      "fried boondi",
+      "masala boondi",
+      "salted boondi",
+      "gram flour boondi",
+      "boondi (besan)",
+      "small boondi",
+      "plain boondi"
+    ],
+    "category": "snack",
+    "tags": [
+      "grain",
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Fried chickpea flour balls used in Indian namkeen mixes."
+  },
+  "murmura": {
+    "name": "murmura",
+    "aliases": [
+      "murmura",
+      "puffed rice",
+      "rice puffs",
+      "lahi",
+      "mamra",
+      "moori",
+      "kurmura",
+      "puffed rice (murmura)",
+      "popped rice",
+      "murmura (puffed rice)"
+    ],
+    "category": "grain",
+    "tags": [
+      "grain",
+      "gluten_free"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Puffed rice used in bhel puri and chivda mixes."
+  },
+  "corn puffs": {
+    "name": "corn puffs",
+    "aliases": [
+      "corn puffs",
+      "puffed corn",
+      "corn balls",
+      "extruded corn",
+      "corn sticks",
+      "maize puffs",
+      "popped corn",
+      "corn (puffed)",
+      "extruded maize",
+      "corn rings"
+    ],
+    "category": "snack",
+    "tags": [
+      "grain",
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Extruded corn snack."
+  },
+  "oats": {
+    "name": "oats",
+    "aliases": [
+      "oats",
+      "rolled oats",
+      "oat flour",
+      "oatmeal",
+      "instant oats",
+      "quick oats",
+      "whole grain oats",
+      "oats (avena sativa)",
+      "oat flakes",
+      "oats (rolled)"
+    ],
+    "category": "grain",
+    "tags": [
+      "grain",
+      "fiber",
+      "energy"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "heart_health",
+      "fat_loss"
+    ],
+    "description": "High-fiber grain with slow energy release."
+  },
+  "barley": {
+    "name": "barley",
+    "aliases": [
+      "barley",
+      "jau",
+      "barley flour",
+      "pearl barley",
+      "whole barley",
+      "barley flakes",
+      "barley (hordeum vulgare)",
+      "barley malt",
+      "malted barley",
+      "barley (jau)"
+    ],
+    "category": "grain",
+    "tags": [
+      "grain",
+      "fiber"
+    ],
+    "badFor": [
+      "gluten_sensitivity"
+    ],
+    "goodFor": [
+      "heart_health"
+    ],
+    "description": "Beta-glucan rich grain used in health foods."
+  },
+  "millet": {
+    "name": "millet",
+    "aliases": [
+      "millet",
+      "bajra",
+      "jowar",
+      "ragi",
+      "finger millet",
+      "pearl millet",
+      "sorghum",
+      "foxtail millet",
+      "millet flour",
+      "bajra (pearl millet)"
+    ],
+    "category": "grain",
+    "tags": [
+      "grain",
+      "fiber",
+      "gluten_free"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced",
+      "heart_health"
+    ],
+    "description": "Traditional Indian grains including bajra, jowar and ragi."
+  },
+  "ragi": {
+    "name": "ragi",
+    "aliases": [
+      "ragi",
+      "finger millet",
+      "nachni",
+      "mandua",
+      "ragi flour",
+      "finger millet flour",
+      "ragi (finger millet)",
+      "nachni flour",
+      "mandua flour",
+      "finger millet (ragi)"
+    ],
+    "category": "grain",
+    "tags": [
+      "grain",
+      "fiber",
+      "gluten_free"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced",
+      "heart_health"
+    ],
+    "description": "Calcium-rich millet used in biscuits and snacks."
+  },
+  "e100": {
+    "name": "curcumin",
+    "aliases": [
+      "curcumin",
+      "e100",
+      "ins100",
+      "turmeric color",
+      "turmeric colour",
+      "curcumin (e100)",
+      "natural yellow colour",
+      "turmeric extract (e100)",
+      "colour (curcumin)",
+      "colour (e100)"
+    ],
+    "category": "color",
+    "tags": [
+      "additive",
+      "natural",
+      "antioxidant"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "anti_inflammatory",
+      "balanced"
+    ],
+    "description": "Natural yellow colour from turmeric, declared as E100 or INS100."
+  },
+  "e101": {
+    "name": "riboflavin",
+    "aliases": [
+      "riboflavin",
+      "e101",
+      "ins101",
+      "vitamin b2",
+      "riboflavin (e101)",
+      "colour (riboflavin)",
+      "colour (e101)",
+      "lactoflavin",
+      "riboflavin 5 phosphate",
+      "vitamin b2 (e101)"
+    ],
+    "category": "color",
+    "tags": [
+      "additive",
+      "vitamin"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced"
+    ],
+    "description": "Yellow vitamin B2 used as colour."
+  },
+  "e102": {
+    "name": "tartrazine",
+    "aliases": [
+      "tartrazine",
+      "e102",
+      "ins102",
+      "yellow 5",
+      "FD&C yellow 5",
+      "tartrazine (e102)",
+      "colour (tartrazine)",
+      "colour (e102)",
+      "acid yellow 23",
+      "food yellow 4"
+    ],
+    "category": "color",
+    "tags": [
+      "additive",
+      "artificial",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity",
+      "hyperactivity"
+    ],
+    "goodFor": [],
+    "description": "Synthetic yellow dye, may cause sensitivity reactions."
+  },
+  "e110": {
+    "name": "sunset yellow",
+    "aliases": [
+      "sunset yellow",
+      "e110",
+      "ins110",
+      "yellow 6",
+      "FD&C yellow 6",
+      "sunset yellow FCF",
+      "orange yellow S",
+      "colour (sunset yellow)",
+      "colour (e110)",
+      "sunset yellow (e110)"
+    ],
+    "category": "color",
+    "tags": [
+      "additive",
+      "artificial",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Synthetic orange-yellow dye used in drinks and snacks."
+  },
+  "e120": {
+    "name": "carmine",
+    "aliases": [
+      "carmine",
+      "e120",
+      "ins120",
+      "cochineal",
+      "carminic acid",
+      "natural red 4",
+      "colour (carmine)",
+      "colour (e120)",
+      "cochineal extract",
+      "carmine (e120)"
+    ],
+    "category": "color",
+    "tags": [
+      "additive",
+      "animal"
+    ],
+    "badFor": [
+      "vegan",
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Red colour from insects."
+  },
+  "e122": {
+    "name": "carmoisine",
+    "aliases": [
+      "carmoisine",
+      "e122",
+      "ins122",
+      "azorubine",
+      "food red 3",
+      "colour (carmoisine)",
+      "colour (e122)",
+      "carmoisine (e122)",
+      "azorubine (e122)",
+      "red colour (e122)"
+    ],
+    "category": "color",
+    "tags": [
+      "additive",
+      "artificial",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Synthetic red dye used in confectionery."
+  },
+  "e124": {
+    "name": "ponceau 4r",
+    "aliases": [
+      "ponceau 4r",
+      "e124",
+      "ins124",
+      "cochineal red a",
+      "food red 7",
+      "new coccine",
+      "colour (ponceau 4r)",
+      "colour (e124)",
+      "ponceau 4r (e124)",
+      "red colour (e124)"
+    ],
+    "category": "color",
+    "tags": [
+      "additive",
+      "artificial",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Synthetic red dye in Indian confectionery."
+  },
+  "e129": {
+    "name": "allura red",
+    "aliases": [
+      "allura red",
+      "e129",
+      "ins129",
+      "red 40",
+      "FD&C red 40",
+      "allura red AC",
+      "colour (allura red)",
+      "colour (e129)",
+      "allura red (e129)",
+      "food red 17"
+    ],
+    "category": "color",
+    "tags": [
+      "additive",
+      "artificial",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Synthetic red colour in drinks and candies."
+  },
+  "e131": {
+    "name": "patent blue v",
+    "aliases": [
+      "patent blue v",
+      "e131",
+      "ins131",
+      "food blue 5",
+      "colour (patent blue)",
+      "colour (e131)",
+      "acid blue 3",
+      "patent blue (e131)"
+    ],
+    "category": "color",
+    "tags": [
+      "additive",
+      "artificial",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Synthetic blue food dye."
+  },
+  "e132": {
+    "name": "indigotine",
+    "aliases": [
+      "indigotine",
+      "e132",
+      "ins132",
+      "indigo carmine",
+      "FD&C blue 2",
+      "food blue 1",
+      "colour (indigotine)",
+      "colour (e132)",
+      "indigotine (e132)",
+      "indigo carmine (e132)"
+    ],
+    "category": "color",
+    "tags": [
+      "additive",
+      "artificial",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Synthetic blue dye."
+  },
+  "e133": {
+    "name": "brilliant blue",
+    "aliases": [
+      "brilliant blue",
+      "e133",
+      "ins133",
+      "blue 1",
+      "FD&C blue 1",
+      "brilliant blue FCF",
+      "colour (brilliant blue)",
+      "colour (e133)",
+      "brilliant blue (e133)",
+      "food blue 2"
+    ],
+    "category": "color",
+    "tags": [
+      "additive",
+      "artificial",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Synthetic blue food colour."
+  },
+  "e141": {
+    "name": "chlorophylls",
+    "aliases": [
+      "chlorophylls",
+      "e141",
+      "ins141",
+      "chlorophyllin",
+      "natural green colour",
+      "colour (chlorophylls)",
+      "colour (e141)",
+      "copper chlorophyllin",
+      "chlorophyll (e141)",
+      "plant green colour"
+    ],
+    "category": "color",
+    "tags": [
+      "additive",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Natural green colour from plants."
+  },
+  "e150a": {
+    "name": "caramel color i",
+    "aliases": [
+      "caramel colour i",
+      "e150a",
+      "ins150a",
+      "plain caramel",
+      "caramel (plain)",
+      "caramel colour (e150a)",
+      "colour (e150a)",
+      "caramel color i",
+      "natural caramel colour"
+    ],
+    "category": "color",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Plain caramel colour used in sauces."
+  },
+  "e150d": {
+    "name": "caramel color iv",
+    "aliases": [
+      "caramel colour iv",
+      "e150d",
+      "ins150d",
+      "sulfite ammonia caramel",
+      "caramel colour (e150d)",
+      "colour (e150d)",
+      "cola caramel",
+      "caramel (sulfite ammonia)",
+      "caramel iv",
+      "dark caramel colour"
+    ],
+    "category": "color",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Dark caramel colour in colas and sauces."
+  },
+  "e160a": {
+    "name": "beta carotene",
+    "aliases": [
+      "beta carotene",
+      "e160a",
+      "ins160a",
+      "beta-carotene",
+      "natural orange colour",
+      "colour (beta carotene)",
+      "colour (e160a)",
+      "carotene",
+      "mixed carotenes",
+      "provitamin a"
+    ],
+    "category": "color",
+    "tags": [
+      "additive",
+      "natural",
+      "antioxidant"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced"
+    ],
+    "description": "Natural orange pigment and antioxidant."
+  },
+  "e160c": {
+    "name": "paprika extract",
+    "aliases": [
+      "paprika extract",
+      "e160c",
+      "ins160c",
+      "capsanthin",
+      "capsorubin",
+      "paprika oleoresin",
+      "colour (paprika extract)",
+      "colour (e160c)",
+      "natural red colour",
+      "paprika colour"
+    ],
+    "category": "color",
+    "tags": [
+      "additive",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Natural red colour from paprika used in chips and snacks."
+  },
+  "e162": {
+    "name": "beetroot red",
+    "aliases": [
+      "beetroot red",
+      "e162",
+      "ins162",
+      "betanin",
+      "beet red",
+      "colour (beetroot red)",
+      "colour (e162)",
+      "natural red colour (beet)",
+      "beetroot colour",
+      "beet juice colour"
+    ],
+    "category": "color",
+    "tags": [
+      "additive",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Natural red colour from beetroot."
+  },
+  "e171": {
+    "name": "titanium dioxide",
+    "aliases": [
+      "titanium dioxide",
+      "e171",
+      "ins171",
+      "TiO2",
+      "colour (titanium dioxide)",
+      "colour (e171)",
+      "whitening agent",
+      "titanium dioxide (e171)",
+      "food grade titanium dioxide"
+    ],
+    "category": "color",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Whitening agent used in confectionery coatings."
+  },
+  "e172": {
+    "name": "iron oxides",
+    "aliases": [
+      "iron oxides",
+      "e172",
+      "ins172",
+      "iron oxide (yellow)",
+      "iron oxide (red)",
+      "iron oxide (black)",
+      "colour (iron oxides)",
+      "colour (e172)",
+      "ferric oxide",
+      "iron oxide colours"
+    ],
+    "category": "color",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Mineral-based colour in red, yellow and black."
+  },
+  "e200": {
+    "name": "sorbic acid",
+    "aliases": [
+      "sorbic acid",
+      "e200",
+      "ins200",
+      "preservative (sorbic acid)",
+      "preservative (e200)",
+      "sorbic acid (e200)",
+      "2,4-hexadienoic acid",
+      "permitted preservative (sorbic acid)",
+      "antifungal agent"
+    ],
+    "category": "preservative",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Preservative preventing mould growth."
+  },
+  "e202": {
+    "name": "potassium sorbate",
+    "aliases": [
+      "potassium sorbate",
+      "e202",
+      "ins202",
+      "preservative (potassium sorbate)",
+      "preservative (e202)",
+      "potassium sorbate (e202)",
+      "potassium (2e,4e)-hexa-2,4-dienoate",
+      "antifungal (potassium sorbate)",
+      "permitted preservative e202"
+    ],
+    "category": "preservative",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Common preservative in dairy and bakery items."
+  },
+  "e211": {
+    "name": "sodium benzoate",
+    "aliases": [
+      "sodium benzoate",
+      "e211",
+      "ins211",
+      "preservative (sodium benzoate)",
+      "preservative (e211)",
+      "sodium benzoate (e211)",
+      "benzoate of soda",
+      "permitted preservative e211",
+      "sodium benzenecarboxylate"
+    ],
+    "category": "preservative",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity",
+      "asthma"
+    ],
+    "goodFor": [],
+    "description": "Preservative in acidic drinks and sauces."
+  },
+  "e220": {
+    "name": "sulfur dioxide",
+    "aliases": [
+      "sulphur dioxide",
+      "sulfur dioxide",
+      "e220",
+      "ins220",
+      "SO2",
+      "preservative (sulphur dioxide)",
+      "preservative (e220)",
+      "sulphur dioxide (e220)",
+      "sulfurous anhydride",
+      "sulfiting agent"
+    ],
+    "category": "preservative",
+    "tags": [
+      "additive",
+      "sulfite",
+      "processed"
+    ],
+    "badFor": [
+      "asthma",
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Sulphite preservative that can trigger asthma."
+  },
+  "e223": {
+    "name": "sodium metabisulfite",
+    "aliases": [
+      "sodium metabisulfite",
+      "sodium metabisulphite",
+      "e223",
+      "ins223",
+      "sodium pyrosulfite",
+      "preservative (e223)",
+      "preservative (sodium metabisulphite)",
+      "sodium metabisulphite (e223)",
+      "sodium disulfite",
+      "SMB"
+    ],
+    "category": "preservative",
+    "tags": [
+      "additive",
+      "sulfite",
+      "processed"
+    ],
+    "badFor": [
+      "asthma",
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Sulphite preservative in dried fruits and snacks."
+  },
+  "e224": {
+    "name": "potassium metabisulfite",
+    "aliases": [
+      "potassium metabisulfite",
+      "potassium metabisulphite",
+      "e224",
+      "ins224",
+      "potassium pyrosulfite",
+      "preservative (e224)",
+      "potassium disulfite",
+      "preservative (potassium metabisulphite)"
+    ],
+    "category": "preservative",
+    "tags": [
+      "additive",
+      "sulfite",
+      "processed"
+    ],
+    "badFor": [
+      "asthma",
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Sulphite preservative used in wines and dried foods."
+  },
+  "e250": {
+    "name": "sodium nitrite",
+    "aliases": [
+      "sodium nitrite",
+      "e250",
+      "ins250",
+      "preservative (sodium nitrite)",
+      "preservative (e250)",
+      "sodium nitrite (e250)",
+      "curing agent",
+      "nitrite",
+      "curing salt"
+    ],
+    "category": "preservative",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "heart",
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Curing salt in processed meats."
+  },
+  "e251": {
+    "name": "sodium nitrate",
+    "aliases": [
+      "sodium nitrate",
+      "e251",
+      "ins251",
+      "preservative (sodium nitrate)",
+      "preservative (e251)",
+      "sodium nitrate (e251)",
+      "nitrate",
+      "curing nitrate"
+    ],
+    "category": "preservative",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "heart",
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Preservative in cured meat products."
+  },
+  "e282": {
+    "name": "calcium propionate",
+    "aliases": [
+      "calcium propionate",
+      "e282",
+      "ins282",
+      "preservative (calcium propionate)",
+      "preservative (e282)",
+      "calcium propionate (e282)",
+      "calcium propanoate",
+      "mould inhibitor (e282)"
+    ],
+    "category": "preservative",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Bread preservative preventing mould growth."
+  },
+  "e300": {
+    "name": "ascorbic acid",
+    "aliases": [
+      "ascorbic acid",
+      "e300",
+      "ins300",
+      "vitamin c",
+      "antioxidant (ascorbic acid)",
+      "antioxidant (e300)",
+      "l-ascorbic acid",
+      "ascorbic acid (e300)",
+      "vitamin c (e300)",
+      "antioxidant (vitamin c)"
+    ],
+    "category": "antioxidant",
+    "tags": [
+      "additive",
+      "vitamin"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced"
+    ],
+    "description": "Vitamin C used as antioxidant and preservative."
+  },
+  "e301": {
+    "name": "sodium ascorbate",
+    "aliases": [
+      "sodium ascorbate",
+      "e301",
+      "ins301",
+      "antioxidant (sodium ascorbate)",
+      "antioxidant (e301)",
+      "sodium ascorbate (e301)",
+      "sodium vitamin c",
+      "sodium l-ascorbate"
+    ],
+    "category": "antioxidant",
+    "tags": [
+      "additive",
+      "vitamin",
+      "sodium"
+    ],
+    "badFor": [
+      "hypertension"
+    ],
+    "goodFor": [
+      "balanced"
+    ],
+    "description": "Sodium salt of vitamin C used as antioxidant."
+  },
+  "e306": {
+    "name": "tocopherols",
+    "aliases": [
+      "tocopherols",
+      "e306",
+      "ins306",
+      "vitamin e",
+      "mixed tocopherols",
+      "antioxidant (tocopherols)",
+      "antioxidant (e306)",
+      "tocopherol (e306)",
+      "natural vitamin e",
+      "alpha tocopherol"
+    ],
+    "category": "antioxidant",
+    "tags": [
+      "additive",
+      "vitamin"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced"
+    ],
+    "description": "Vitamin E-based antioxidant."
+  },
+  "e307": {
+    "name": "alpha tocopherol",
+    "aliases": [
+      "alpha tocopherol",
+      "e307",
+      "ins307",
+      "dl-alpha-tocopherol",
+      "antioxidant (alpha tocopherol)",
+      "antioxidant (e307)",
+      "synthetic vitamin e",
+      "alpha-tocopherol (e307)"
+    ],
+    "category": "antioxidant",
+    "tags": [
+      "additive",
+      "vitamin"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced"
+    ],
+    "description": "Synthetic vitamin E used as antioxidant."
+  },
+  "e310": {
+    "name": "propyl gallate",
+    "aliases": [
+      "propyl gallate",
+      "e310",
+      "ins310",
+      "antioxidant (propyl gallate)",
+      "antioxidant (e310)",
+      "n-propyl gallate",
+      "propyl 3,4,5-trihydroxybenzoate",
+      "propyl gallate (e310)"
+    ],
+    "category": "antioxidant",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Synthetic antioxidant used in oily foods."
+  },
+  "e320": {
+    "name": "bha",
+    "aliases": [
+      "BHA",
+      "e320",
+      "ins320",
+      "butylated hydroxyanisole",
+      "antioxidant (BHA)",
+      "antioxidant (e320)",
+      "BHA (e320)",
+      "butylated hydroxy anisole",
+      "antioxidant (butylated hydroxyanisole)"
+    ],
+    "category": "antioxidant",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Synthetic antioxidant preventing fat oxidation."
+  },
+  "e321": {
+    "name": "bht",
+    "aliases": [
+      "BHT",
+      "e321",
+      "ins321",
+      "butylated hydroxytoluene",
+      "antioxidant (BHT)",
+      "antioxidant (e321)",
+      "BHT (e321)",
+      "butylated hydroxy toluene",
+      "antioxidant (butylated hydroxytoluene)"
+    ],
+    "category": "antioxidant",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Synthetic antioxidant in packaged snacks."
+  },
+  "e322": {
+    "name": "lecithin",
+    "aliases": [
+      "lecithin",
+      "e322",
+      "ins322",
+      "soy lecithin",
+      "soya lecithin",
+      "emulsifier (lecithin)",
+      "emulsifier (e322)",
+      "lecithin (soya)",
+      "sunflower lecithin",
+      "phospholipids"
+    ],
+    "category": "emulsifier",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "soy_allergy"
+    ],
+    "goodFor": [],
+    "description": "Emulsifier from soy or sunflower."
+  },
+  "e330": {
+    "name": "citric acid",
+    "aliases": [
+      "citric acid",
+      "e330",
+      "ins330",
+      "acidity regulator (citric acid)",
+      "acidity regulator (e330)",
+      "citric acid (e330)",
+      "citric acid (anhydrous)",
+      "food grade citric acid",
+      "acidity regulator"
+    ],
+    "category": "acid regulator",
+    "tags": [
+      "additive"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Common acidity regulator in drinks and snacks."
+  },
+  "e331": {
+    "name": "sodium citrate",
+    "aliases": [
+      "sodium citrate",
+      "e331",
+      "ins331",
+      "acidity regulator (sodium citrate)",
+      "acidity regulator (e331)",
+      "sodium citrate (e331)",
+      "trisodium citrate",
+      "disodium citrate",
+      "sodium salt of citric acid"
+    ],
+    "category": "acid regulator",
+    "tags": [
+      "additive",
+      "sodium"
+    ],
+    "badFor": [
+      "hypertension"
+    ],
+    "goodFor": [],
+    "description": "Buffer salt regulating acidity."
+  },
+  "e332": {
+    "name": "potassium citrate",
+    "aliases": [
+      "potassium citrate",
+      "e332",
+      "ins332",
+      "acidity regulator (potassium citrate)",
+      "acidity regulator (e332)",
+      "tripotassium citrate",
+      "potassium salt of citric acid"
+    ],
+    "category": "acid regulator",
+    "tags": [
+      "additive"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Potassium-based acidity regulator."
+  },
+  "e334": {
+    "name": "tartaric acid",
+    "aliases": [
+      "tartaric acid",
+      "e334",
+      "ins334",
+      "l-tartaric acid",
+      "acidity regulator (tartaric acid)",
+      "acidity regulator (e334)",
+      "tartaric acid (e334)",
+      "2,3-dihydroxybutanedioic acid"
+    ],
+    "category": "acid regulator",
+    "tags": [
+      "additive"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Natural acidity regulator found in grapes."
+  },
+  "e338": {
+    "name": "phosphoric acid",
+    "aliases": [
+      "phosphoric acid",
+      "e338",
+      "ins338",
+      "acidity regulator (phosphoric acid)",
+      "acidity regulator (e338)",
+      "orthophosphoric acid",
+      "phosphoric acid (e338)",
+      "food grade phosphoric acid"
+    ],
+    "category": "acid regulator",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Acidulant in colas and soft drinks."
+  },
+  "e339": {
+    "name": "sodium phosphate",
+    "aliases": [
+      "sodium phosphate",
+      "e339",
+      "ins339",
+      "monosodium phosphate",
+      "disodium phosphate",
+      "trisodium phosphate",
+      "acidity regulator (e339)",
+      "sodium phosphate (e339)",
+      "sodium orthophosphate"
+    ],
+    "category": "acid regulator",
+    "tags": [
+      "additive",
+      "sodium",
+      "processed"
+    ],
+    "badFor": [
+      "hypertension"
+    ],
+    "goodFor": [],
+    "description": "Sodium phosphate salt used as acidity regulator."
+  },
+  "e407": {
+    "name": "carrageenan",
+    "aliases": [
+      "carrageenan",
+      "e407",
+      "ins407",
+      "carrageenan (e407)",
+      "stabilizer (carrageenan)",
+      "stabilizer (e407)",
+      "irish moss extract",
+      "kappa carrageenan",
+      "iota carrageenan",
+      "thickener (carrageenan)"
+    ],
+    "category": "stabilizer",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Seaweed-derived thickener and stabilizer."
+  },
+  "e410": {
+    "name": "locust bean gum",
+    "aliases": [
+      "locust bean gum",
+      "e410",
+      "ins410",
+      "carob gum",
+      "stabilizer (locust bean gum)",
+      "stabilizer (e410)",
+      "LBG",
+      "carob bean gum",
+      "thickener (locust bean gum)",
+      "locust bean gum (e410)"
+    ],
+    "category": "stabilizer",
+    "tags": [
+      "additive"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Plant gum for texture and stability."
+  },
+  "e412": {
+    "name": "guar gum",
+    "aliases": [
+      "guar gum",
+      "e412",
+      "ins412",
+      "stabilizer (guar gum)",
+      "stabilizer (e412)",
+      "thickener (guar gum)",
+      "guar flour",
+      "guar gum (e412)",
+      "cluster bean gum",
+      "cyamopsis tetragonoloba"
+    ],
+    "category": "stabilizer",
+    "tags": [
+      "additive",
+      "fiber"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Thickening gum from guar beans."
+  },
+  "e414": {
+    "name": "acacia gum",
+    "aliases": [
+      "acacia gum",
+      "e414",
+      "ins414",
+      "gum arabic",
+      "stabilizer (acacia gum)",
+      "stabilizer (e414)",
+      "acacia (e414)",
+      "arabic gum",
+      "thickener (gum arabic)",
+      "gum acacia"
+    ],
+    "category": "stabilizer",
+    "tags": [
+      "additive",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Natural gum from acacia trees."
+  },
+  "e415": {
+    "name": "xanthan gum",
+    "aliases": [
+      "xanthan gum",
+      "e415",
+      "ins415",
+      "stabilizer (xanthan gum)",
+      "stabilizer (e415)",
+      "thickener (xanthan gum)",
+      "xanthan gum (e415)",
+      "xanthan",
+      "corn sugar gum"
+    ],
+    "category": "stabilizer",
+    "tags": [
+      "additive"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Fermented gum used as thickener."
+  },
+  "e440": {
+    "name": "pectin",
+    "aliases": [
+      "pectin",
+      "e440",
+      "ins440",
+      "fruit pectin",
+      "apple pectin",
+      "citrus pectin",
+      "stabilizer (pectin)",
+      "stabilizer (e440)",
+      "thickener (pectin)",
+      "pectin (e440)"
+    ],
+    "category": "stabilizer",
+    "tags": [
+      "additive",
+      "fiber",
+      "plant"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "digestion"
+    ],
+    "description": "Fruit-derived gelling agent."
+  },
+  "e450": {
+    "name": "diphosphates",
+    "aliases": [
+      "diphosphates",
+      "e450",
+      "ins450",
+      "sodium diphosphate",
+      "disodium diphosphate",
+      "raising agent (e450)",
+      "acidity regulator (e450)",
+      "leavening agent (e450)",
+      "pyrophosphates",
+      "disodium pyrophosphate"
+    ],
+    "category": "raising agent",
+    "tags": [
+      "additive",
+      "processed",
+      "sodium"
+    ],
+    "badFor": [
+      "hypertension"
+    ],
+    "goodFor": [],
+    "description": "Leavening and moisture-retention phosphate."
+  },
+  "e451": {
+    "name": "triphosphates",
+    "aliases": [
+      "triphosphates",
+      "e451",
+      "ins451",
+      "sodium triphosphate",
+      "STPP",
+      "stabilizer (e451)",
+      "sodium tripolyphosphate",
+      "triphosphate (e451)",
+      "acidity regulator (e451)"
+    ],
+    "category": "stabilizer",
+    "tags": [
+      "additive",
+      "processed",
+      "sodium"
+    ],
+    "badFor": [
+      "hypertension"
+    ],
+    "goodFor": [],
+    "description": "Texture stabilizer in processed foods."
+  },
+  "e452": {
+    "name": "polyphosphates",
+    "aliases": [
+      "polyphosphates",
+      "e452",
+      "ins452",
+      "sodium polyphosphate",
+      "stabilizer (e452)",
+      "stabilizer (polyphosphates)",
+      "acidity regulator (e452)",
+      "sodium hexametaphosphate"
+    ],
+    "category": "stabilizer",
+    "tags": [
+      "additive",
+      "processed",
+      "sodium"
+    ],
+    "badFor": [
+      "hypertension"
+    ],
+    "goodFor": [],
+    "description": "Polyphosphate salt used as stabilizer."
+  },
+  "e460": {
+    "name": "microcrystalline cellulose",
+    "aliases": [
+      "microcrystalline cellulose",
+      "e460",
+      "ins460",
+      "MCC",
+      "cellulose",
+      "cellulose (e460)",
+      "anticaking agent (e460)",
+      "thickener (microcrystalline cellulose)"
+    ],
+    "category": "stabilizer",
+    "tags": [
+      "additive"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Cellulose-based stabilizer and anti-caking agent."
+  },
+  "e466": {
+    "name": "carboxymethyl cellulose",
+    "aliases": [
+      "carboxymethyl cellulose",
+      "e466",
+      "ins466",
+      "CMC",
+      "sodium CMC",
+      "stabilizer (CMC)",
+      "stabilizer (e466)",
+      "cellulose gum",
+      "thickener (CMC)",
+      "carboxymethylcellulose"
+    ],
+    "category": "stabilizer",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Cellulose-based thickener."
+  },
+  "e471": {
+    "name": "mono and diglycerides",
+    "aliases": [
+      "mono and diglycerides",
+      "e471",
+      "ins471",
+      "mono- and diglycerides",
+      "emulsifier (e471)",
+      "emulsifier (mono and diglycerides)",
+      "glyceryl monostearate",
+      "GMS",
+      "mono diglycerides of fatty acids",
+      "monoglycerides"
+    ],
+    "category": "emulsifier",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Emulsifier in bakery and frozen products."
+  },
+  "e472e": {
+    "name": "datem",
+    "aliases": [
+      "DATEM",
+      "e472e",
+      "ins472e",
+      "diacetyl tartaric acid esters",
+      "emulsifier (DATEM)",
+      "emulsifier (e472e)",
+      "diacetyl tartaric acid esters of mono- and diglycerides",
+      "DATEM (e472e)"
+    ],
+    "category": "emulsifier",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Bread emulsifier improving dough strength."
+  },
+  "e476": {
+    "name": "pgpr",
+    "aliases": [
+      "PGPR",
+      "e476",
+      "ins476",
+      "polyglycerol polyricinoleate",
+      "emulsifier (PGPR)",
+      "emulsifier (e476)",
+      "polyglycerol esters",
+      "PGPR (e476)",
+      "emulsifier (polyglycerol polyricinoleate)"
+    ],
+    "category": "emulsifier",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Emulsifier used in chocolates to reduce viscosity."
+  },
+  "e481": {
+    "name": "sodium stearoyl lactylate",
+    "aliases": [
+      "sodium stearoyl lactylate",
+      "e481",
+      "ins481",
+      "SSL",
+      "emulsifier (SSL)",
+      "emulsifier (e481)",
+      "sodium stearoyl-2-lactylate",
+      "SSL (e481)"
+    ],
+    "category": "emulsifier",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Emulsifier improving texture in bread and cakes."
+  },
+  "e500": {
+    "name": "sodium bicarbonate",
+    "aliases": [
+      "sodium bicarbonate",
+      "e500",
+      "ins500",
+      "baking soda",
+      "raising agent (sodium bicarbonate)",
+      "raising agent (e500)",
+      "bicarbonate of soda",
+      "NaHCO3",
+      "sodium hydrogen carbonate",
+      "leavening agent (baking soda)"
+    ],
+    "category": "raising agent",
+    "tags": [
+      "additive",
+      "sodium"
+    ],
+    "badFor": [
+      "hypertension"
+    ],
+    "goodFor": [],
+    "description": "Leavening agent in baked snacks."
+  },
+  "e503": {
+    "name": "ammonium bicarbonate",
+    "aliases": [
+      "ammonium bicarbonate",
+      "e503",
+      "ins503",
+      "ammonium carbonate",
+      "raising agent (ammonium bicarbonate)",
+      "raising agent (e503)",
+      "ammonium hydrogen carbonate",
+      "leavening agent (e503)"
+    ],
+    "category": "raising agent",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Leavening agent in biscuits and crackers."
+  },
+  "e551": {
+    "name": "silicon dioxide",
+    "aliases": [
+      "silicon dioxide",
+      "e551",
+      "ins551",
+      "silica",
+      "anti-caking agent (silicon dioxide)",
+      "anticaking agent (e551)",
+      "SiO2",
+      "amorphous silica",
+      "silicon dioxide (e551)",
+      "free flow agent"
+    ],
+    "category": "anti-caking",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Anti-caking agent improving powder flow."
+  },
+  "e552": {
+    "name": "calcium silicate",
+    "aliases": [
+      "calcium silicate",
+      "e552",
+      "ins552",
+      "anti-caking agent (calcium silicate)",
+      "anticaking agent (e552)",
+      "calcium silicate (e552)"
+    ],
+    "category": "anti-caking",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Anti-caking agent in powdered foods."
+  },
+  "e621": {
+    "name": "monosodium glutamate",
+    "aliases": [
+      "monosodium glutamate",
+      "MSG",
+      "e621",
+      "ins621",
+      "flavour enhancer (MSG)",
+      "flavour enhancer (e621)",
+      "MSG (e621)",
+      "sodium glutamate",
+      "glutamate",
+      "umami seasoning",
+      "aji-no-moto",
+      "ajinomoto"
+    ],
+    "category": "flavor enhancer",
+    "tags": [
+      "additive",
+      "processed",
+      "sodium"
+    ],
+    "badFor": [
+      "sensitivity",
+      "hypertension"
+    ],
+    "goodFor": [],
+    "description": "Umami flavour enhancer in savoury snacks."
+  },
+  "e627": {
+    "name": "disodium guanylate",
+    "aliases": [
+      "disodium guanylate",
+      "e627",
+      "ins627",
+      "flavour enhancer (disodium guanylate)",
+      "flavour enhancer (e627)",
+      "GMP",
+      "disodium 5-guanylate",
+      "guanylate (e627)",
+      "sodium guanylate"
+    ],
+    "category": "flavor enhancer",
+    "tags": [
+      "additive",
+      "processed",
+      "sodium"
+    ],
+    "badFor": [
+      "hypertension"
+    ],
+    "goodFor": [],
+    "description": "Flavour enhancer combined with MSG."
+  },
+  "e631": {
+    "name": "disodium inosinate",
+    "aliases": [
+      "disodium inosinate",
+      "e631",
+      "ins631",
+      "flavour enhancer (disodium inosinate)",
+      "flavour enhancer (e631)",
+      "IMP",
+      "disodium 5-inosinate",
+      "inosinate (e631)",
+      "sodium inosinate"
+    ],
+    "category": "flavor enhancer",
+    "tags": [
+      "additive",
+      "processed",
+      "sodium"
+    ],
+    "badFor": [
+      "hypertension"
+    ],
+    "goodFor": [],
+    "description": "Flavour enhancer in instant foods."
+  },
+  "e635": {
+    "name": "disodium ribonucleotides",
+    "aliases": [
+      "disodium ribonucleotides",
+      "e635",
+      "ins635",
+      "flavour enhancer (disodium ribonucleotides)",
+      "flavour enhancer (e635)",
+      "I+G",
+      "ribonucleotides (e635)",
+      "disodium 5 ribonucleotides",
+      "nucleotides"
+    ],
+    "category": "flavor enhancer",
+    "tags": [
+      "additive",
+      "processed",
+      "sodium"
+    ],
+    "badFor": [
+      "hypertension"
+    ],
+    "goodFor": [],
+    "description": "Synergistic flavour enhancer used with MSG."
+  },
+  "e901": {
+    "name": "beeswax",
+    "aliases": [
+      "beeswax",
+      "e901",
+      "ins901",
+      "white beeswax",
+      "yellow beeswax",
+      "glazing agent (beeswax)",
+      "glazing agent (e901)",
+      "beeswax (e901)",
+      "natural wax"
+    ],
+    "category": "glazing agent",
+    "tags": [
+      "animal",
+      "additive"
+    ],
+    "badFor": [
+      "vegan"
+    ],
+    "goodFor": [],
+    "description": "Natural wax used as glazing agent in confectionery."
+  },
+  "e903": {
+    "name": "carnauba wax",
+    "aliases": [
+      "carnauba wax",
+      "e903",
+      "ins903",
+      "brazil wax",
+      "glazing agent (carnauba wax)",
+      "glazing agent (e903)",
+      "carnauba wax (e903)",
+      "palm wax"
+    ],
+    "category": "glazing agent",
+    "tags": [
+      "additive",
+      "plant"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Plant wax used as glazing agent in chocolates."
+  },
+  "e950": {
+    "name": "acesulfame potassium",
+    "aliases": [
+      "acesulfame potassium",
+      "acesulfame k",
+      "e950",
+      "ins950",
+      "sweetener (acesulfame k)",
+      "sweetener (e950)",
+      "acesulfame-k",
+      "ace k",
+      "acesulfame potassium (e950)",
+      "non-nutritive sweetener (e950)"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "additive",
+      "artificial",
+      "sweetener"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [
+      "fat_loss"
+    ],
+    "description": "Intense non-caloric sweetener."
+  },
+  "e951": {
+    "name": "aspartame",
+    "aliases": [
+      "aspartame",
+      "e951",
+      "ins951",
+      "sweetener (aspartame)",
+      "sweetener (e951)",
+      "nutrasweet",
+      "equal",
+      "aspartame (e951)",
+      "low calorie sweetener (aspartame)",
+      "dipeptide sweetener"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "additive",
+      "artificial",
+      "sweetener"
+    ],
+    "badFor": [
+      "phenylketonuria",
+      "sensitivity"
+    ],
+    "goodFor": [
+      "fat_loss"
+    ],
+    "description": "Low-calorie sweetener containing phenylalanine."
+  },
+  "e952": {
+    "name": "cyclamate",
+    "aliases": [
+      "cyclamate",
+      "e952",
+      "ins952",
+      "sodium cyclamate",
+      "calcium cyclamate",
+      "sweetener (cyclamate)",
+      "sweetener (e952)",
+      "cyclamic acid",
+      "cyclamate (e952)"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "additive",
+      "artificial",
+      "sweetener"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [
+      "fat_loss"
+    ],
+    "description": "Artificial sweetener in tabletop blends."
+  },
+  "e954": {
+    "name": "saccharin",
+    "aliases": [
+      "saccharin",
+      "e954",
+      "ins954",
+      "sodium saccharin",
+      "sweetener (saccharin)",
+      "sweetener (e954)",
+      "saccharin sodium",
+      "saccharin (e954)",
+      "sweet n low",
+      "sugar substitute (saccharin)"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "additive",
+      "artificial",
+      "sweetener"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [
+      "fat_loss"
+    ],
+    "description": "Non-caloric high-intensity sweetener."
+  },
+  "e955": {
+    "name": "sucralose",
+    "aliases": [
+      "sucralose",
+      "e955",
+      "ins955",
+      "sweetener (sucralose)",
+      "sweetener (e955)",
+      "trichlorogalactosucrose",
+      "splenda",
+      "sucralose (e955)",
+      "non-caloric sweetener (sucralose)"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "additive",
+      "artificial",
+      "sweetener"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "fat_loss"
+    ],
+    "description": "Heat-stable zero-calorie sweetener."
+  },
+  "e960": {
+    "name": "steviol glycosides",
+    "aliases": [
+      "steviol glycosides",
+      "e960",
+      "ins960",
+      "stevia",
+      "stevia extract",
+      "sweetener (stevia)",
+      "sweetener (e960)",
+      "rebiana",
+      "rebaudioside a",
+      "stevia leaf extract",
+      "stevioside"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "additive",
+      "natural",
+      "sweetener"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "fat_loss"
+    ],
+    "description": "Plant-derived low-calorie sweetener from stevia."
+  },
+  "e965": {
+    "name": "maltitol",
+    "aliases": [
+      "maltitol",
+      "e965",
+      "ins965",
+      "sweetener (maltitol)",
+      "sweetener (e965)",
+      "maltitol syrup",
+      "hydrogenated maltose",
+      "maltitol (e965)",
+      "polyol sweetener (maltitol)"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "additive",
+      "sweetener",
+      "sugar_alcohol"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Sugar alcohol used in sugar-free products."
+  },
+  "e966": {
+    "name": "lactitol",
+    "aliases": [
+      "lactitol",
+      "e966",
+      "ins966",
+      "sweetener (lactitol)",
+      "sweetener (e966)",
+      "lactitol monohydrate",
+      "polyol (lactitol)",
+      "lactitol (e966)"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "additive",
+      "sweetener",
+      "sugar_alcohol"
+    ],
+    "badFor": [
+      "lactose_intolerance",
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Sugar alcohol from lactose."
+  },
+  "e967": {
+    "name": "xylitol",
+    "aliases": [
+      "xylitol",
+      "e967",
+      "ins967",
+      "sweetener (xylitol)",
+      "sweetener (e967)",
+      "birch sugar",
+      "xylitol (e967)",
+      "polyol sweetener (xylitol)",
+      "wood sugar"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "additive",
+      "sweetener",
+      "sugar_alcohol"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Sugar alcohol with low glycemic index."
+  },
+  "e968": {
+    "name": "erythritol",
+    "aliases": [
+      "erythritol",
+      "e968",
+      "ins968",
+      "sweetener (erythritol)",
+      "sweetener (e968)",
+      "erythritol (e968)",
+      "polyol sweetener (erythritol)",
+      "meso-erythritol",
+      "natural erythritol"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "additive",
+      "sweetener",
+      "sugar_alcohol",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "fat_loss"
+    ],
+    "description": "Zero-calorie fermented sugar alcohol."
+  },
+  "e1400": {
+    "name": "dextrin",
+    "aliases": [
+      "dextrin",
+      "e1400",
+      "ins1400",
+      "roasted starch",
+      "starch (dextrin)",
+      "thickener (dextrin)",
+      "starch (e1400)",
+      "white dextrin",
+      "yellow dextrin",
+      "maltodextrin"
+    ],
+    "category": "starch",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Roasted starch used as thickener."
+  },
+  "e1422": {
+    "name": "acetylated distarch adipate",
+    "aliases": [
+      "acetylated distarch adipate",
+      "e1422",
+      "ins1422",
+      "modified starch (e1422)",
+      "starch acetate adipate",
+      "thickener (e1422)",
+      "cross-linked starch",
+      "acetylated starch"
+    ],
+    "category": "starch",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Modified starch for heat and shear stability."
+  },
+  "e1442": {
+    "name": "hydroxypropyl distarch phosphate",
+    "aliases": [
+      "hydroxypropyl distarch phosphate",
+      "e1442",
+      "ins1442",
+      "modified starch (e1442)",
+      "HDP starch",
+      "thickener (e1442)",
+      "HPDSP",
+      "waxy maize starch (modified)"
+    ],
+    "category": "starch",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Modified starch stable at low temperatures."
+  },
+  "spices": {
+    "name": "spices",
+    "aliases": [
+      "spices",
+      "mixed spices",
+      "spices and condiments",
+      "spice blend",
+      "spice mix",
+      "natural spices",
+      "whole spices",
+      "ground spices",
+      "spice mixture",
+      "blend of spices",
+      "spices (natural)"
+    ],
+    "category": "label_term",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Generic label declaration for a mixture of spices."
+  },
+  "condiments": {
+    "name": "condiments",
+    "aliases": [
+      "condiments",
+      "spices and condiments",
+      "natural condiments",
+      "mixed condiments",
+      "herbs and condiments",
+      "condiment mix"
+    ],
+    "category": "label_term",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Generic label term for seasoning blend."
+  },
+  "flavouring": {
+    "name": "flavouring",
+    "aliases": [
+      "flavouring",
+      "artificial flavouring",
+      "natural flavouring",
+      "natural and artificial flavouring",
+      "flavoring",
+      "flavouring substances",
+      "added flavouring",
+      "natural flavour",
+      "artificial flavour",
+      "flavour",
+      "flavorings",
+      "flavours (natural and artificial)",
+      "nature identical flavouring",
+      "nature identical flavour"
+    ],
+    "category": "label_term",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Generic label term for added flavour compounds."
+  },
+  "nature identical flavour": {
+    "name": "nature identical flavour",
+    "aliases": [
+      "nature identical flavour",
+      "nature identical flavoring",
+      "nature-identical flavour",
+      "artificial and nature identical flavours",
+      "nature identical flavouring substances",
+      "synthetic flavour (nature identical)",
+      "flavour (nature identical)"
+    ],
+    "category": "label_term",
+    "tags": [
+      "additive",
+      "processed",
+      "artificial"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Chemically synthesized flavour identical to natural compound."
+  },
+  "permitted preservatives": {
+    "name": "permitted preservatives",
+    "aliases": [
+      "permitted preservatives",
+      "preservatives",
+      "contains preservatives",
+      "permitted class ii preservatives",
+      "added preservatives",
+      "preservative (permitted)",
+      "class ii preservatives"
+    ],
+    "category": "label_term",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Generic label term for food-grade preservatives."
+  },
+  "acidity regulator": {
+    "name": "acidity regulator",
+    "aliases": [
+      "acidity regulator",
+      "acidity regulators",
+      "permitted acidity regulator",
+      "acid regulator",
+      "ph regulator",
+      "acidity controller",
+      "acidity regulator (permitted)"
+    ],
+    "category": "label_term",
+    "tags": [
+      "additive"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Generic label term for pH-controlling additives."
+  },
+  "stabilizer": {
+    "name": "stabilizer",
+    "aliases": [
+      "stabilizer",
+      "stabiliser",
+      "stabilizers",
+      "stabilisers",
+      "permitted stabilizer",
+      "emulsifier and stabilizer",
+      "stabilizer (permitted)",
+      "thickener and stabilizer"
+    ],
+    "category": "label_term",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Generic label term for texture-stabilizing additives."
+  },
+  "emulsifier": {
+    "name": "emulsifier",
+    "aliases": [
+      "emulsifier",
+      "emulsifiers",
+      "permitted emulsifier",
+      "emulsifying agent",
+      "emulsifier (permitted)",
+      "emulsifiers and stabilizers"
+    ],
+    "category": "label_term",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Generic label term for emulsifying agents."
+  },
+  "antioxidant": {
+    "name": "antioxidant",
+    "aliases": [
+      "antioxidant",
+      "antioxidants",
+      "permitted antioxidant",
+      "antioxidant (permitted)",
+      "anti-oxidant",
+      "free radical scavenger"
+    ],
+    "category": "label_term",
+    "tags": [
+      "additive"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Generic label term for antioxidant additives."
+  },
+  "raising agent": {
+    "name": "raising agent",
+    "aliases": [
+      "raising agent",
+      "leavening agent",
+      "leaven",
+      "leavening",
+      "raising agents",
+      "baking powder",
+      "permitted raising agent",
+      "leavening agents"
+    ],
+    "category": "label_term",
+    "tags": [
+      "additive"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Generic label term for leavening agents."
+  },
+  "anticaking agent": {
+    "name": "anticaking agent",
+    "aliases": [
+      "anticaking agent",
+      "anti-caking agent",
+      "anti caking agent",
+      "anticaking agents",
+      "free flow agent",
+      "powder agent",
+      "permitted anticaking agent"
+    ],
+    "category": "label_term",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Agent preventing powder clumping."
+  },
+  "humectant": {
+    "name": "humectant",
+    "aliases": [
+      "humectant",
+      "humectants",
+      "moisture retainer",
+      "moisture retention agent",
+      "permitted humectant",
+      "humidifier",
+      "moistening agent"
+    ],
+    "category": "label_term",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Agent retaining moisture in foods."
+  },
+  "glazing agent": {
+    "name": "glazing agent",
+    "aliases": [
+      "glazing agent",
+      "glazing agents",
+      "coating agent",
+      "surface treatment agent",
+      "polish",
+      "shellac",
+      "glazing (permitted)"
+    ],
+    "category": "label_term",
+    "tags": [
+      "additive"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Coating applied to confectionery surfaces."
+  },
+  "food colour": {
+    "name": "food colour",
+    "aliases": [
+      "food colour",
+      "food color",
+      "colour",
+      "color",
+      "permitted food colour",
+      "added colour",
+      "colour (natural)",
+      "colour (artificial)",
+      "colouring",
+      "colorant",
+      "food colouring"
+    ],
+    "category": "label_term",
+    "tags": [
+      "additive"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Generic label term for any permitted food colour."
+  },
+  "iodised salt": {
+    "name": "iodised salt",
+    "aliases": [
+      "iodised salt",
+      "iodized salt",
+      "common salt (iodised)",
+      "iodized common salt",
+      "table salt (iodized)",
+      "iodised common salt",
+      "salt (iodised)",
+      "double fortified salt"
+    ],
+    "category": "mineral",
+    "tags": [
+      "sodium",
+      "high_sodium"
+    ],
+    "badFor": [
+      "hypertension"
+    ],
+    "goodFor": [],
+    "description": "Table salt fortified with iodine."
+  },
+  "vegetable fat": {
+    "name": "vegetable fat",
+    "aliases": [
+      "vegetable fat",
+      "edible vegetable fat",
+      "hydrogenated vegetable fat",
+      "partially hydrogenated vegetable fat",
+      "vegetable shortening",
+      "bakery fat",
+      "compound fat",
+      "vegetable fat (palm)"
+    ],
+    "category": "fat",
+    "tags": [
+      "oil",
+      "processed"
+    ],
+    "badFor": [
+      "heart"
+    ],
+    "goodFor": [],
+    "description": "Generic vegetable-derived fat used in baked goods."
+  },
+  "sugar syrup": {
+    "name": "sugar syrup",
+    "aliases": [
+      "sugar syrup",
+      "liquid sugar",
+      "invert sugar syrup",
+      "invert sugar",
+      "golden syrup",
+      "cane syrup",
+      "sugar solution",
+      "syrup (sugar)",
+      "sugar (syrup)",
+      "corn sugar syrup"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "high_glycemic",
+      "energy"
+    ],
+    "badFor": [
+      "diabetes",
+      "fat_loss"
+    ],
+    "goodFor": [
+      "athlete"
+    ],
+    "description": "Liquid form of sugar used in beverages and confectionery."
+  },
+  "cocoa mix": {
+    "name": "cocoa mix",
+    "aliases": [
+      "cocoa mix",
+      "chocolate flavour",
+      "chocolate flavoured coating",
+      "compound chocolate",
+      "chocolate compound",
+      "cocoa flavoured",
+      "chocolate coating",
+      "compound coating",
+      "cocoa flavour",
+      "chocolate flavouring"
+    ],
+    "category": "label_term",
+    "tags": [
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Chocolate-flavoured compound used in coated snacks."
+  },
+  "vegetable extract": {
+    "name": "vegetable extract",
+    "aliases": [
+      "vegetable extract",
+      "yeast extract",
+      "vegetable powder",
+      "dehydrated vegetables",
+      "vegetable (powder)",
+      "mixed vegetable extract",
+      "onion extract",
+      "garlic extract",
+      "tomato extract",
+      "vegetable stock"
+    ],
+    "category": "flavor enhancer",
+    "tags": [
+      "natural",
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Concentrated vegetable or yeast extract for flavour."
+  },
+  "onion powder": {
+    "name": "onion powder",
+    "aliases": [
+      "onion powder",
+      "dehydrated onion",
+      "dried onion",
+      "onion (powder)",
+      "onion (dehydrated)",
+      "onion flakes",
+      "granulated onion",
+      "onion (dried)"
+    ],
+    "category": "spice",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Dehydrated onion used in savoury snacks."
+  },
+  "garlic powder": {
+    "name": "garlic powder",
+    "aliases": [
+      "garlic powder",
+      "dehydrated garlic",
+      "garlic (powder)",
+      "garlic (dehydrated)",
+      "garlic granules",
+      "dried garlic",
+      "garlic extract",
+      "garlic flakes"
+    ],
+    "category": "spice",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Dehydrated garlic used in savoury snacks."
+  },
+  "tomato powder": {
+    "name": "tomato powder",
+    "aliases": [
+      "tomato powder",
+      "dehydrated tomato",
+      "tomato (powder)",
+      "tomato solids",
+      "tomato concentrate (dried)",
+      "tomato (dehydrated)",
+      "dried tomato",
+      "tomato extract"
+    ],
+    "category": "spice",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Dried tomato used in masala coatings."
+  },
+  "mango powder": {
+    "name": "mango powder",
+    "aliases": [
+      "mango powder",
+      "amchur",
+      "dry mango powder",
+      "dehydrated mango",
+      "mango (powder)",
+      "aamchur",
+      "raw mango powder",
+      "mango (dehydrated)"
+    ],
+    "category": "spice",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Dried mango powder for tangy flavour."
+  },
+  "lemon powder": {
+    "name": "lemon powder",
+    "aliases": [
+      "lemon powder",
+      "citric acid (lemon)",
+      "dried lemon",
+      "lemon juice powder",
+      "lemon flavour",
+      "lime powder",
+      "lemon (powder)",
+      "dehydrated lemon"
+    ],
+    "category": "flavor enhancer",
+    "tags": [
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Dried lemon used for sour flavouring."
+  },
+  "yeast extract": {
+    "name": "yeast extract",
+    "aliases": [
+      "yeast extract",
+      "autolysed yeast extract",
+      "yeast autolysate",
+      "hydrolysed yeast",
+      "yeast extract (flavour)",
+      "flavour (yeast extract)",
+      "yeast (extract)",
+      "dried yeast extract"
+    ],
+    "category": "flavor enhancer",
+    "tags": [
+      "natural",
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Yeast-derived flavour enhancer rich in glutamates."
+  },
+  "hydrolysed vegetable protein": {
+    "name": "hydrolysed vegetable protein",
+    "aliases": [
+      "hydrolysed vegetable protein",
+      "HVP",
+      "hydrolyzed vegetable protein",
+      "hydrolysed soy protein",
+      "hydrolysed wheat protein",
+      "HVP (soy)",
+      "plant protein (hydrolysed)",
+      "flavour (HVP)"
+    ],
+    "category": "flavor enhancer",
+    "tags": [
+      "additive",
+      "processed",
+      "soy"
+    ],
+    "badFor": [
+      "soy_allergy",
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Protein hydrolysate used as savoury flavour enhancer."
+  },
+  "maltose": {
+    "name": "maltose",
+    "aliases": [
+      "maltose",
+      "malt sugar",
+      "barley malt",
+      "malt extract",
+      "malted barley extract",
+      "malt syrup",
+      "maltose syrup",
+      "cereal extract (malt)"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "high_glycemic",
+      "energy"
+    ],
+    "badFor": [
+      "diabetes",
+      "fat_loss"
+    ],
+    "goodFor": [],
+    "description": "Malt-derived sugar with moderate glycemic effect."
+  },
+  "fructose": {
+    "name": "fructose",
+    "aliases": [
+      "fructose",
+      "fruit sugar",
+      "crystalline fructose",
+      "D-fructose",
+      "fructose (fruit sugar)",
+      "levulose",
+      "fructose syrup"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "high_glycemic",
+      "energy"
+    ],
+    "badFor": [
+      "diabetes",
+      "fat_loss"
+    ],
+    "goodFor": [],
+    "description": "Fruit sugar with high fructose content."
+  },
+  "sorbitol": {
+    "name": "sorbitol",
+    "aliases": [
+      "sorbitol",
+      "e420",
+      "ins420",
+      "glucitol",
+      "sweetener (sorbitol)",
+      "humectant (sorbitol)",
+      "sorbitol syrup",
+      "sorbitol (e420)",
+      "polyol (sorbitol)"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "additive",
+      "sweetener",
+      "sugar_alcohol"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Sugar alcohol used as humectant and sweetener."
+  },
+  "mannitol": {
+    "name": "mannitol",
+    "aliases": [
+      "mannitol",
+      "e421",
+      "ins421",
+      "sweetener (mannitol)",
+      "mannitol (e421)",
+      "polyol (mannitol)",
+      "anti-caking agent (mannitol)"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "additive",
+      "sweetener",
+      "sugar_alcohol"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Sugar alcohol used in sugar-free confectionery."
+  },
+  "inulin": {
+    "name": "inulin",
+    "aliases": [
+      "inulin",
+      "chicory fibre",
+      "chicory root extract",
+      "chicory inulin",
+      "inulin (chicory)",
+      "dietary fibre (inulin)",
+      "prebiotic fibre",
+      "fructooligosaccharides",
+      "FOS",
+      "inulin (FOS)"
+    ],
+    "category": "fiber",
+    "tags": [
+      "fiber",
+      "prebiotic",
+      "natural"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [
+      "digestion",
+      "fat_loss"
+    ],
+    "description": "Prebiotic fibre from chicory root."
+  },
+  "psyllium husk": {
+    "name": "psyllium husk",
+    "aliases": [
+      "psyllium husk",
+      "isabgol",
+      "psyllium",
+      "psyllium husk powder",
+      "isabgol husk",
+      "psyllium seed husk",
+      "psyllium fibre",
+      "dietary fibre (psyllium)"
+    ],
+    "category": "fiber",
+    "tags": [
+      "fiber",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "digestion",
+      "heart_health"
+    ],
+    "description": "Soluble fibre used in health foods."
+  },
+  "pea protein": {
+    "name": "pea protein",
+    "aliases": [
+      "pea protein",
+      "pea protein isolate",
+      "pea protein concentrate",
+      "yellow pea protein",
+      "plant protein (pea)",
+      "protein (pea)",
+      "pea protein (isolate)"
+    ],
+    "category": "protein",
+    "tags": [
+      "protein",
+      "plant"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "muscle_gain",
+      "vegan"
+    ],
+    "description": "Plant-based protein from yellow peas."
+  },
+  "soy protein": {
+    "name": "soy protein",
+    "aliases": [
+      "soy protein",
+      "soya protein",
+      "soy protein isolate",
+      "soy protein concentrate",
+      "textured soy protein",
+      "TSP",
+      "soya protein isolate",
+      "plant protein (soy)",
+      "protein (soy)"
+    ],
+    "category": "protein",
+    "tags": [
+      "protein",
+      "plant",
+      "soy"
+    ],
+    "badFor": [
+      "soy_allergy"
+    ],
+    "goodFor": [
+      "muscle_gain",
+      "vegan"
+    ],
+    "description": "Protein extracted from soybeans."
+  },
+  "whey protein": {
+    "name": "whey protein",
+    "aliases": [
+      "whey protein",
+      "whey protein concentrate",
+      "WPC",
+      "whey protein isolate",
+      "WPI",
+      "whey protein (dairy)",
+      "milk whey protein",
+      "protein (whey)",
+      "whey (protein)"
+    ],
+    "category": "protein",
+    "tags": [
+      "protein",
+      "dairy"
+    ],
+    "badFor": [
+      "lactose_intolerance"
+    ],
+    "goodFor": [
+      "muscle_gain"
+    ],
+    "description": "High-quality dairy protein."
+  },
+  "corn": {
+    "name": "corn",
+    "aliases": [
+      "corn",
+      "maize",
+      "sweet corn",
+      "corn grits",
+      "maize grits",
+      "corn (maize)",
+      "whole grain corn",
+      "corn meal",
+      "puffed corn",
+      "corn (extruded)"
+    ],
+    "category": "grain",
+    "tags": [
+      "grain",
+      "gluten_free"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Maize used in chips, puffs and extruded snacks."
+  },
+  "potato": {
+    "name": "potato",
+    "aliases": [
+      "potato",
+      "potato slices",
+      "fresh potato",
+      "dehydrated potato",
+      "potato chips",
+      "potato (dehydrated)",
+      "potato granules",
+      "potato flakes",
+      "potato (fresh)",
+      "aloo"
+    ],
+    "category": "vegetable",
+    "tags": [
+      "energy",
+      "high_glycemic"
+    ],
+    "badFor": [
+      "diabetes",
+      "fat_loss"
+    ],
+    "goodFor": [],
+    "description": "Potato used in chips and namkeen."
+  },
+  "tomato": {
+    "name": "tomato",
+    "aliases": [
+      "tomato",
+      "tomatoes",
+      "tomato puree",
+      "tomato paste",
+      "tomato concentrate",
+      "tomato (fresh)",
+      "dried tomato",
+      "sun-dried tomato",
+      "tomato ketchup",
+      "tamatar"
+    ],
+    "category": "vegetable",
+    "tags": [
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced"
+    ],
+    "description": "Tomato used in masala coatings and snacks."
+  },
+  "lentils": {
+    "name": "lentils",
+    "aliases": [
+      "lentils",
+      "dal",
+      "masoor dal",
+      "whole lentils",
+      "red lentils",
+      "green lentils",
+      "masoor",
+      "split lentils",
+      "lentil flour",
+      "dal (lentils)"
+    ],
+    "category": "legume",
+    "tags": [
+      "protein",
+      "fiber",
+      "plant"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced",
+      "muscle_gain"
+    ],
+    "description": "Protein-rich pulse used in Indian snacks."
+  },
+  "chickpea": {
+    "name": "chickpea",
+    "aliases": [
+      "chickpea",
+      "chana",
+      "kabuli chana",
+      "chick pea",
+      "garbanzo",
+      "chickpeas",
+      "whole chickpea",
+      "roasted chickpea",
+      "chana dal",
+      "chhole"
+    ],
+    "category": "legume",
+    "tags": [
+      "protein",
+      "fiber",
+      "plant"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced",
+      "muscle_gain"
+    ],
+    "description": "Protein-rich legume used in Indian snacks."
+  },
+  "moong dal": {
+    "name": "moong dal",
+    "aliases": [
+      "moong dal",
+      "mung dal",
+      "moong lentil",
+      "moong bean",
+      "green gram",
+      "mung bean",
+      "moong (split)",
+      "mung lentil",
+      "moong (husked)",
+      "yellow moong dal"
+    ],
+    "category": "legume",
+    "tags": [
+      "protein",
+      "fiber",
+      "plant"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced"
+    ],
+    "description": "Mung lentil used in Indian namkeen."
+  },
+  "sesame seeds": {
+    "name": "sesame seeds",
+    "aliases": [
+      "sesame seeds",
+      "til",
+      "sesame",
+      "white sesame",
+      "black sesame",
+      "til (sesame)",
+      "sesame (white)",
+      "toasted sesame",
+      "sesame seed",
+      "gingelly seeds"
+    ],
+    "category": "seed",
+    "tags": [
+      "healthy_fat",
+      "protein",
+      "natural"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [
+      "heart_health"
+    ],
+    "description": "Seeds used in chikki and snack coatings."
+  },
+  "flaxseed": {
+    "name": "flaxseed",
+    "aliases": [
+      "flaxseed",
+      "linseed",
+      "alsi",
+      "flax seed",
+      "flaxseeds",
+      "ground flaxseed",
+      "flax (linseed)",
+      "flaxseed powder",
+      "alsi (flaxseed)"
+    ],
+    "category": "seed",
+    "tags": [
+      "fiber",
+      "healthy_fat",
+      "protein"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "heart_health",
+      "fat_loss"
+    ],
+    "description": "Omega-3 rich seed used in health snacks."
+  },
+  "chia seeds": {
+    "name": "chia seeds",
+    "aliases": [
+      "chia seeds",
+      "chia",
+      "chia seed",
+      "sabja seeds",
+      "chia (salvia hispanica)",
+      "whole chia seeds",
+      "ground chia",
+      "chia seed powder"
+    ],
+    "category": "seed",
+    "tags": [
+      "fiber",
+      "healthy_fat",
+      "protein"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "heart_health",
+      "fat_loss"
+    ],
+    "description": "Fibre-rich seeds with omega-3 fatty acids."
+  },
+  "sunflower seeds": {
+    "name": "sunflower seeds",
+    "aliases": [
+      "sunflower seeds",
+      "sunflower seed",
+      "roasted sunflower seeds",
+      "sunflower kernels",
+      "sunflower seed (raw)",
+      "dehulled sunflower seeds"
+    ],
+    "category": "seed",
+    "tags": [
+      "healthy_fat",
+      "protein"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "heart_health"
+    ],
+    "description": "Seeds rich in vitamin E and healthy fats."
+  },
+  "pumpkin seeds": {
+    "name": "pumpkin seeds",
+    "aliases": [
+      "pumpkin seeds",
+      "pepitas",
+      "kaddu ke beej",
+      "pumpkin seed",
+      "roasted pumpkin seeds",
+      "dehulled pumpkin seeds",
+      "pumpkin kernel"
+    ],
+    "category": "seed",
+    "tags": [
+      "healthy_fat",
+      "protein"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "heart_health"
+    ],
+    "description": "Protein and zinc-rich seeds."
+  },
+  "watermelon seeds": {
+    "name": "watermelon seeds",
+    "aliases": [
+      "watermelon seeds",
+      "magaz",
+      "magaz seeds",
+      "tarbuj ke beej",
+      "roasted watermelon seeds",
+      "watermelon seed",
+      "melon seeds"
+    ],
+    "category": "seed",
+    "tags": [
+      "protein",
+      "healthy_fat"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Traditional Indian seed used in makhana mixes."
+  },
+  "makhana": {
+    "name": "makhana",
+    "aliases": [
+      "makhana",
+      "fox nuts",
+      "lotus seeds",
+      "phool makhana",
+      "euryale ferox",
+      "roasted makhana",
+      "foxnuts",
+      "lotus pops",
+      "makhana (fox nuts)"
+    ],
+    "category": "snack",
+    "tags": [
+      "gluten_free",
+      "low_fat",
+      "energy"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced",
+      "fat_loss"
+    ],
+    "description": "Puffed lotus seeds popular in Indian healthy snacks."
+  },
+  "coconut": {
+    "name": "coconut",
+    "aliases": [
+      "coconut",
+      "desiccated coconut",
+      "coconut powder",
+      "shredded coconut",
+      "coconut (dry)",
+      "nariyal",
+      "coconut flakes",
+      "grated coconut",
+      "coconut (desiccated)",
+      "dried coconut"
+    ],
+    "category": "nut",
+    "tags": [
+      "energy",
+      "healthy_fat"
+    ],
+    "badFor": [
+      "heart"
+    ],
+    "goodFor": [],
+    "description": "Coconut used in Indian sweets and snacks."
+  },
+  "dates": {
+    "name": "dates",
+    "aliases": [
+      "dates",
+      "khajur",
+      "date syrup",
+      "date paste",
+      "date sugar",
+      "dried dates",
+      "pitted dates",
+      "date concentrate",
+      "dates (khajur)",
+      "date extract"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "natural",
+      "high_glycemic",
+      "energy",
+      "fiber"
+    ],
+    "badFor": [
+      "diabetes",
+      "fat_loss"
+    ],
+    "goodFor": [],
+    "description": "Natural fruit sweetener used in health bars."
+  },
+  "raisins": {
+    "name": "raisins",
+    "aliases": [
+      "raisins",
+      "kishmish",
+      "golden raisins",
+      "sultanas",
+      "dried grapes",
+      "raisins (kishmish)",
+      "dried raisins",
+      "currants",
+      "munakka"
+    ],
+    "category": "fruit",
+    "tags": [
+      "high_glycemic",
+      "energy",
+      "natural"
+    ],
+    "badFor": [
+      "diabetes",
+      "fat_loss"
+    ],
+    "goodFor": [],
+    "description": "Dried grapes used in Indian sweets and snack mixes."
+  },
+  "milk chocolate": {
+    "name": "milk chocolate",
+    "aliases": [
+      "milk chocolate",
+      "milk choc",
+      "dairy milk chocolate",
+      "chocolate (milk)",
+      "milk chocolate coating",
+      "full cream milk chocolate"
+    ],
+    "category": "confectionery",
+    "tags": [
+      "dairy",
+      "high_glycemic",
+      "energy"
+    ],
+    "badFor": [
+      "lactose_intolerance",
+      "diabetes",
+      "fat_loss"
+    ],
+    "goodFor": [],
+    "description": "Chocolate containing milk solids."
+  },
+  "dark chocolate": {
+    "name": "dark chocolate",
+    "aliases": [
+      "dark chocolate",
+      "bittersweet chocolate",
+      "semi-sweet chocolate",
+      "plain chocolate",
+      "dark choc",
+      "extra dark chocolate",
+      "70% dark chocolate",
+      "dark chocolate (cocoa)"
+    ],
+    "category": "confectionery",
+    "tags": [
+      "antioxidant",
+      "energy"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced"
+    ],
+    "description": "High-cocoa chocolate with antioxidant properties."
+  },
+  "malt extract": {
+    "name": "malt extract",
+    "aliases": [
+      "malt extract",
+      "barley malt extract",
+      "malted barley",
+      "malt",
+      "malted cereal extract",
+      "cereal malt extract",
+      "malt syrup",
+      "barley malt",
+      "malt (barley)"
+    ],
+    "category": "sweetener",
+    "tags": [
+      "grain",
+      "high_glycemic",
+      "energy"
+    ],
+    "badFor": [
+      "gluten_sensitivity",
+      "diabetes"
+    ],
+    "goodFor": [],
+    "description": "Concentrated grain extract used as sweetener and flavour."
+  },
+  "baking powder": {
+    "name": "baking powder",
+    "aliases": [
+      "baking powder",
+      "raising agent (baking powder)",
+      "leavening (baking powder)",
+      "baking powder (raising agent)",
+      "double action baking powder",
+      "food grade baking powder"
+    ],
+    "category": "raising agent",
+    "tags": [
+      "additive"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Mixture of sodium bicarbonate and acids used as leavener."
+  },
+  "sodium chloride": {
+    "name": "sodium chloride",
+    "aliases": [
+      "sodium chloride",
+      "salt",
+      "NaCl",
+      "common salt",
+      "edible sodium chloride",
+      "food grade salt",
+      "refined salt (sodium chloride)",
+      "sodium chloride (salt)"
+    ],
+    "category": "mineral",
+    "tags": [
+      "sodium",
+      "high_sodium"
+    ],
+    "badFor": [
+      "hypertension"
+    ],
+    "goodFor": [],
+    "description": "Table salt used for flavouring and preservation."
+  },
+  "potassium chloride": {
+    "name": "potassium chloride",
+    "aliases": [
+      "potassium chloride",
+      "salt substitute",
+      "salt (potassium chloride)",
+      "KCl",
+      "potassium salt",
+      "low sodium salt",
+      "mineral salt (potassium chloride)",
+      "acidity regulator (potassium chloride)"
+    ],
+    "category": "mineral",
+    "tags": [
+      "additive"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Potassium-based salt substitute."
+  },
+  "milk fat": {
+    "name": "milk fat",
+    "aliases": [
+      "milk fat",
+      "dairy fat",
+      "anhydrous milk fat",
+      "AMF",
+      "butterfat",
+      "cream",
+      "butter fat",
+      "milk fat (dairy)",
+      "anhydrous butter fat"
+    ],
+    "category": "fat",
+    "tags": [
+      "dairy"
+    ],
+    "badFor": [
+      "lactose_intolerance",
+      "vegan",
+      "heart"
+    ],
+    "goodFor": [],
+    "description": "Fat component of dairy used in chocolates and biscuits."
+  },
+  "cream": {
+    "name": "cream",
+    "aliases": [
+      "cream",
+      "dairy cream",
+      "whipping cream",
+      "heavy cream",
+      "fresh cream",
+      "cream (dairy)",
+      "double cream",
+      "cream (milk)",
+      "pasteurised cream"
+    ],
+    "category": "dairy",
+    "tags": [
+      "dairy"
+    ],
+    "badFor": [
+      "lactose_intolerance",
+      "vegan",
+      "heart"
+    ],
+    "goodFor": [],
+    "description": "High-fat dairy ingredient used in confectionery."
+  },
+  "condensed milk": {
+    "name": "condensed milk",
+    "aliases": [
+      "condensed milk",
+      "sweetened condensed milk",
+      "SCM",
+      "condensed milk (sweetened)",
+      "condensed skimmed milk",
+      "evaporated milk",
+      "dairy (condensed milk)"
+    ],
+    "category": "dairy",
+    "tags": [
+      "dairy",
+      "high_glycemic"
+    ],
+    "badFor": [
+      "lactose_intolerance",
+      "vegan",
+      "diabetes"
+    ],
+    "goodFor": [],
+    "description": "Concentrated sweetened milk used in Indian sweets."
+  },
+  "paneer": {
+    "name": "paneer",
+    "aliases": [
+      "paneer",
+      "cottage cheese",
+      "Indian cottage cheese",
+      "fresh paneer",
+      "chhena",
+      "paneer (cottage cheese)",
+      "chenna"
+    ],
+    "category": "dairy",
+    "tags": [
+      "dairy",
+      "protein"
+    ],
+    "badFor": [
+      "lactose_intolerance",
+      "vegan"
+    ],
+    "goodFor": [
+      "muscle_gain"
+    ],
+    "description": "Fresh Indian cheese used in savoury snacks."
+  },
+  "vinegar": {
+    "name": "vinegar",
+    "aliases": [
+      "vinegar",
+      "acetic acid",
+      "white vinegar",
+      "malt vinegar",
+      "apple cider vinegar",
+      "spirit vinegar",
+      "rice vinegar",
+      "vinegar (acidity regulator)",
+      "acidity regulator (vinegar)"
+    ],
+    "category": "acid regulator",
+    "tags": [
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Acetic acid-based flavour and preservative."
+  },
+  "tamarind": {
+    "name": "tamarind",
+    "aliases": [
+      "tamarind",
+      "imli",
+      "tamarind extract",
+      "tamarind paste",
+      "tamarind concentrate",
+      "tamarind powder",
+      "dried tamarind",
+      "imli (tamarind)",
+      "tamarind pulp"
+    ],
+    "category": "spice",
+    "tags": [
+      "natural",
+      "spice"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Sour flavouring agent used in Indian snacks."
+  },
+  "spinach powder": {
+    "name": "spinach powder",
+    "aliases": [
+      "spinach powder",
+      "dried spinach",
+      "spinach (powder)",
+      "spinach extract",
+      "dehydrated spinach",
+      "spinach colour",
+      "vegetable powder (spinach)"
+    ],
+    "category": "vegetable",
+    "tags": [
+      "natural",
+      "vegetable"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced"
+    ],
+    "description": "Dehydrated spinach used for colour and nutrition."
+  },
+  "beetroot powder": {
+    "name": "beetroot powder",
+    "aliases": [
+      "beetroot powder",
+      "beet powder",
+      "beetroot (powder)",
+      "dehydrated beetroot",
+      "beetroot extract",
+      "beet extract",
+      "vegetable powder (beetroot)"
+    ],
+    "category": "vegetable",
+    "tags": [
+      "natural",
+      "vegetable"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced"
+    ],
+    "description": "Dried beetroot used for natural colour and flavour."
+  },
+  "tea extract": {
+    "name": "tea extract",
+    "aliases": [
+      "tea extract",
+      "green tea extract",
+      "black tea extract",
+      "tea (extract)",
+      "tea solids",
+      "brewed tea",
+      "concentrated tea",
+      "chai extract"
+    ],
+    "category": "plant extract",
+    "tags": [
+      "natural",
+      "antioxidant"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced"
+    ],
+    "description": "Tea concentrate used in beverages and health products."
+  },
+  "coffee": {
+    "name": "coffee",
+    "aliases": [
+      "coffee",
+      "instant coffee",
+      "coffee powder",
+      "coffee extract",
+      "coffee solids",
+      "coffee (powder)",
+      "roasted coffee",
+      "decaffeinated coffee",
+      "chicory coffee",
+      "coffee flavouring"
+    ],
+    "category": "plant extract",
+    "tags": [
+      "natural",
+      "energy"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Coffee used in flavoured biscuits and confectionery."
+  },
+  "cocoa butter substitute": {
+    "name": "cocoa butter substitute",
+    "aliases": [
+      "cocoa butter substitute",
+      "CBS",
+      "cocoa butter replacer",
+      "CBR",
+      "cocoa butter equivalent",
+      "CBE",
+      "vegetable fat (cocoa butter substitute)",
+      "palm stearin"
+    ],
+    "category": "fat",
+    "tags": [
+      "oil",
+      "processed"
+    ],
+    "badFor": [
+      "heart"
+    ],
+    "goodFor": [],
+    "description": "Plant-based fat substituting cocoa butter in compound chocolate."
+  },
+  "sodium starch glycolate": {
+    "name": "sodium starch glycolate",
+    "aliases": [
+      "sodium starch glycolate",
+      "e468",
+      "ins468",
+      "starch glycolate",
+      "modified starch (sodium)",
+      "disintegrant",
+      "thickener (sodium starch glycolate)"
+    ],
+    "category": "starch",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Modified starch used as thickener."
+  },
+  "niacin": {
+    "name": "niacin",
+    "aliases": [
+      "niacin",
+      "nicotinic acid",
+      "vitamin b3",
+      "niacinamide",
+      "nicotinamide",
+      "vitamin pp",
+      "niacin (b3)"
+    ],
+    "category": "vitamin",
+    "tags": [
+      "vitamin",
+      "additive"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced"
+    ],
+    "description": "Vitamin B3 added for fortification."
+  },
+  "thiamine": {
+    "name": "thiamine",
+    "aliases": [
+      "thiamine",
+      "vitamin b1",
+      "thiamine mononitrate",
+      "thiamine hydrochloride",
+      "vitamin b1 (thiamine)",
+      "thiamine (b1)"
+    ],
+    "category": "vitamin",
+    "tags": [
+      "vitamin",
+      "additive"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced"
+    ],
+    "description": "Vitamin B1 added for fortification."
+  },
+  "zinc": {
+    "name": "zinc",
+    "aliases": [
+      "zinc",
+      "zinc sulphate",
+      "zinc oxide",
+      "zinc gluconate",
+      "zinc (mineral)",
+      "mineral (zinc)",
+      "zinc sulfate"
+    ],
+    "category": "mineral",
+    "tags": [
+      "additive"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced",
+      "muscle_gain"
+    ],
+    "description": "Essential mineral added for fortification."
+  },
+  "iron": {
+    "name": "iron",
+    "aliases": [
+      "iron",
+      "ferrous sulphate",
+      "ferric pyrophosphate",
+      "iron sulfate",
+      "iron (mineral)",
+      "mineral (iron)",
+      "elemental iron",
+      "ferric ammonium citrate"
+    ],
+    "category": "mineral",
+    "tags": [
+      "additive"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced"
+    ],
+    "description": "Iron used for food fortification."
+  },
+  "calcium carbonate": {
+    "name": "calcium carbonate",
+    "aliases": [
+      "calcium carbonate",
+      "e170",
+      "ins170",
+      "calcium (carbonate)",
+      "mineral (calcium)",
+      "chalk",
+      "food grade calcium carbonate",
+      "calcium (mineral)",
+      "acidity regulator (calcium carbonate)"
+    ],
+    "category": "mineral",
+    "tags": [
+      "additive"
+    ],
+    "badFor": [],
+    "goodFor": [
+      "balanced"
+    ],
+    "description": "Calcium mineral used as fortifier and acidity regulator."
+  },
+  "glycerol": {
+    "name": "glycerol",
+    "aliases": [
+      "glycerol",
+      "glycerin",
+      "e422",
+      "ins422",
+      "glycerine",
+      "humectant (glycerol)",
+      "humectant (e422)",
+      "food grade glycerol",
+      "vegetable glycerin",
+      "glycerol (e422)"
+    ],
+    "category": "humectant",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Humectant keeping products moist."
+  },
+  "propylene glycol": {
+    "name": "propylene glycol",
+    "aliases": [
+      "propylene glycol",
+      "e1520",
+      "ins1520",
+      "humectant (propylene glycol)",
+      "propylene glycol (e1520)",
+      "1,2-propanediol",
+      "solvent (propylene glycol)"
+    ],
+    "category": "humectant",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Solvent and humectant in flavour extracts."
+  },
+  "saffron": {
+    "name": "saffron",
+    "aliases": [
+      "saffron",
+      "kesar",
+      "saffron extract",
+      "saffron colour",
+      "kesar (saffron)",
+      "saffron powder",
+      "saffron threads",
+      "natural yellow colour (saffron)"
+    ],
+    "category": "spice",
+    "tags": [
+      "spice",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Precious spice used in Indian sweets and desserts."
+  },
+  "rose water": {
+    "name": "rose water",
+    "aliases": [
+      "rose water",
+      "rosewater",
+      "rose extract",
+      "gulab jal",
+      "rose flavour",
+      "rose (extract)",
+      "rose flavouring",
+      "rose essence"
+    ],
+    "category": "flavoring",
+    "tags": [
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Rose-derived flavouring used in Indian sweets."
+  },
+  "natural colour": {
+    "name": "natural colour",
+    "aliases": [
+      "natural colour",
+      "natural color",
+      "natural colouring",
+      "colour (natural)",
+      "permitted natural colour",
+      "natural food colour",
+      "plant colour",
+      "vegetable colour"
+    ],
+    "category": "label_term",
+    "tags": [
+      "additive",
+      "natural"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Generic label term for any natural-source colour."
+  },
+  "artificial colour": {
+    "name": "artificial colour",
+    "aliases": [
+      "artificial colour",
+      "artificial color",
+      "synthetic colour",
+      "colour (artificial)",
+      "permitted artificial colour",
+      "artificial food colour",
+      "FD&C colour",
+      "coal tar dye"
+    ],
+    "category": "label_term",
+    "tags": [
+      "additive",
+      "artificial",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Generic label term for synthetic food colour."
+  },
+  "contains gluten": {
+    "name": "contains gluten",
+    "aliases": [
+      "contains gluten",
+      "gluten",
+      "wheat gluten",
+      "vital wheat gluten",
+      "gluten (wheat)",
+      "added gluten",
+      "wheat protein (gluten)"
+    ],
+    "category": "allergen",
+    "tags": [
+      "allergen",
+      "gluten_sensitivity"
+    ],
+    "badFor": [
+      "gluten_sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Gluten from wheat used as dough strengthener."
+  },
+  "milk protein concentrate": {
+    "name": "milk protein concentrate",
+    "aliases": [
+      "milk protein concentrate",
+      "MPC",
+      "milk protein isolate",
+      "MPI",
+      "concentrated milk proteins",
+      "dairy protein concentrate",
+      "milk proteins",
+      "casein and whey"
+    ],
+    "category": "protein",
+    "tags": [
+      "dairy",
+      "protein"
+    ],
+    "badFor": [
+      "lactose_intolerance",
+      "vegan"
+    ],
+    "goodFor": [
+      "muscle_gain"
+    ],
+    "description": "Concentrated dairy protein used in protein-enriched foods."
+  },
+  "permitted class ii preservative": {
+    "name": "permitted class ii preservative",
+    "aliases": [
+      "permitted class ii preservative",
+      "class ii preservative",
+      "class-ii preservative",
+      "class 2 preservative",
+      "permitted preservative (class ii)",
+      "FSSAI class ii preservative"
+    ],
+    "category": "label_term",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "FSSAI category term for chemical preservatives like benzoates and sorbates."
+  },
+  "edible starch": {
+    "name": "edible starch",
+    "aliases": [
+      "edible starch",
+      "food starch",
+      "native starch",
+      "unmodified starch",
+      "plain starch",
+      "starch (edible)",
+      "food grade starch"
+    ],
+    "category": "starch",
+    "tags": [
+      "processed"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Unmodified food-grade starch used as thickener."
+  },
+  "mineral salt": {
+    "name": "mineral salt",
+    "aliases": [
+      "mineral salt",
+      "mineral salts",
+      "mineral (salt)",
+      "potassium salt",
+      "magnesium salt",
+      "calcium salt",
+      "mineral (permitted)",
+      "permitted mineral salt"
+    ],
+    "category": "mineral",
+    "tags": [
+      "additive"
+    ],
+    "badFor": [],
+    "goodFor": [],
+    "description": "Generic term for mineral-based salts used as additives."
+  },
+  "flavour enhancer": {
+    "name": "flavour enhancer",
+    "aliases": [
+      "flavour enhancer",
+      "flavor enhancer",
+      "flavour enhancers",
+      "taste enhancer",
+      "taste booster",
+      "permitted flavour enhancer",
+      "umami enhancer"
+    ],
+    "category": "label_term",
+    "tags": [
+      "additive",
+      "processed"
+    ],
+    "badFor": [
+      "sensitivity"
+    ],
+    "goodFor": [],
+    "description": "Generic label term for flavour-boosting additives."
+  },
+  "mixed fruit": {
+    "name": "mixed fruit",
+    "aliases": [
+      "mixed fruit",
+      "assorted fruits",
+      "dried mixed fruit",
+      "mixed dried fruit",
+      "fruit pieces",
+      "fruit bits",
+      "mixed fruit (dried)"
+    ],
+    "category": "fruit",
+    "tags": [
+      "natural",
+      "energy",
+      "high_glycemic"
+    ],
+    "badFor": [
+      "diabetes",
+      "fat_loss"
+    ],
+    "goodFor": [],
+    "description": "Blend of dried fruits used in snack mixes."
+  },
+  "dry fruits": {
+    "name": "dry fruits",
+    "aliases": [
+      "dry fruits",
+      "dried fruits",
+      "assorted dry fruits",
+      "mixed dry fruits",
+      "nuts and dry fruits",
+      "dry fruit mix",
+      "dried fruit and nuts"
+    ],
+    "category": "fruit",
+    "tags": [
+      "natural",
+      "energy",
+      "healthy_fat"
+    ],
+    "badFor": [
+      "nut_allergy"
+    ],
+    "goodFor": [],
+    "description": "Assorted dried fruits and nuts used in Indian mixes."
+  }
+}

@@ -49,7 +49,7 @@ class ResultDetailActivity : AppCompatActivity() {
 
         // ── Header card: status icon + label + colour ────────────────
         when (status) {
-            "HIGH_RISK" -> {
+            "HIGH_RISK", "HIGH RISK" -> {
                 binding.cardDetailHeader.setCardBackgroundColor(0xFFB71C1C.toInt())
                 binding.tvDetailIcon.text   = "❌"
                 binding.tvDetailStatus.text = "High Risk"

@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.labeliq.app.data.local.UserProfile
 import com.labeliq.app.data.local.saveUserProfile
 import com.labeliq.app.databinding.ActivitySetupBinding
+import com.labeliq.app.domain.usecase.parseNote
+import java.util.Locale
 
 class SetupActivity : AppCompatActivity() {
 
@@ -37,15 +39,34 @@ class SetupActivity : AppCompatActivity() {
         // ── Build profile from UI inputs ─────────────────────────────
         val name        = binding.etName.text?.toString()?.trim()
                               .takeIf { !it.isNullOrEmpty() } ?: "Guest"
-        val isDiabetic  = binding.switchDiabetic.isChecked
-        val isVegan     = binding.switchVegan.isChecked
-        val hasNutAllergy = binding.switchNutAllergy.isChecked
+        val conditions = parseCsv(binding.etConditions.text?.toString())
+            .toMutableSet()
+        val allergies = parseCsv(binding.etAllergies.text?.toString())
+            .toMutableSet()
+        val preferences = parseCsv(binding.etPreferences.text?.toString())
+            .toMutableSet()
+        val avoidTags = parseCsv(binding.etAvoidTags.text?.toString())
+            .toMutableSet()
+        val customNote = binding.etCustomNote.text?.toString()?.trim().orEmpty()
+        val noteTags = parseNote(customNote)
+
+        if (binding.switchDiabetic.isChecked) conditions += "diabetes"
+        if (binding.switchNutAllergy.isChecked) allergies += "nuts"
+        if (binding.switchVegan.isChecked) preferences += "vegan"
+        avoidTags += noteTags
+
+        val dietGoal = normalizeDietGoal(binding.etDietGoal.text?.toString(), noteTags)
+        val lifestyle = normalizeLifestyle(binding.etLifestyle.text?.toString())
 
         val profile = UserProfile(
-            name          = name,
-            isDiabetic    = isDiabetic,
-            isVegan       = isVegan,
-            hasNutAllergy = hasNutAllergy
+            name = name,
+            conditions = conditions.toList(),
+            allergies = allergies.toList(),
+            dietGoal = dietGoal,
+            lifestyle = lifestyle,
+            preferences = preferences.toList(),
+            avoidTags = avoidTags.toList(),
+            customNote = customNote
         )
 
         // ── Persist profile ──────────────────────────────────────────
@@ -63,5 +84,35 @@ class SetupActivity : AppCompatActivity() {
         }
         startActivity(intent)
         finish()
+    }
+
+    private fun parseCsv(raw: String?): List<String> {
+        if (raw.isNullOrBlank()) return emptyList()
+        return raw.split(",")
+            .map { normalizeToken(it) }
+            .filter { it.isNotBlank() }
+            .distinct()
+    }
+
+    private fun normalizeDietGoal(raw: String?, noteTags: List<String>): String {
+        val normalized = normalizeToken(raw ?: "")
+        if (normalized in setOf("fat_loss", "muscle_gain", "balanced")) return normalized
+        if ("fat_loss" in noteTags) return "fat_loss"
+        if ("protein" in noteTags) return "muscle_gain"
+        return "balanced"
+    }
+
+    private fun normalizeLifestyle(raw: String?): String {
+        val normalized = normalizeToken(raw ?: "")
+        return if (normalized in setOf("athlete", "normal")) normalized else "normal"
+    }
+
+    private fun normalizeToken(raw: String): String {
+        return raw
+            .lowercase(Locale.US)
+            .replace(Regex("[^a-z0-9\\s_-]"), " ")
+            .replace(Regex("[\\s-]+"), "_")
+            .trim('_')
+            .trim()
     }
 }

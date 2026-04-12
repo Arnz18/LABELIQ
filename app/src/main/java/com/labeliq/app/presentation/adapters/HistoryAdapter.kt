@@ -26,7 +26,7 @@ class HistoryAdapter(
         fun bind(item: ScanResult) {
             // ── Status label + color ─────────────────────────────────
             val (label, color) = when (item.status) {
-                "HIGH_RISK" -> "❌  High Risk"      to "#EF5350"
+                "HIGH_RISK", "HIGH RISK" -> "❌  High Risk" to "#EF5350"
                 "MODERATE"  -> "⚠️  Moderate Risk" to "#FFA726"
                 else        -> "✅  Safe"            to "#66BB6A"
             }
