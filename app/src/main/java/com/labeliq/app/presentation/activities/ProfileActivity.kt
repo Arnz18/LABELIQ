@@ -4,9 +4,12 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.labeliq.app.data.local.UserProfile
+import com.labeliq.app.data.local.getCurrentUser
 import com.labeliq.app.data.local.loadUserProfile
 import com.labeliq.app.data.local.saveUserProfile
+import com.labeliq.app.data.local.updateUser
 import com.labeliq.app.databinding.ActivityProfileBinding
+import com.labeliq.app.domain.model.User
 import com.labeliq.app.domain.usecase.parseNote
 import java.util.Locale
 
@@ -23,14 +26,17 @@ class ProfileActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
         binding.toolbar.setNavigationOnClickListener { finish() }
 
-        // ── Load saved profile ───────────────────────────────────────
+        // ── Load current user (name + dietary flags) + full profile ─────
+        val user    = getCurrentUser(this)
         val profile = loadUserProfile(this)
 
-        // ── Populate UI with saved values ────────────────────────────
-        binding.etName.setText(profile.name)
-        binding.switchDiabetic.isChecked = "diabetes" in profile.conditions
-        binding.switchVegan.isChecked = "vegan" in profile.preferences
-        binding.switchNutAllergy.isChecked = "nuts" in profile.allergies || "nut_allergy" in profile.allergies
+        // ── Populate UI ──────────────────────────────────────────────
+        // name / boolean flags → User is source of truth
+        binding.etName.setText(user?.name ?: profile.name)
+        binding.switchDiabetic.isChecked   = user?.isDiabetic    ?: ("diabetes" in profile.conditions)
+        binding.switchVegan.isChecked      = user?.isVegan        ?: ("vegan" in profile.preferences)
+        binding.switchNutAllergy.isChecked = user?.hasNutAllergy  ?: ("nuts" in profile.allergies || "nut_allergy" in profile.allergies)
+        // rich fields → still from UserProfile
         binding.etConditions.setText(profile.conditions.joinToString(", "))
         binding.etAllergies.setText(profile.allergies.joinToString(", "))
         binding.etDietGoal.setText(profile.dietGoal)
@@ -68,6 +74,21 @@ class ProfileActivity : AppCompatActivity() {
                 customNote = customNote
             )
             saveUserProfile(this, updatedProfile)
+
+            // Also persist name + dietary flags back to the User record
+            user?.let {
+                val updatedUser = User(
+                    id           = it.id,
+                    name         = binding.etName.text.toString().trim().ifBlank { "Guest" },
+                    email        = it.email,
+                    password     = it.password,
+                    isDiabetic   = binding.switchDiabetic.isChecked,
+                    isVegan      = binding.switchVegan.isChecked,
+                    hasNutAllergy = binding.switchNutAllergy.isChecked
+                )
+                updateUser(this, updatedUser)
+            }
+
             Toast.makeText(this, "Profile updated", Toast.LENGTH_SHORT).show()
             finish()
         }

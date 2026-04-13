@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.labeliq.app.data.local.getCurrentUserId
 import com.labeliq.app.databinding.ActivityMainBinding
 import com.labeliq.app.presentation.viewmodels.MainViewModel
 
@@ -14,6 +15,15 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // ── Auth gate — redirect to Login if no active session ───────
+        if (getCurrentUserId(this) == null) {
+            startActivity(Intent(this, LoginActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            })
+            finish()
+            return
+        }
 
         // ── First-time setup gate ────────────────────────────────────
         if (SetupActivity.isFirstTime(this)) {

@@ -52,6 +52,18 @@
             android:exported="false"
             android:label="My Profile" />
 
+        <activity
+            android:name=".presentation.activities.LoginActivity"
+            android:exported="false"
+            android:label="Log In"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".presentation.activities.SignupActivity"
+            android:exported="false"
+            android:label="Sign Up"
+            android:windowSoftInputMode="adjustResize" />
+
     </application>
 
 </manifest>

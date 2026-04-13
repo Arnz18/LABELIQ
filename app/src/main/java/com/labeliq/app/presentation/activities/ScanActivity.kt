@@ -24,7 +24,8 @@ import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions
 import com.labeliq.app.data.local.ScanResult
 import com.labeliq.app.data.local.loadScanHistory
-import com.labeliq.app.data.local.loadUserProfile
+import com.labeliq.app.data.local.UserProfile
+import com.labeliq.app.data.local.getCurrentUser
 import com.labeliq.app.data.local.saveScanResult
 import com.labeliq.app.data.repository.IngredientRepository
 import com.labeliq.app.databinding.ActivityScanBinding
@@ -179,9 +180,19 @@ class ScanActivity : AppCompatActivity() {
                 Log.d("OCR_INGREDIENTS_EXTRACTED", extractedIngredients.toString())
                 Log.d("OCR_INGREDIENTS_MATCHED", matchedIngredientList.toString())
 
-                // ── Load user profile ─────────────────────────────────────
-                val profile = loadUserProfile(this@ScanActivity)
-                Log.d("PROFILE", "Using profile: $profile")
+                // ── Load current user and map to UserProfile ───────────────
+                val user = getCurrentUser(this@ScanActivity)
+                val profile = UserProfile(
+                    name          = user?.name.orEmpty(),
+                    conditions    = if (user?.isDiabetic == true) listOf("diabetes") else emptyList(),
+                    allergies     = if (user?.hasNutAllergy == true) listOf("nuts") else emptyList(),
+                    preferences   = if (user?.isVegan == true) listOf("vegan") else emptyList(),
+                    avoidTags     = emptyList(),
+                    dietGoal      = "balanced",
+                    lifestyle     = "normal",
+                    customNote    = ""
+                )
+                Log.d("PROFILE", "Using user: ${user?.name}, profile: $profile")
 
                 // ── Evaluate risk using local knowledge base ──────────────
                 val report = riskEngine.evaluate(extractedIngredients, profile)
