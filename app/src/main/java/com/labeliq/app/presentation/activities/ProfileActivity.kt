@@ -1,11 +1,13 @@
 package com.labeliq.app.presentation.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.labeliq.app.data.local.UserProfile
 import com.labeliq.app.data.local.getCurrentUser
 import com.labeliq.app.data.local.loadUserProfile
+import com.labeliq.app.data.local.logoutUser
 import com.labeliq.app.data.local.saveUserProfile
 import com.labeliq.app.data.local.updateUser
 import com.labeliq.app.databinding.ActivityProfileBinding
@@ -91,6 +93,15 @@ class ProfileActivity : AppCompatActivity() {
 
             Toast.makeText(this, "Profile updated", Toast.LENGTH_SHORT).show()
             finish()
+        }
+
+        // ── Logout button ────────────────────────────────────────────
+        binding.btnLogout.setOnClickListener {
+            // Clear session only — user data is preserved
+            logoutUser(this)
+            val intent = Intent(this, LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
         }
     }
 
