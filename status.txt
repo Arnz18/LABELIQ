@@ -1,0 +1,16 @@
+﻿ M app/src/main/AndroidManifest.xml
+ M app/src/main/java/com/labeliq/app/data/local/ScanHistoryManager.kt
+ M app/src/main/java/com/labeliq/app/presentation/activities/MainActivity.kt
+ M app/src/main/java/com/labeliq/app/presentation/activities/ScanActivity.kt
+ M app/src/main/java/com/labeliq/app/presentation/adapters/HistoryAdapter.kt
+ M app/src/main/java/com/labeliq/app/presentation/viewmodels/MainViewModel.java
+ M app/src/main/res/layout/activity_main.xml
+ M app/src/main/res/layout/item_history.xml
+ M app/src/main/res/values/strings.xml
+?? app/src/main/java/com/labeliq/app/presentation/activities/ProfileActivity.kt
+?? app/src/main/java/com/labeliq/app/presentation/activities/ResultDetailActivity.kt
+?? app/src/main/java/com/labeliq/app/presentation/activities/SetupActivity.kt
+?? app/src/main/res/layout/activity_profile.xml
+?? app/src/main/res/layout/activity_result_detail.xml
+?? app/src/main/res/layout/activity_setup.xml
+?? status.txt

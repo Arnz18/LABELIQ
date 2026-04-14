@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Triangle outline -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M1,21 L12,2 L23,21 Z"
+        android:strokeColor="@android:color/white"
+        android:strokeWidth="0" />
+    <!-- Exclamation stem -->
+    <path
+        android:fillColor="#C62828"
+        android:pathData="M11,10 h2 v5 h-2 Z" />
+    <!-- Exclamation dot -->
+    <path
+        android:fillColor="#C62828"
+        android:pathData="M11,16.5 h2 v2 h-2 Z" />
+</vector>

@@ -31,6 +31,7 @@ import com.labeliq.app.data.repository.IngredientRepository
 import com.labeliq.app.databinding.ActivityScanBinding
 import com.labeliq.app.domain.usecase.IngredientTextProcessor
 import com.labeliq.app.domain.usecase.RiskEngine
+import com.labeliq.app.utils.isLikelyIngredientList
 import java.io.File
 
 class ScanActivity : AppCompatActivity() {
@@ -67,7 +68,15 @@ class ScanActivity : AppCompatActivity() {
         }
 
         binding.btnCapture.setOnClickListener { captureImage() }
-        binding.btnRetake.setOnClickListener { showPreview() }
+        binding.btnRetake.setOnClickListener {
+            binding.layoutError.visibility = View.GONE
+
+            // Restore buttons for preview state
+            binding.btnConfirm.visibility = View.VISIBLE
+            binding.btnRetake.visibility  = View.VISIBLE
+
+            showPreview()
+        }
         binding.btnConfirm.setOnClickListener {
             lastCapturedFile?.let { file ->
                 binding.layoutLoading.visibility = View.VISIBLE
@@ -155,6 +164,7 @@ class ScanActivity : AppCompatActivity() {
         binding.ivCaptured.visibility = View.GONE
         binding.layoutReviewActions.visibility = View.GONE
         binding.layoutLoading.visibility = View.GONE
+        binding.layoutError.visibility = View.GONE
         binding.previewView.visibility = View.VISIBLE
         binding.btnCapture.visibility = View.VISIBLE
     }
@@ -171,6 +181,16 @@ class ScanActivity : AppCompatActivity() {
                     Log.d("OCR", "No text detected")
                 } else {
                     Log.d("OCR", "Detected: $resultText")
+                }
+
+                // ── Validate: reject non-food OCR text before classification ──
+                if (!isLikelyIngredientList(resultText)) {
+                    Log.d("OCR", "Text does not look like an ingredient list — aborting.")
+                    runOnUiThread {
+                        binding.layoutLoading.visibility = View.GONE
+                        showError("No ingredients detected.\nTry scanning a food label or packaged product.")
+                    }
+                    return@addOnSuccessListener
                 }
 
                 // ── Parse + clean ingredients ─────────────────────────────
@@ -220,8 +240,10 @@ class ScanActivity : AppCompatActivity() {
                 saveScanResult(this@ScanActivity, result)
                 Log.d("SAVE", "Scan saved")
 
-                // ── Navigate to ResultActivity ───────────────────────────
+                // ── Navigate to ResultActivity ───────────────────────
                 binding.layoutLoading.visibility = View.GONE
+                binding.layoutError.visibility   = View.GONE
+                binding.btnConfirm.visibility    = View.VISIBLE
                 val intent = Intent(this@ScanActivity, ResultActivity::class.java).apply {
                     putExtra(ResultActivity.EXTRA_VERDICT, report.verdict)
                     putExtra(ResultActivity.EXTRA_ADVICE, report.advice)
@@ -264,5 +286,16 @@ class ScanActivity : AppCompatActivity() {
     private fun showPermissionDenied() {
         binding.previewView.visibility = View.GONE
         binding.tvPermissionDenied.visibility = View.VISIBLE
+    }
+
+    // ── Error feedback ────────────────────────────────────────────────────────
+    private fun showError(message: String) {
+        binding.layoutError.visibility   = View.VISIBLE
+
+        binding.tvErrorTitle.text    = "No ingredients detected"
+        binding.tvErrorSubtitle.text = "Try scanning a food label or packaged product"
+
+        binding.btnConfirm.visibility = View.GONE
+        binding.btnRetake.visibility  = View.VISIBLE
     }
 }

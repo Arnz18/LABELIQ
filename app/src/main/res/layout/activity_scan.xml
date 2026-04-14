@@ -37,7 +37,41 @@
         android:textSize="16sp"
         android:visibility="gone" />
 
-    <!-- LAYER 4 — capture button (shown during preview) -->
+    <!-- LAYER 5 — Error banner (shown when scan is not a food label) -->
+    <LinearLayout
+        android:id="@+id/layout_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="16dp"
+        android:elevation="16dp"
+        android:background="@drawable/bg_error_modern">
+
+        <TextView
+            android:id="@+id/tv_error_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No ingredients detected"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tv_error_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Try scanning a food label or packaged product"
+            android:textColor="#B0B0B0"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <!-- LAYER 6 — capture button (shown during preview) -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_capture"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
