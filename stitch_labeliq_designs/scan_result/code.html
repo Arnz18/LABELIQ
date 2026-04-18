@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LabelIQ - Result Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-primary-fixed": "#40000d",
+                "error-container": "#93000a",
+                "secondary-fixed-dim": "#5bdacc",
+                "surface-variant": "#353534",
+                "on-background": "#e5e2e1",
+                "on-surface-variant": "#e5bdbe",
+                "on-secondary": "#003732",
+                "surface-container": "#201f1f",
+                "tertiary": "#ffba35",
+                "secondary-container": "#00a598",
+                "on-tertiary-fixed": "#281900",
+                "on-secondary-fixed-variant": "#005049",
+                "inverse-surface": "#e5e2e1",
+                "surface-container-low": "#1c1b1b",
+                "primary": "#ffb2b6",
+                "on-tertiary": "#422c00",
+                "on-tertiary-container": "#3a2600",
+                "on-surface": "#e5e2e1",
+                "surface-dim": "#131313",
+                "tertiary-container": "#bf8600",
+                "tertiary-fixed-dim": "#ffba35",
+                "surface-container-lowest": "#0e0e0e",
+                "on-secondary-fixed": "#00201d",
+                "surface-tint": "#ffb2b6",
+                "error": "#ffb4ab",
+                "background": "#131313",
+                "secondary-fixed": "#7af7e8",
+                "outline-variant": "#5c3f41",
+                "primary-container": "#ff5169",
+                "outline": "#ac8889",
+                "surface-container-highest": "#353534",
+                "secondary": "#5bdacc",
+                "surface-bright": "#393939",
+                "tertiary-fixed": "#ffdeac",
+                "surface-container-high": "#2a2a2a",
+                "on-secondary-container": "#00332e",
+                "on-primary-fixed-variant": "#920029",
+                "on-error-container": "#ffdad6",
+                "primary-fixed-dim": "#ffb2b6",
+                "inverse-primary": "#be0038",
+                "on-error": "#690005",
+                "on-primary-container": "#5b0016",
+                "surface": "#131313",
+                "inverse-on-surface": "#313030",
+                "on-tertiary-fixed-variant": "#5f4100",
+                "primary-fixed": "#ffdada",
+                "on-primary": "#68001a"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Plus Jakarta Sans"],
+                "body": ["Plus Jakarta Sans"],
+                "label": ["Plus Jakarta Sans"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+      body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #131313; }
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+      .glass-card { backdrop-filter: blur(16px); background: rgba(53, 53, 52, 0.2); }
+      .gradient-primary { background: linear-gradient(135deg, #ffb2b6 0%, #ff5169 100%); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-background antialiased pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-neutral-900/80 backdrop-blur-md flex justify-between items-center px-6 py-4 w-full shadow-[0px_4px_12px_rgba(0,0,0,0.3)]">
+<div class="flex items-center gap-4">
+<button class="text-on-surface hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-xl font-extrabold tracking-tighter text-[#FF385C] font-['Plus_Jakarta_Sans']">LabelIQ</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface">share</span>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high border-2 border-outline-variant/20">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="close-up portrait of a young man with a friendly expression in soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxN-hJjcZXjkEEU6nbYC6Ra4FV2B7gSxUDAv1Q2aoRa9u4xplq7YcX-kofjE-L-szFMoGmzMpAAIpksqbYDGXW1DDodb9jVk9Nibo7m_NRHLRQATtwlEIFSVQ5RqaM0pL-EsTNXAAtktdRfxqJzkVRbKLQixef0AmV9KvE8lfe757-Kro2uHW4X_DYT1EyA2YVwSqOkfs8073RROG6ves1ankBY0nwV7aFuRd63J9Yei1IN4urEcr5YyoAu5fUS1c5gAQW8B-8QicS"/>
+</div>
+</div>
+</header>
+<main class="mt-20 px-6 max-w-2xl mx-auto">
+<!-- Hero Verdict Section -->
+<section class="mt-8 mb-10">
+<div class="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden mb-6 group">
+<img alt="Product Image" class="w-full h-full object-cover" data-alt="Close-up of a premium artisanal snack bar packaging with vibrant organic ingredients visible in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMQYXmD5bkxsWRs_w0NMqGTn2ag1GkzgE4v8n2DPhY5k2zzGSJ_foJ7wmtbM0lwyXew1e5R6vgAd-PgJv1ulVQwunwKhlZYvf5ehUT2_FbbXREVTgw69uOoVcxepCe6U8s2f-Zs0IZ5pEQi8melui1c-5Wqh73ludcYD5kZs1xuSap8Z6etoxWTShhbmsZnhSSW7b--zCLW6itUdPgeVVxUIL3atGy8o2FFyIWTzE2t_hE1mXPDN43GBcSb2ceLZsszGYuOl_8MHSw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim via-surface-dim/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="inline-flex items-center px-4 py-1.5 rounded-full bg-primary-container text-on-primary-container text-[0.6875rem] font-bold tracking-widest uppercase mb-3">
+                        Verdict
+                    </div>
+<h2 class="text-[3.5rem] font-bold leading-tight tracking-tight text-primary-fixed-dim">AVOID</h2>
+<p class="text-headline-sm font-medium text-on-surface-variant/90 mt-2">Organic Almond &amp; Sea Salt Bar</p>
+</div>
+</div>
+<!-- Explanation Card -->
+<div class="bg-surface-container-low rounded-[1.5rem] p-6 space-y-4">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-2xl bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div>
+<h3 class="text-title-md font-bold text-on-surface">Personalized Conflict</h3>
+<p class="text-body-md text-on-surface-variant mt-1 leading-relaxed">
+                            Based on your <span class="text-primary font-bold">Peanut Allergy</span>, this product is unsafe. While primarily almond-based, it is manufactured in a facility that processes peanuts.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Nutrition Insights Bento -->
+<section class="mb-10">
+<h3 class="text-title-md font-bold mb-6 tracking-tight">Nutrition Insights</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container rounded-3xl p-5 flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-tertiary text-3xl">restaurant</span>
+<div>
+<p class="text-on-surface-variant text-sm font-medium">Sugar</p>
+<p class="text-2xl font-bold text-on-surface">12g <span class="text-xs text-error font-bold">HIGH</span></p>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-3xl p-5 flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-secondary text-3xl">bolt</span>
+<div>
+<p class="text-on-surface-variant text-sm font-medium">Protein</p>
+<p class="text-2xl font-bold text-on-surface">8g <span class="text-xs text-secondary font-bold">GOOD</span></p>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-3xl p-5 flex flex-col justify-between col-span-2">
+<div class="flex justify-between items-center mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">opacity</span>
+<div class="px-3 py-1 rounded-full bg-surface-variant text-[10px] font-bold tracking-widest text-on-surface-variant">MODERATE</div>
+</div>
+<div>
+<p class="text-on-surface-variant text-sm font-medium">Saturated Fats</p>
+<p class="text-2xl font-bold text-on-surface">4.5g</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Flagged Ingredients -->
+<section class="mb-10">
+<div class="flex justify-between items-end mb-6">
+<h3 class="text-title-md font-bold tracking-tight">Flagged Ingredients</h3>
+<button class="text-primary text-sm font-bold">View Full List</button>
+</div>
+<div class="space-y-3">
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-2xl flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-error-container/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">priority_high</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-on-surface">Peanut Traces</p>
+<p class="text-xs text-on-surface-variant">Allergen: Critical Risk</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-2xl flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-container/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">info</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-on-surface">Cane Sugar</p>
+<p class="text-xs text-on-surface-variant">Added Sweetener: High Dose</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Action Buttons -->
+<section class="flex flex-col gap-4 mt-8">
+<button class="gradient-primary h-16 rounded-2xl flex items-center justify-center gap-3 active:scale-[0.98] transition-transform shadow-[0px_8px_24px_rgba(255,81,105,0.3)]">
+<span class="material-symbols-outlined text-on-primary" style="font-variation-settings: 'FILL' 1;">center_focus_strong</span>
+<span class="font-bold text-on-primary">Re-scan Item</span>
+</button>
+<button class="h-16 rounded-2xl border border-outline-variant/30 flex items-center justify-center gap-3 bg-surface-container-high/50 backdrop-blur-md active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-on-surface">bookmark</span>
+<span class="font-bold text-on-surface">Save to History</span>
+</button>
+</section>
+</main>
+<!-- BottomNavBar (Shared Component) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center pb-6 pt-3 px-4 bg-[#1C1B1B]/90 backdrop-blur-xl shadow-[0px_-8px_24px_rgba(0,0,0,0.2)] rounded-t-3xl">
+<a class="flex flex-col items-center justify-center text-neutral-500 hover:text-neutral-200 transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 hover:text-neutral-200 transition-colors" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#FF385C] bg-[#FF385C]/10 rounded-2xl px-4 py-2 scale-96 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">center_focus_strong</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Scan</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 hover:text-neutral-200 transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

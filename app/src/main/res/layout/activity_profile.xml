@@ -4,361 +4,518 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_dark"
+    android:background="@color/background"
     android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp"
-        android:gravity="center_horizontal">
+        android:orientation="vertical">
 
-        <!-- ── Toolbar ────────────────────────────────────────────── -->
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <!-- ── Custom Toolbar ─────────────────────────────── -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/background_dark"
-            app:title="My Profile"
-            app:titleTextColor="@color/white"
-            app:navigationIcon="@drawable/ic_arrow_back" />
+            android:layout_height="64dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:background="@color/background">
 
-        <!-- ── Avatar / icon ─────────────────────────────────────── -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="👤"
-            android:textSize="64sp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="24dp" />
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/background"
+                android:elevation="0dp"
+                app:navigationIcon="@drawable/ic_arrow_back" />
 
-        <!-- ── Name card ─────────────────────────────────────────── -->
-        <com.google.android.material.card.MaterialCardView
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="My Profile"
+                android:textColor="@color/on_surface"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:letterSpacing="-0.02"
+                android:fontFamily="@font/plus_jakarta_sans" />
+        </LinearLayout>
+
+        <!-- ── Avatar section ────────────────────────────── -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
+            android:paddingHorizontal="20dp">
+
+            <!-- Avatar circle -->
+            <FrameLayout
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="88dp"
+                    android:layout_height="88dp"
+                    android:gravity="center"
+                    android:text="👤"
+                    android:textSize="40sp"
+                    android:background="@drawable/bg_avatar_large" />
+
+                <!-- Premium badge -->
+                <TextView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="bottom|end"
+                    android:gravity="center"
+                    android:text="★"
+                    android:textSize="12sp"
+                    android:textColor="@color/on_tertiary"
+                    android:background="@drawable/bg_badge_tertiary" />
+            </FrameLayout>
+
+            <!-- Name (shown from profile; saved by save button) -->
+            <TextView
+                android:id="@+id/tv_profile_name_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Name"
+                android:textColor="@color/on_surface"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:letterSpacing="-0.02" />
+
+            <!-- Premium pill -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="★  Premium Member"
+                android:textColor="@color/on_tertiary_container"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:letterSpacing="0.05"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:background="@drawable/bg_tertiary_pill" />
+        </LinearLayout>
+
+        <!-- ── Quick Preferences card ──────────────────────── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="20dp"
             android:layout_marginBottom="16dp"
-            app:cardCornerRadius="14dp"
-            app:cardElevation="4dp"
-            app:cardBackgroundColor="#1E1E1E">
+            android:background="@drawable/bg_gradient_card"
+            android:padding="20dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DIETARY PREFERENCES"
+                        android:textColor="#80FFFFFF"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:letterSpacing="0.12" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Manage your health profile"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Your Name"
-                    android:textSize="13sp"
-                    android:textColor="#BDBDBD"
-                    android:layout_marginBottom="8dp" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:boxStrokeColor="#444444"
-                    app:hintTextColor="#BDBDBD">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_name"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Enter your name"
-                        android:textColor="@color/white"
-                        android:textColorHint="#757575"
-                        android:inputType="textPersonName"
-                        android:imeOptions="actionDone" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:gravity="center"
+                    android:text="🥗"
+                    android:textSize="18sp"
+                    android:background="@drawable/bg_icon_circle" />
             </LinearLayout>
 
-        </com.google.android.material.card.MaterialCardView>
+            <!-- Dietary flags with switches -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
 
-        <!-- ── Dietary preferences card ──────────────────────────── -->
-        <com.google.android.material.card.MaterialCardView
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🩸  Diabetic"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switch_diabetic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    app:thumbTint="@color/white"
+                    app:trackTint="#80FFFFFF" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🌿  Vegan"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switch_vegan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    app:thumbTint="@color/white"
+                    app:trackTint="#80FFFFFF" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🥜  Nut Allergy"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switch_nut_allergy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    app:thumbTint="@color/white"
+                    app:trackTint="#80FFFFFF" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ── Advanced profile fields card ────────────────── -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
-            app:cardCornerRadius="14dp"
-            app:cardElevation="4dp"
-            app:cardBackgroundColor="#1E1E1E">
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_surface_card"
+            android:padding="20dp">
 
-            <LinearLayout
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PROFILE DETAILS"
+                android:textColor="@color/brand_red"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Name -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Name"
+                android:textColor="@color/on_surface_variant"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:textSize="12sp"
+                android:layout_marginBottom="6dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/outline_variant"
+                app:hintEnabled="false"
+                android:layout_marginBottom="12dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Dietary Preferences"
-                    android:textSize="13sp"
-                    android:textColor="#BDBDBD"
-                    android:layout_marginBottom="12dp" />
-
-                <!-- Diabetic -->
-                <LinearLayout
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_name"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:layout_marginBottom="14dp">
+                    android:layout_height="52dp"
+                    android:hint="Enter your name"
+                    android:textColor="@color/on_surface"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textColorHint="@color/outline"
+                    android:inputType="textPersonName"
+                    android:imeOptions="actionDone" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="🩸  Diabetic"
-                        android:textSize="15sp"
-                        android:textColor="@color/white" />
+            <!-- Conditions -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Health Conditions"
+                android:textColor="@color/on_surface_variant"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:textSize="12sp"
+                android:layout_marginBottom="6dp" />
 
-                    <androidx.appcompat.widget.SwitchCompat
-                        android:id="@+id/switch_diabetic"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#2C2C2C"
-                    android:layout_marginBottom="14dp" />
-
-                <!-- Vegan -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:layout_marginBottom="14dp">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="🌿  Vegan"
-                        android:textSize="15sp"
-                        android:textColor="@color/white" />
-
-                    <androidx.appcompat.widget.SwitchCompat
-                        android:id="@+id/switch_vegan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#2C2C2C"
-                    android:layout_marginBottom="14dp" />
-
-                <!-- Nut Allergy -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="🥜  Nut Allergy"
-                        android:textSize="15sp"
-                        android:textColor="@color/white" />
-
-                    <androidx.appcompat.widget.SwitchCompat
-                        android:id="@+id/switch_nut_allergy"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- ── Advanced personalization card ─────────────────────── -->
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            app:cardCornerRadius="14dp"
-            app:cardElevation="4dp"
-            app:cardBackgroundColor="#1E1E1E">
-
-            <LinearLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/outline_variant"
+                app:hintEnabled="false"
+                android:layout_marginBottom="12dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Personalization"
-                    android:textSize="13sp"
-                    android:textColor="#BDBDBD"
-                    android:layout_marginBottom="12dp" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_conditions"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Conditions (comma separated)"
+                    android:textColor="@color/on_surface"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textColorHint="@color/outline" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
+            <!-- Allergies -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Allergies"
+                android:textColor="@color/on_surface_variant"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:textSize="12sp"
+                android:layout_marginBottom="6dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/outline_variant"
+                app:hintEnabled="false"
+                android:layout_marginBottom="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_allergies"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Allergies (comma separated)"
+                    android:textColor="@color/on_surface"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textColorHint="@color/outline" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Diet Goal -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diet Goal"
+                android:textColor="@color/on_surface_variant"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:textSize="12sp"
+                android:layout_marginBottom="6dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/outline_variant"
+                app:hintEnabled="false"
+                android:layout_marginBottom="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_diet_goal"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="fat_loss / muscle_gain / balanced"
+                    android:textColor="@color/on_surface"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textColorHint="@color/outline" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Lifestyle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lifestyle"
+                android:textColor="@color/on_surface_variant"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:textSize="12sp"
+                android:layout_marginBottom="6dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/outline_variant"
+                app:hintEnabled="false"
+                android:layout_marginBottom="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_lifestyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="athlete / normal"
+                    android:textColor="@color/on_surface"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textColorHint="@color/outline" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Preferences -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preferences"
+                android:textColor="@color/on_surface_variant"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:textSize="12sp"
+                android:layout_marginBottom="6dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/outline_variant"
+                app:hintEnabled="false"
+                android:layout_marginBottom="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_preferences"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Preferences (comma separated)"
+                    android:textColor="@color/on_surface"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textColorHint="@color/outline" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Avoid Tags -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avoid Tags"
+                android:textColor="@color/on_surface_variant"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:textSize="12sp"
+                android:layout_marginBottom="6dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/outline_variant"
+                app:hintEnabled="false"
+                android:layout_marginBottom="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_avoid_tags"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Avoid tags (comma separated)"
+                    android:textColor="@color/on_surface"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textColorHint="@color/outline" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Custom note -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Custom Note"
+                android:textColor="@color/on_surface_variant"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:textSize="12sp"
+                android:layout_marginBottom="6dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/outline_variant"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_custom_note"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:boxStrokeColor="#444444"
-                    android:layout_marginBottom="12dp">
+                    android:hint="Custom note"
+                    android:minLines="2"
+                    android:maxLines="4"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/on_surface"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textColorHint="@color/outline" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_conditions"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Conditions (comma separated)"
-                        android:textColor="@color/white"
-                        android:textColorHint="#757575" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:boxStrokeColor="#444444"
-                    android:layout_marginBottom="12dp">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_allergies"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Allergies (comma separated)"
-                        android:textColor="@color/white"
-                        android:textColorHint="#757575" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:boxStrokeColor="#444444"
-                    android:layout_marginBottom="12dp">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_diet_goal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Diet Goal (fat_loss, muscle_gain, balanced)"
-                        android:textColor="@color/white"
-                        android:textColorHint="#757575" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:boxStrokeColor="#444444"
-                    android:layout_marginBottom="12dp">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_lifestyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Lifestyle (athlete, normal)"
-                        android:textColor="@color/white"
-                        android:textColorHint="#757575" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:boxStrokeColor="#444444"
-                    android:layout_marginBottom="12dp">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_preferences"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Preferences (comma separated)"
-                        android:textColor="@color/white"
-                        android:textColorHint="#757575" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:boxStrokeColor="#444444"
-                    android:layout_marginBottom="12dp">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_avoid_tags"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Avoid tags (comma separated)"
-                        android:textColor="@color/white"
-                        android:textColorHint="#757575" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:boxStrokeColor="#444444">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_custom_note"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Custom note"
-                        android:minLines="2"
-                        android:maxLines="4"
-                        android:inputType="textMultiLine"
-                        android:textColor="@color/white"
-                        android:textColorHint="#757575" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- ── Save button ────────────────────────────────────────── -->
+        <!-- ── Save button ────────────────────────────────── -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_save_profile"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="62dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="12dp"
             android:text="Save Profile"
             android:textColor="@color/white"
+            android:fontFamily="@font/plus_jakarta_sans"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:cornerRadius="28dp"
-            app:backgroundTint="#2979FF" />
+            android:background="@drawable/bg_button_primary"
+            app:backgroundTint="@null"
+            app:cornerRadius="16dp" />
 
-        <!-- ── Logout button ──────────────────────────────────────── -->
+        <!-- ── Logout button ──────────────────────────────── -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_logout"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="40dp"
             android:text="Logout"
-            android:textColor="@color/white"
+            android:textColor="@color/error"
+            android:fontFamily="@font/plus_jakarta_sans"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:cornerRadius="28dp"
-            app:backgroundTint="#C62828"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            app:strokeColor="#EF5350"
+            app:cornerRadius="16dp"
+            app:backgroundTint="@color/surface_container_highest"
+            app:strokeColor="@color/outline_variant"
             app:strokeWidth="1dp" />
 
     </LinearLayout>

@@ -1,19 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Backgrounds -->
-    <color name="background_dark">#0D1117</color>
-    <color name="surface_dark">#161B22</color>
-    <color name="surface_elevated">#21262D</color>
+    <!-- Backgrounds & Surfaces -->
+    <color name="background">#131313</color>
+    <color name="surface_container_lowest">#0E0E0E</color>
+    <color name="surface_container_low">#1C1B1B</color>
+    <color name="surface_container">#201F1F</color>
+    <color name="surface_container_high">#2A2A2A</color>
+    <color name="surface_container_highest">#353534</color>
+    <color name="surface_bright">#393939</color>
+    <color name="surface_variant">#353534</color>
+    <color name="surface_dim">#131313</color>
 
-    <!-- Accent -->
-    <color name="accent_green">#39D353</color>
-    <color name="accent_green_dim">#238636</color>
+    <!-- Primary -->
+    <color name="primary">#FFB2B6</color>
+    <color name="primary_container">#FF5169</color>
+    <color name="on_primary">#68001A</color>
+    <color name="on_primary_container">#5B0016</color>
+    <color name="primary_fixed">#FFDADA</color>
+    <color name="primary_fixed_dim">#FFB2B6</color>
 
-    <!-- Text -->
-    <color name="text_primary">#E6EDF3</color>
-    <color name="text_secondary">#8B949E</color>
+    <!-- Secondary -->
+    <color name="secondary">#5BDACC</color>
+    <color name="secondary_container">#00A598</color>
+    <color name="on_secondary">#003732</color>
+    <color name="on_secondary_container">#00332E</color>
+    <color name="secondary_fixed">#7AF7E8</color>
+    <color name="secondary_fixed_dim">#5BDACC</color>
+
+    <!-- Tertiary -->
+    <color name="tertiary">#FFBA35</color>
+    <color name="tertiary_container">#BF8600</color>
+    <color name="on_tertiary">#422C00</color>
+    <color name="on_tertiary_container">#3A2600</color>
+    <color name="tertiary_fixed">#FFDEAC</color>
+    <color name="tertiary_fixed_dim">#FFBA35</color>
+
+    <!-- Error -->
+    <color name="error">#FFB4AB</color>
+    <color name="error_container">#93000A</color>
+    <color name="on_error">#690005</color>
+    <color name="on_error_container">#FFDAD6</color>
+
+    <!-- Text & Borders -->
+    <color name="on_background">#E5E2E1</color>
+    <color name="on_surface">#E5E2E1</color>
+    <color name="on_surface_variant">#E5BDBE</color>
+    <color name="outline">#AC8889</color>
+    <color name="outline_variant">#5C3F41</color>
+    <color name="inverse_surface">#E5E2E1</color>
+    <color name="inverse_on_surface">#313030</color>
+
+    <!-- Brand accent -->
+    <color name="brand_red">#FF385C</color>
+
+    <!-- Compat -->
     <color name="white">#FFFFFF</color>
-
-    <!-- Status -->
-    <color name="error">#F85149</color>
 </resources>

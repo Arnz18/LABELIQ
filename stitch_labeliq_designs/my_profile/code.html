@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#40000d",
+                    "error-container": "#93000a",
+                    "secondary-fixed-dim": "#5bdacc",
+                    "surface-variant": "#353534",
+                    "on-background": "#e5e2e1",
+                    "on-surface-variant": "#e5bdbe",
+                    "on-secondary": "#003732",
+                    "surface-container": "#201f1f",
+                    "tertiary": "#ffba35",
+                    "secondary-container": "#00a598",
+                    "on-tertiary-fixed": "#281900",
+                    "on-secondary-fixed-variant": "#005049",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-container-low": "#1c1b1b",
+                    "primary": "#ffb2b6",
+                    "on-tertiary": "#422c00",
+                    "on-tertiary-container": "#3a2600",
+                    "on-surface": "#e5e2e1",
+                    "surface-dim": "#131313",
+                    "tertiary-container": "#bf8600",
+                    "tertiary-fixed-dim": "#ffba35",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-secondary-fixed": "#00201d",
+                    "surface-tint": "#ffb2b6",
+                    "error": "#ffb4ab",
+                    "background": "#131313",
+                    "secondary-fixed": "#7af7e8",
+                    "outline-variant": "#5c3f41",
+                    "primary-container": "#ff5169",
+                    "outline": "#ac8889",
+                    "surface-container-highest": "#353534",
+                    "secondary": "#5bdacc",
+                    "surface-bright": "#393939",
+                    "tertiary-fixed": "#ffdeac",
+                    "surface-container-high": "#2a2a2a",
+                    "on-secondary-container": "#00332e",
+                    "on-primary-fixed-variant": "#920029",
+                    "on-error-container": "#ffdad6",
+                    "primary-fixed-dim": "#ffb2b6",
+                    "inverse-primary": "#be0038",
+                    "on-error": "#690005",
+                    "on-primary-container": "#5b0016",
+                    "surface": "#131313",
+                    "inverse-on-surface": "#313030",
+                    "on-tertiary-fixed-variant": "#5f4100",
+                    "primary-fixed": "#ffdada",
+                    "on-primary": "#68001a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-32">
+<!-- Top AppBar (from Shared Components JSON) -->
+<header class="fixed top-0 w-full z-50 bg-neutral-900/80 backdrop-blur-md shadow-[0px_4px_12px_rgba(0,0,0,0.3)]">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="text-on-background hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="text-xl font-extrabold tracking-tighter text-[#FF385C] font-['Plus_Jakarta_Sans']">LabelIQ</h1>
+</div>
+<div class="h-10 w-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="Alex Sommelier" class="w-full h-full object-cover" data-alt="Close-up portrait of a sophisticated man with a kind expression, soft studio lighting, high-end fashion photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFAsDkMSc0WA7rqMsfj1PlvUh67lTnDqs9toAqORzA8xA8roHCGBMRimMfaUnWJrvsT-xSq3HD7K6jkrtQ2SXrxiC4xVMkEUDUFMKXKhvGCkY1nrbBGCnkuq_JUcgm9AFSqhdggb0PgLNY8YkU3Zjd-jTzyUu-jo2190fSPrdWKbHG5hXR8zUeEScxRCYNrLK3hUP1HIFGOEe_Wi0ySJ9Bg_akentzeSmrs6g7A5JGfPT7jPitEmtQybb0By-jIHV-4SX0hf1HFcCh"/>
+</div>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Profile Header Section -->
+<section class="mb-12 flex flex-col items-center text-center">
+<div class="relative mb-6">
+<div class="h-32 w-32 rounded-full overflow-hidden border-4 border-surface-container-high shadow-2xl">
+<img alt="Alex Sommelier" class="w-full h-full object-cover" data-alt="Professional headshot of a premium member, warm ambient lighting, modern aesthetic, blurred minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUyoLM7PCycNQR7IP2EzopWU_SmhnxaD_puAnBAL3vwLV_JWFDHlYvUffplrltSMLVDiwrFZezrNqyAARw4XyEH1EyHQ2HNASqTYF_6am5bEZHSWtBe2bDai7IejHI8u5FPaEmrhf_tZDM0Bnx729eHshjXzA-R7HdbcLmbPdMDy4JPHd3Ki_EGpLUeNbGNqhRx4KUnLLLkDWv4S78XbglbwB_oHM5WYKzFjPeUV2zt1-dPdI4aJHTl3omlT1MQRiGtegGpHW7Rmlz"/>
+</div>
+<div class="absolute bottom-0 right-0 bg-secondary rounded-full p-2 border-4 border-background text-on-secondary shadow-lg">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<h2 class="text-3xl font-extrabold tracking-tight text-on-background mb-1">Alex Sommelier</h2>
+<p class="text-on-surface-variant/80 font-medium mb-4">alex.sommelier@premium.io</p>
+<!-- Hero Stat/Badge -->
+<div class="bg-surface-container-low px-6 py-2 rounded-full inline-flex items-center gap-2 border border-outline-variant/10">
+<span class="material-symbols-outlined text-tertiary text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface">Premium Member</span>
+</div>
+</section>
+<!-- Preference Quick Action -->
+<section class="mb-10">
+<div class="bg-gradient-to-br from-primary/20 to-primary-container/10 p-6 rounded-3xl border border-primary/10 shadow-xl flex items-center justify-between">
+<div>
+<h3 class="text-lg font-bold text-on-background mb-1">Dietary Preferences</h3>
+<p class="text-sm text-on-surface-variant">Update your allergens and goals</p>
+</div>
+<button class="bg-primary text-on-primary px-5 py-2.5 rounded-xl font-bold text-sm shadow-lg hover:opacity-90 active:scale-95 transition-all">
+                    Update
+                </button>
+</div>
+</section>
+<!-- Profile Navigation List -->
+<section class="space-y-4">
+<!-- Group Header -->
+<h4 class="text-[11px] font-bold text-neutral-500 uppercase tracking-[0.2em] px-2 mb-4">Account Overview</h4>
+<nav class="space-y-2">
+<!-- Navigation Drawer Items (Mapping from JSON) -->
+<!-- My Preferences (Linked back to multi-select intent) -->
+<a class="flex items-center justify-between p-5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="target">target</span>
+</div>
+<span class="font-semibold text-on-background">Dietary Goals</span>
+</div>
+<span class="material-symbols-outlined text-neutral-600 group-hover:text-primary transition-colors">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="warning">warning</span>
+</div>
+<span class="font-semibold text-on-background">Allergens</span>
+</div>
+<span class="material-symbols-outlined text-neutral-600 group-hover:text-primary transition-colors">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-neutral-800 flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</div>
+<span class="font-semibold text-on-background">Account Settings</span>
+</div>
+<span class="material-symbols-outlined text-neutral-600 group-hover:text-primary transition-colors">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-neutral-800 flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</div>
+<span class="font-semibold text-on-background">Help Center</span>
+</div>
+<span class="material-symbols-outlined text-neutral-600 group-hover:text-primary transition-colors">chevron_right</span>
+</a>
+<div class="pt-6">
+<button class="w-full flex items-center justify-between p-5 rounded-2xl bg-error-container/10 hover:bg-error-container/20 transition-colors group border border-error-container/20">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-error-container/20 flex items-center justify-center text-error">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+</div>
+<span class="font-bold text-error">Logout</span>
+</div>
+</button>
+</div>
+</nav>
+</section>
+<!-- Footer Meta -->
+<footer class="mt-12 text-center pb-8">
+<p class="text-[10px] font-bold text-neutral-600 uppercase tracking-widest">Version v1.0.2</p>
+</footer>
+</main>
+<!-- Bottom Navigation Bar (from Shared Components JSON) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center pb-6 pt-3 px-4 bg-[#1C1B1B]/90 backdrop-blur-xl rounded-t-3xl shadow-[0px_-8px_24px_rgba(0,0,0,0.2)]">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-neutral-500 hover:text-neutral-200 transition-colors scale-96" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest">Home</span>
+</a>
+<!-- History -->
+<a class="flex flex-col items-center justify-center text-neutral-500 hover:text-neutral-200 transition-colors scale-96" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="history">history</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest">History</span>
+</a>
+<!-- Scan -->
+<a class="flex flex-col items-center justify-center text-neutral-500 hover:text-neutral-200 transition-colors scale-96" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="center_focus_strong">center_focus_strong</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest">Scan</span>
+</a>
+<!-- Profile (Active) -->
+<a class="flex flex-col items-center justify-center text-[#FF385C] bg-[#FF385C]/10 rounded-2xl px-4 py-2 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest">Profile</span>
+</a>
+</nav>
+</body></html>

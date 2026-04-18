@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#40000d",
+                        "error-container": "#93000a",
+                        "secondary-fixed-dim": "#5bdacc",
+                        "surface-variant": "#353534",
+                        "on-background": "#e5e2e1",
+                        "on-surface-variant": "#e5bdbe",
+                        "on-secondary": "#003732",
+                        "surface-container": "#201f1f",
+                        "tertiary": "#ffba35",
+                        "secondary-container": "#00a598",
+                        "on-tertiary-fixed": "#281900",
+                        "on-secondary-fixed-variant": "#005049",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "primary": "#ffb2b6",
+                        "on-tertiary": "#422c00",
+                        "on-tertiary-container": "#3a2600",
+                        "on-surface": "#e5e2e1",
+                        "surface-dim": "#131313",
+                        "tertiary-container": "#bf8600",
+                        "tertiary-fixed-dim": "#ffba35",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-fixed": "#00201d",
+                        "surface-tint": "#ffb2b6",
+                        "error": "#ffb4ab",
+                        "background": "#131313",
+                        "secondary-fixed": "#7af7e8",
+                        "outline-variant": "#5c3f41",
+                        "primary-container": "#ff5169",
+                        "outline": "#ac8889",
+                        "surface-container-highest": "#353534",
+                        "secondary": "#5bdacc",
+                        "surface-bright": "#393939",
+                        "tertiary-fixed": "#ffdeac",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-container": "#00332e",
+                        "on-primary-fixed-variant": "#920029",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#ffb2b6",
+                        "inverse-primary": "#be0038",
+                        "on-error": "#690005",
+                        "on-primary-container": "#5b0016",
+                        "surface": "#131313",
+                        "inverse-on-surface": "#313030",
+                        "on-tertiary-fixed-variant": "#5f4100",
+                        "primary-fixed": "#ffdada",
+                        "on-primary": "#68001a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-neutral-900/80 backdrop-blur-md shadow-[0px_4px_12px_rgba(0,0,0,0.3)] flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#FF385C]" data-icon="menu">menu</span>
+<span class="text-xl font-extrabold tracking-tighter text-[#FF385C] font-['Plus_Jakarta_Sans']">LabelIQ</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden ring-2 ring-primary/20">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="Close-up portrait of a stylish person with soft lighting and a minimalist dark background for a profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsEbyEWjeuucMhaiM4h4ps_Zo7VSYcw6uWc0sJW8RkFN-nOcJD6RFPO7y4Q9nN28l65bcQlt3ELqH-6HV1BBTSutgnAcmVZ_QCA-b6HMbDW60I8jFHid026_qIIRj1T6VJxhwuOzFN5Ah0pfyxJ6bDz-aB6mSM--SDoZCmuJx1aLgMCji5SjIcqrzXw90oqvSbq4vZ-UqLQEV5wvLwF-CbzOouq5DxHAeTWTp75h9qMLL_SSAuedNp9Qx2Re8mo1xh51Lpoaoz463y"/>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto space-y-12">
+<!-- Hero Section: Scanner Core -->
+<section class="relative group">
+<div class="w-full aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-surface-container-low shadow-[0px_16px_48px_rgba(0,0,0,0.4)] transition-transform duration-500 hover:scale-[1.01]">
+<div class="absolute inset-0 z-0">
+<img alt="Scanning backdrop" class="w-full h-full object-cover opacity-60 scale-105 group-hover:scale-100 transition-transform duration-700" data-alt="Cinematic close-up of a rustic glass bottle and fresh organic ingredients on a dark stone surface with moody side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFOOI4soyV1wOD7KY8sk7c4OJo07eqxWLLS3o_GEAVQFPkYcqwNReXGsE9Si0jYsqvEvg1JU_rd_AGuBCIJ8Aq7a9fb5Uigwq27QuUdbTRdjt8xiSJn9Vdvjuh2NOvzUC8E5zK0e3LpBGXM8AUEIRab-eumrT8v_5t9ReEuCd_kXiqmc5S753kX8HF7yd4fqHydMP4jiZEZc_I9BOtI2qTdVkhLvw29naWHM4bAFmQRRMb0HtzreMi5dubCLI2lZ0CI0tMFxdrFZhd"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+</div>
+<div class="absolute inset-0 z-10 flex flex-col items-center justify-center p-8 text-center">
+<!-- Scanner Reticle Visual -->
+<div class="relative w-48 h-48 mb-8 flex items-center justify-center">
+<div class="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-secondary rounded-tl-xl"></div>
+<div class="absolute top-0 right-0 w-8 h-8 border-t-4 border-r-4 border-secondary rounded-tr-xl"></div>
+<div class="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-secondary rounded-bl-xl"></div>
+<div class="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-secondary rounded-br-xl"></div>
+<div class="w-24 h-24 rounded-full bg-primary-container/20 flex items-center justify-center backdrop-blur-xl ring-1 ring-primary/30">
+<span class="material-symbols-outlined text-primary text-5xl" data-icon="center_focus_strong">center_focus_strong</span>
+</div>
+<div class="absolute inset-0 rounded-full blur-3xl bg-primary/10 -z-10 animate-pulse"></div>
+</div>
+<h1 class="text-4xl font-bold tracking-tight text-on-surface mb-3 leading-tight">Start Scanning</h1>
+<p class="text-on-surface-variant text-lg font-medium opacity-90 max-w-xs">Point your camera at the ingredient list</p>
+<button class="mt-10 px-8 py-4 bg-primary text-on-primary-container font-bold rounded-2xl flex items-center gap-3 shadow-[0px_8px_24px_rgba(255,178,182,0.3)] active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="camera">camera</span>
+                        Open Camera
+                    </button>
+</div>
+</div>
+</section>
+<!-- Recent Scans: Bento Grid Inspired -->
+<section class="space-y-6">
+<div class="flex justify-between items-end px-1">
+<div>
+<h2 class="text-2xl font-bold tracking-tight">Recent Scans</h2>
+<p class="text-sm text-on-surface-variant/70">Your kitchen history</p>
+</div>
+<button class="text-[#FF385C] text-sm font-bold uppercase tracking-widest">View All</button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Scan Item 1 -->
+<div class="bg-surface-container-low p-4 rounded-3xl space-y-4 hover:bg-surface-container transition-colors">
+<div class="aspect-square rounded-2xl overflow-hidden">
+<img alt="Recent product" class="w-full h-full object-cover" data-alt="Top view of artisanal breakfast cereal clusters with almond slices and dried berries on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIH98QWb65-0Kv46WzaCCQ9SqBowEf22iqrFug4awpVzIkeqxW4PiaTvMCMhYilPQFESESYz8tX1FN1BAlrJAA4KSTOIP_3Trx7qoGy6FgO-vNbEci41PYh3q8aeBI2Cy4SG0YvCT3e7bXkPghrkMfhmcnrkhhEPDOdquPHxwlsBFrCad-JHao76MS8WFc2sf4GWCxt2Rdf94qCGSA5jBGup_Uh1Ytya0MC0Pe2-ryVvotClZNoZKSfjQanDFRi-Ix0GjYUd5eqtDm"/>
+</div>
+<div>
+<h3 class="font-bold text-base leading-tight">Almond Muesli</h3>
+<div class="mt-2 inline-flex items-center gap-1.5 px-3 py-1 bg-secondary-container rounded-full">
+<div class="w-1.5 h-1.5 rounded-full bg-on-secondary-container"></div>
+<span class="text-[10px] font-bold text-on-secondary-container uppercase tracking-wider">Safe for you</span>
+</div>
+</div>
+</div>
+<!-- Scan Item 2 -->
+<div class="bg-surface-container-low p-4 rounded-3xl space-y-4 hover:bg-surface-container transition-colors">
+<div class="aspect-square rounded-2xl overflow-hidden">
+<img alt="Recent product" class="w-full h-full object-cover" data-alt="Close-up of a high-end chocolate bar packaging with dark foil and minimalist gold lettering" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoTpZlx6kqQWbFy09otEzlPCRqgRQLpxehush-JgVk6P9nHxwOtO5PdtNRtEl_yCwJgCQX5HmU3A35QcqCTXJWq8KaHz_9H7GzrKANQsHApjgzEHkMor2uBCOvBoq9LLd6Q8ap4US0Q9bZ2PB2rwVCV_4JwrEdaF12eyO2Tp3lqgz1QZv4rAQm6JKIjnLPveJb6vjApfXaidLtCZAfd4N2zgurwIrAabf1TgvWhNMVX86qg88KfxS88W_S9-z_01YahvC0HmVdzveh"/>
+</div>
+<div>
+<h3 class="font-bold text-base leading-tight">Dark Cocoa 85%</h3>
+<div class="mt-2 inline-flex items-center gap-1.5 px-3 py-1 bg-primary-container rounded-full">
+<div class="w-1.5 h-1.5 rounded-full bg-on-primary-container"></div>
+<span class="text-[10px] font-bold text-on-primary-container uppercase tracking-wider">Allergen Alert</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tips for You: Editorial Cards -->
+<section class="space-y-6">
+<h2 class="text-2xl font-bold tracking-tight px-1">Tips for You</h2>
+<div class="space-y-4">
+<!-- Tip 1 -->
+<div class="relative w-full rounded-3xl bg-surface-container-low overflow-hidden group">
+<div class="flex items-center p-5 gap-6">
+<div class="flex-1 space-y-2">
+<span class="text-[10px] font-bold text-tertiary-fixed uppercase tracking-[0.15em]">Health Insight</span>
+<h4 class="text-lg font-bold leading-snug">Hidden sugars in "Diet" labels</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Learn how to spot maltodextrin and other high-GI sweeteners.</p>
+</div>
+<div class="w-20 h-20 rounded-2xl bg-tertiary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-icon="lightbulb">lightbulb</span>
+</div>
+</div>
+</div>
+<!-- Tip 2 -->
+<div class="relative w-full rounded-3xl bg-surface-container-low overflow-hidden group">
+<div class="flex items-center p-5 gap-6">
+<div class="flex-1 space-y-2">
+<span class="text-[10px] font-bold text-secondary-fixed uppercase tracking-[0.15em]">Sustainability</span>
+<h4 class="text-lg font-bold leading-snug">Ethical Palm Oil Sourcing</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">How to find RSPO certified products during your scan.</p>
+</div>
+<div class="w-20 h-20 rounded-2xl bg-secondary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="eco">eco</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center pb-6 pt-3 px-4 bg-[#1C1B1B]/90 backdrop-blur-xl rounded-t-3xl shadow-[0px_-8px_24px_rgba(0,0,0,0.2)]">
+<a class="flex flex-col items-center justify-center text-[#FF385C] bg-[#FF385C]/10 rounded-2xl px-4 py-2 transition-transform scale-96" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 hover:text-neutral-200 transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="history">history</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 hover:text-neutral-200 transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="center_focus_strong">center_focus_strong</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Scan</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 hover:text-neutral-200 transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "on-primary-fixed": "#40000d",
+                  "error-container": "#93000a",
+                  "secondary-fixed-dim": "#5bdacc",
+                  "surface-variant": "#353534",
+                  "on-background": "#e5e2e1",
+                  "on-surface-variant": "#e5bdbe",
+                  "on-secondary": "#003732",
+                  "surface-container": "#201f1f",
+                  "tertiary": "#ffba35",
+                  "secondary-container": "#00a598",
+                  "on-tertiary-fixed": "#281900",
+                  "on-secondary-fixed-variant": "#005049",
+                  "inverse-surface": "#e5e2e1",
+                  "surface-container-low": "#1c1b1b",
+                  "primary": "#ffb2b6",
+                  "on-tertiary": "#422c00",
+                  "on-tertiary-container": "#3a2600",
+                  "on-surface": "#e5e2e1",
+                  "surface-dim": "#131313",
+                  "tertiary-container": "#bf8600",
+                  "tertiary-fixed-dim": "#ffba35",
+                  "surface-container-lowest": "#0e0e0e",
+                  "on-secondary-fixed": "#00201d",
+                  "surface-tint": "#ffb2b6",
+                  "error": "#ffb4ab",
+                  "background": "#131313",
+                  "secondary-fixed": "#7af7e8",
+                  "outline-variant": "#5c3f41",
+                  "primary-container": "#ff5169",
+                  "outline": "#ac8889",
+                  "surface-container-highest": "#353534",
+                  "secondary": "#5bdacc",
+                  "surface-bright": "#393939",
+                  "tertiary-fixed": "#ffdeac",
+                  "surface-container-high": "#2a2a2a",
+                  "on-secondary-container": "#00332e",
+                  "on-primary-fixed-variant": "#920029",
+                  "on-error-container": "#ffdad6",
+                  "primary-fixed-dim": "#ffb2b6",
+                  "inverse-primary": "#be0038",
+                  "on-error": "#690005",
+                  "on-primary-container": "#5b0016",
+                  "surface": "#131313",
+                  "inverse-on-surface": "#313030",
+                  "on-tertiary-fixed-variant": "#5f4100",
+                  "primary-fixed": "#ffdada",
+                  "on-primary": "#68001a"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "fontFamily": {
+                  "headline": ["Plus Jakarta Sans"],
+                  "body": ["Plus Jakarta Sans"],
+                  "label": ["Plus Jakarta Sans"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #131313;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #353534;
+      border-radius: 10px;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30 min-h-screen pb-32">
+<!-- Shared Component: TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-neutral-900/80 backdrop-blur-md shadow-[0px_4px_12px_rgba(0,0,0,0.3)] flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-200" data-icon="menu">menu</button>
+<span class="font-['Plus_Jakarta_Sans'] tracking-tight font-bold text-xl font-extrabold tracking-tighter text-[#FF385C]">LabelIQ</span>
+</div>
+<div class="h-10 w-10 rounded-full overflow-hidden border-2 border-[#FF385C]/20 active:scale-95 transition-transform duration-200">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="Close-up portrait of a young man with a friendly expression in soft cinematic lighting, urban backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_6Bl95BKyms2-JnOcP9xFw2NLySO_8U8zt9RESIw080bvM-XJiSuMdR3Y_y3sV9BVbgpBPJjoBJjRpmm61ISuWRAqpbyyFavFhoEYGBJPjoHnrPxz7vR6wDEEchrRwrOUfl2ZV0__rx-6M1r9fY2Lct_-JfErST4ZkU3UwrfOAhPh--rccnvyWcTg__z3KPBKGsHwNAJBSDcshObDy0-RznaqPCJhnHvlI7P-XKdCMmXRua66CQjgax4GYlVIcQMYM-oS7M2v89ra"/>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 px-6 max-w-4xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-12">
+<h1 class="text-[3.5rem] font-headline font-extrabold tracking-[-0.04em] leading-[1.1] mb-4 text-on-background">
+        Tailor Your <br/><span class="text-primary-container">Experience.</span>
+</h1>
+<p class="text-on-surface-variant text-lg max-w-xl leading-relaxed">
+        Let LabelIQ act as your digital sommelier. Select your preferences below to personalize your ingredient analysis and nutritional scores.
+      </p>
+</section>
+<div class="space-y-12">
+<!-- Section: Health Conditions -->
+<section>
+<div class="flex items-end justify-between mb-6">
+<div>
+<h2 class="text-xl font-bold tracking-tight text-on-surface">Health Conditions</h2>
+<p class="text-sm text-neutral-500 mt-1 uppercase tracking-widest font-bold text-[10px]">Multi-select applicable</p>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<!-- Active State: Airbnb/Rausch Red Highlight -->
+<button class="flex flex-col items-start p-5 rounded-xl bg-surface-container-low border-2 border-primary-container ring-4 ring-primary-container/10 text-left transition-all active:scale-95">
+<span class="material-symbols-outlined text-primary-container mb-3" style="font-variation-settings: 'FILL' 1;">monitor_heart</span>
+<span class="text-on-surface font-bold">Diabetes</span>
+</button>
+<button class="flex flex-col items-start p-5 rounded-xl bg-surface-container-low border-2 border-transparent hover:border-outline-variant/30 text-left transition-all active:scale-95">
+<span class="material-symbols-outlined text-neutral-400 mb-3">speed</span>
+<span class="text-on-surface font-bold">Hypertension</span>
+</button>
+<button class="flex flex-col items-start p-5 rounded-xl bg-surface-container-low border-2 border-transparent hover:border-outline-variant/30 text-left transition-all active:scale-95">
+<span class="material-symbols-outlined text-neutral-400 mb-3">pulmonology</span>
+<span class="text-on-surface font-bold">Asthma</span>
+</button>
+</div>
+</section>
+<!-- Section: Dietary Flags (Bento Grid Style) -->
+<section>
+<div class="flex items-end justify-between mb-6">
+<h2 class="text-xl font-bold tracking-tight text-on-surface">Dietary Flags</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<button class="flex items-center gap-3 p-4 rounded-xl bg-surface-container border-2 border-transparent hover:border-outline-variant/30 transition-all active:scale-95">
+<span class="material-symbols-outlined text-secondary">eco</span>
+<span class="text-sm font-semibold">Vegan</span>
+</button>
+<button class="flex items-center gap-3 p-4 rounded-xl bg-surface-container border-2 border-primary-container ring-4 ring-primary-container/10 transition-all active:scale-95">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">psychiatry</span>
+<span class="text-sm font-semibold">Jain</span>
+</button>
+<button class="flex items-center gap-3 p-4 rounded-xl bg-surface-container border-2 border-transparent hover:border-outline-variant/30 transition-all active:scale-95">
+<span class="material-symbols-outlined text-neutral-400">restaurant_menu</span>
+<span class="text-sm font-semibold">Halal</span>
+</button>
+<button class="flex items-center gap-3 p-4 rounded-xl bg-surface-container border-2 border-transparent hover:border-outline-variant/30 transition-all active:scale-95">
+<span class="material-symbols-outlined text-neutral-400">set_meal</span>
+<span class="text-sm font-semibold">Keto</span>
+</button>
+</div>
+</section>
+<!-- Section: Allergies (Chips with high contrast) -->
+<section>
+<div class="flex items-end justify-between mb-6">
+<h2 class="text-xl font-bold tracking-tight text-on-surface">Allergies</h2>
+</div>
+<div class="flex flex-wrap gap-3">
+<button class="px-6 py-3 rounded-full bg-primary-container text-on-primary-container font-bold flex items-center gap-2 transition-transform active:scale-95 shadow-lg">
+<span class="material-symbols-outlined text-sm">emergency</span> Peanuts
+          </button>
+<button class="px-6 py-3 rounded-full bg-surface-container-high border-2 border-transparent text-on-surface font-semibold hover:border-outline-variant/50 transition-all active:scale-95">
+            Gluten
+          </button>
+<button class="px-6 py-3 rounded-full bg-surface-container-high border-2 border-transparent text-on-surface font-semibold hover:border-outline-variant/50 transition-all active:scale-95">
+            Dairy
+          </button>
+<button class="px-6 py-3 rounded-full bg-surface-container-high border-2 border-transparent text-on-surface font-semibold hover:border-outline-variant/50 transition-all active:scale-95">
+            Shellfish
+          </button>
+</div>
+</section>
+<!-- Section: Lifestyle & Goals (Editorial Asymmetric Layout) -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div>
+<h2 class="text-xl font-bold tracking-tight text-on-surface mb-6">Diet Goals</h2>
+<div class="space-y-4">
+<button class="w-full flex items-center justify-between p-5 rounded-2xl bg-surface-container-low border-2 border-transparent hover:bg-surface-container transition-all active:scale-98">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">trending_down</span>
+</div>
+<span class="font-bold">Weight loss</span>
+</div>
+<span class="material-symbols-outlined text-neutral-600">radio_button_unchecked</span>
+</button>
+<button class="w-full flex items-center justify-between p-5 rounded-2xl bg-surface-container-low border-2 border-primary-container ring-4 ring-primary-container/10 transition-all active:scale-98">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container">fitness_center</span>
+</div>
+<span class="font-bold">Muscle gain</span>
+</div>
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+</div>
+</div>
+<div>
+<h2 class="text-xl font-bold tracking-tight text-on-surface mb-6">Lifestyle</h2>
+<div class="space-y-4">
+<button class="w-full flex items-center justify-between p-5 rounded-2xl bg-surface-container-low border-2 border-transparent hover:bg-surface-container transition-all active:scale-98">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">directions_run</span>
+</div>
+<span class="font-bold">Athlete</span>
+</div>
+<span class="material-symbols-outlined text-neutral-600">radio_button_unchecked</span>
+</button>
+<button class="w-full flex items-center justify-between p-5 rounded-2xl bg-surface-container-low border-2 border-primary-container ring-4 ring-primary-container/10 transition-all active:scale-98">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container">event_seat</span>
+</div>
+<span class="font-bold">Sedentary</span>
+</div>
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Section: Custom Notes -->
+<section>
+<h2 class="text-xl font-bold tracking-tight text-on-surface mb-6">Custom Notes</h2>
+<div class="relative group">
+<textarea class="w-full bg-surface-container-low border-none rounded-2xl p-6 text-on-surface focus:ring-2 focus:ring-primary-container min-h-[120px] transition-all placeholder:text-neutral-600" placeholder="Anything else we should know? (e.g., Low sodium preference, Avoid artificial sweeteners)"></textarea>
+<div class="absolute inset-0 rounded-2xl pointer-events-none border border-outline-variant/10 group-hover:border-outline-variant/30 transition-colors"></div>
+</div>
+</section>
+</div>
+<!-- Final CTA Anchor -->
+<div class="mt-16 pb-12">
+<button class="w-full py-5 rounded-2xl bg-gradient-to-br from-[#FFB2B6] to-[#FF5169] text-on-primary-container text-lg font-bold shadow-[0px_16px_48px_rgba(255,81,105,0.3)] hover:opacity-90 active:scale-95 transition-all">
+        Save &amp; Continue
+      </button>
+</div>
+</main>
+<!-- Shared Component: NavigationDrawer (Off-screen by default in this layout, represented for architectural integrity) -->
+<aside class="hidden fixed left-0 top-0 h-full w-80 bg-[#131313] z-[60] shadow-[0px_16px_48px_rgba(0,0,0,0.4)] rounded-r-2xl border-r border-outline-variant/10">
+<div class="flex flex-col h-full p-6">
+<div class="flex items-center gap-4 mb-10">
+<div class="h-12 w-12 rounded-full bg-surface-container flex items-center justify-center overflow-hidden">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="Modern close-up of a premium app user profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMSNYmIWnQ9PQsLVSfjgvbt6Me63hWSq0DhhEAOnVs3vHk1C3ZbvHlZN8NPGdY_q5oWEvRGUvf3bar8ye-PfbRPDVN2XjTMUdTStKjb0g684L1BgTuOf_veyHtQ4xDtynohMBHQFUmyBY1f5QQKtH3yyjtX0gm7-HBCtHL3XP9cer_E4ACsC9X8OmBm1LJHl1_hPlnYP26Q40P-i3lE1auZrEzpY6XXRVAlQFRz_d-945Sha5_grvN8ejrTl84sVsS_mg-zsw4w9Gz"/>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">Alex Sommelier</p>
+<p class="text-xs text-secondary-fixed-dim">Premium Member</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-4 p-4 rounded-xl bg-neutral-800 text-[#FF385C] font-bold transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="target">target</span> Dietary Goals
+        </a>
+<a class="flex items-center gap-4 p-4 rounded-xl text-neutral-400 hover:bg-neutral-800/50 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="warning">warning</span> Allergens
+        </a>
+<a class="flex items-center gap-4 p-4 rounded-xl text-neutral-400 hover:bg-neutral-800/50 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span> Account Settings
+        </a>
+</nav>
+<div class="pt-6 border-t border-outline-variant/10">
+<p class="text-[10px] text-neutral-600 font-bold tracking-widest uppercase">v1.0.2</p>
+</div>
+</div>
+</aside>
+<!-- Shared Component: BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center pb-6 pt-3 px-4 bg-[#1C1B1B]/90 backdrop-blur-xl shadow-[0px_-8px_24px_rgba(0,0,0,0.2)] rounded-t-3xl">
+<a class="flex flex-col items-center justify-center text-neutral-500 hover:text-neutral-200 transition-colors scale-96 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 hover:text-neutral-200 transition-colors scale-96 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="history">history</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 hover:text-neutral-200 transition-colors scale-96 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="center_focus_strong">center_focus_strong</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest">Scan</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#FF385C] bg-[#FF385C]/10 rounded-2xl px-4 py-2 scale-96 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest">Profile</span>
+</a>
+</nav>
+</body></html>

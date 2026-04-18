@@ -5,20 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/background_dark">
+    android:background="@color/background">
 
-    <!-- ── Toolbar ─────────────────────────────────────────────── -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/background_dark"
-        android:elevation="4dp"
+        android:background="#A61C1B1B"
+        android:elevation="0dp"
         app:title="Scan Detail"
-        app:titleTextColor="@color/white"
+        app:titleTextColor="@color/on_surface"
         app:navigationIcon="@drawable/ic_arrow_back" />
 
-    <!-- ── Scrollable content ──────────────────────────────────── -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -27,16 +25,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="24dp">
 
-            <!-- ── SCANNED IMAGE ────────────────────────────────── -->
-            <com.google.android.material.card.MaterialCardView
+            <!-- SCANNED IMAGE -->
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="0dp"
-                app:cardPreventCornerOverlap="false">
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_surface_card">
 
                 <ImageView
                     android:id="@+id/iv_scan_image"
@@ -45,189 +41,178 @@
                     android:scaleType="centerCrop"
                     android:background="#1A1A1A"
                     android:contentDescription="Scanned label image" />
+            </FrameLayout>
 
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- ── HEADER CARD: Status + Timestamp ─────────────── -->
-            <com.google.android.material.card.MaterialCardView
+            <!-- HEADER CARD -->
+            <FrameLayout
                 android:id="@+id/card_detail_header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="6dp">
-
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/bg_surface_card">
+                
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="20dp"
+                    android:padding="32dp"
                     android:gravity="center_horizontal">
 
                     <TextView
                         android:id="@+id/tv_detail_icon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="48sp"
-                        android:layout_marginBottom="8dp" />
+                        android:textSize="64sp"
+                        android:layout_marginBottom="16dp" />
 
                     <TextView
                         android:id="@+id/tv_detail_status"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="22sp"
+                        android:textSize="28sp"
                         android:textStyle="bold"
-                        android:textColor="@color/white"
+                        android:textColor="@color/on_surface"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:letterSpacing="-0.02"
                         android:gravity="center"
-                        android:layout_marginBottom="12dp" />
+                        android:layout_marginBottom="24dp" />
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="#33FFFFFF"
-                        android:layout_marginBottom="12dp" />
+                        android:background="#1AFFFFFF"
+                        android:layout_marginBottom="24dp" />
 
                     <TextView
                         android:id="@+id/tv_detail_timestamp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="13sp"
-                        android:textColor="#BDBDBD"
+                        android:textSize="14sp"
+                        android:textColor="@color/on_surface_variant"
+                        android:fontFamily="@font/plus_jakarta_sans"
                         android:gravity="center"
                         android:drawablePadding="6dp" />
-
                 </LinearLayout>
+            </FrameLayout>
 
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- ── HIGH RISK CARD ───────────────────────────────── -->
-            <com.google.android.material.card.MaterialCardView
+            <!-- HIGH RISK -->
+            <LinearLayout
                 android:id="@+id/card_detail_high"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
+                android:layout_marginBottom="16dp"
                 android:visibility="gone"
-                app:cardCornerRadius="14dp"
-                app:cardElevation="4dp"
-                app:cardBackgroundColor="#B71C1C">
+                android:background="@drawable/bg_surface_card"
+                android:padding="24dp"
+                android:orientation="vertical">
 
-                <LinearLayout
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Concerns"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/on_primary_container"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:background="@drawable/bg_button_primary"
+                    app:backgroundTint="@color/primary_container"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_detail_high_items"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+                    android:textSize="16sp"
+                    android:textColor="@color/on_surface"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:lineSpacingMultiplier="1.6" />
+            </LinearLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Concerns"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="#FFCDD2"
-                        android:layout_marginBottom="8dp" />
-
-                    <TextView
-                        android:id="@+id/tv_detail_high_items"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="14sp"
-                        android:textColor="#FFEBEE"
-                        android:lineSpacingMultiplier="1.6" />
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- ── MODERATE CARD ────────────────────────────────── -->
-            <com.google.android.material.card.MaterialCardView
+            <!-- NEUTRAL -->
+            <LinearLayout
                 android:id="@+id/card_detail_moderate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
+                android:layout_marginBottom="16dp"
                 android:visibility="gone"
-                app:cardCornerRadius="14dp"
-                app:cardElevation="4dp"
-                app:cardBackgroundColor="#E65100">
+                android:background="@drawable/bg_surface_card"
+                android:padding="24dp"
+                android:orientation="vertical">
 
-                <LinearLayout
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Neutral Ingredients"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#3A2600"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:background="@drawable/bg_button_primary"
+                    app:backgroundTint="#FFBA35"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_detail_moderate_items"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+                    android:textSize="16sp"
+                    android:textColor="@color/on_surface"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:lineSpacingMultiplier="1.6" />
+            </LinearLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Neutral Ingredients"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="#FFE0B2"
-                        android:layout_marginBottom="8dp" />
-
-                    <TextView
-                        android:id="@+id/tv_detail_moderate_items"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="14sp"
-                        android:textColor="#FFF3E0"
-                        android:lineSpacingMultiplier="1.6" />
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- ── SAFE CARD ─────────────────────────────────────── -->
-            <com.google.android.material.card.MaterialCardView
+            <!-- SAFE -->
+            <LinearLayout
                 android:id="@+id/card_detail_safe"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="32dp"
                 android:visibility="gone"
-                app:cardCornerRadius="14dp"
-                app:cardElevation="4dp"
-                app:cardBackgroundColor="#1B5E20">
+                android:background="@drawable/bg_surface_card"
+                android:padding="24dp"
+                android:orientation="vertical">
 
-                <LinearLayout
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Benefits"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/on_secondary_container"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:background="@drawable/bg_button_primary"
+                    app:backgroundTint="@color/secondary_container"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_detail_safe_items"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+                    android:textSize="16sp"
+                    android:textColor="@color/on_surface"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:lineSpacingMultiplier="1.6" />
+            </LinearLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Benefits"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="#A5D6A7"
-                        android:layout_marginBottom="8dp" />
-
-                    <TextView
-                        android:id="@+id/tv_detail_safe_items"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="14sp"
-                        android:textColor="#E8F5E9"
-                        android:lineSpacingMultiplier="1.6" />
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- ── No ingredients note (shown when all lists empty) -->
             <TextView
                 android:id="@+id/tv_detail_no_data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="No ingredient data recorded for this scan."
-                android:textColor="#757575"
+                android:textColor="@color/on_surface_variant"
+                android:fontFamily="@font/plus_jakarta_sans"
                 android:textSize="14sp"
                 android:gravity="center"
                 android:paddingTop="24dp"
                 android:visibility="gone" />
 
         </LinearLayout>
-
     </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>

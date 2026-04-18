@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#40000d",
+                    "error-container": "#93000a",
+                    "secondary-fixed-dim": "#5bdacc",
+                    "surface-variant": "#353534",
+                    "on-background": "#e5e2e1",
+                    "on-surface-variant": "#e5bdbe",
+                    "on-secondary": "#003732",
+                    "surface-container": "#201f1f",
+                    "tertiary": "#ffba35",
+                    "secondary-container": "#00a598",
+                    "on-tertiary-fixed": "#281900",
+                    "on-secondary-fixed-variant": "#005049",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-container-low": "#1c1b1b",
+                    "primary": "#ffb2b6",
+                    "on-tertiary": "#422c00",
+                    "on-tertiary-container": "#3a2600",
+                    "on-surface": "#e5e2e1",
+                    "surface-dim": "#131313",
+                    "tertiary-container": "#bf8600",
+                    "tertiary-fixed-dim": "#ffba35",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-secondary-fixed": "#00201d",
+                    "surface-tint": "#ffb2b6",
+                    "error": "#ffb4ab",
+                    "background": "#131313",
+                    "secondary-fixed": "#7af7e8",
+                    "outline-variant": "#5c3f41",
+                    "primary-container": "#ff5169",
+                    "outline": "#ac8889",
+                    "surface-container-highest": "#353534",
+                    "secondary": "#5bdacc",
+                    "surface-bright": "#393939",
+                    "tertiary-fixed": "#ffdeac",
+                    "surface-container-high": "#2a2a2a",
+                    "on-secondary-container": "#00332e",
+                    "on-primary-fixed-variant": "#920029",
+                    "on-error-container": "#ffdad6",
+                    "primary-fixed-dim": "#ffb2b6",
+                    "inverse-primary": "#be0038",
+                    "on-error": "#690005",
+                    "on-primary-container": "#5b0016",
+                    "surface": "#131313",
+                    "inverse-on-surface": "#313030",
+                    "on-tertiary-fixed-variant": "#5f4100",
+                    "primary-fixed": "#ffdada",
+                    "on-primary": "#68001a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-glass {
+            background: rgba(28, 27, 27, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-neutral-900/80 backdrop-blur-md shadow-[0px_4px_12px_rgba(0,0,0,0.3)] flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface">menu</span>
+<h1 class="text-xl font-extrabold tracking-tighter text-[#FF385C] font-['Plus_Jakarta_Sans']">LabelIQ</h1>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant/20">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="close-up portrait of a professional man with glasses in soft studio lighting, high-end editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWGHZivkgLFWpn9oFSWrHPtGXJeeX77OsSHzmj8_ofDSPp8zPKEgthQQbrDiTSTAkMzQnt3Z8zlMuiaHh7fy6h_id4VfxCR02FQ18wbB3Y-xMPUCm7wlptxRVFGIX7sGE_ur-uVmxWHPdk2fSu1nFc-ANx8hrJApjWuv2dnjUxXV-X-bSvY_wDik17Eji33YFGfc1XorxhS7HXw-lTYG-KkUBZetl9yIMYP0eYJ1aQWsspgl37zKjsn6IPmPnVdMbTHEwCBoobxlHE"/>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Header Section -->
+<section class="mb-10">
+<h2 class="text-[2.5rem] font-extrabold tracking-tight leading-tight mb-2">Scan History</h2>
+<p class="text-on-surface-variant font-medium">Review your recent product insights</p>
+</section>
+<!-- Stats Bento Grid -->
+<div class="grid grid-cols-2 gap-4 mb-10">
+<div class="bg-surface-container-low p-6 rounded-[20px] flex flex-col justify-between">
+<span class="material-symbols-outlined text-secondary text-3xl mb-4">analytics</span>
+<div>
+<p class="text-[2rem] font-bold">24</p>
+<p class="text-label-sm font-bold uppercase tracking-widest text-on-surface-variant/60">Total Scans</p>
+</div>
+</div>
+<div class="bg-secondary-container/10 p-6 rounded-[20px] flex flex-col justify-between">
+<span class="material-symbols-outlined text-secondary text-3xl mb-4">check_circle</span>
+<div>
+<p class="text-[2rem] font-bold text-secondary-fixed-dim">18</p>
+<p class="text-label-sm font-bold uppercase tracking-widest text-on-surface-variant/60">Safe Choices</p>
+</div>
+</div>
+</div>
+<!-- History List -->
+<div class="space-y-6">
+<!-- Scan Item: Safe -->
+<div class="group bg-surface-container-low hover:bg-surface-container transition-all duration-300 rounded-[20px] p-4 flex gap-5 active:scale-98">
+<div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container-high">
+<img alt="Product Image" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Macro photography of organic rolled oats in a minimalist ceramic bowl, soft natural morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE-zabTbmFfd4PL5ru-uskRZVmNT2_-KVjYdYpmXgeC1mEBfYsGHdu5pKnrfOGv1_R15OohiKPPFfAfn2L6aI4_-04NPAVNSVJTvhVtExIrsV8QnyNBrInj6eXmMwBjCJxU64n68uHZ9cI7PjArUGuqjxbfyBj2kHhWbh5x2RTI5BpFE63pwGngYrkuOUtGzlPpeAUwSAbRdt6IGGZYD-CHhujp8z7uknmBNaUw-9sadsT-wH7A4L10vTb3V85tNY-OfhWjGJDRd_w"/>
+</div>
+<div class="flex flex-col justify-center flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-title-md font-bold text-on-surface">Steel Cut Organic Oats</h3>
+<span class="bg-secondary-container/20 text-secondary-fixed-dim px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Safe</span>
+</div>
+<p class="text-label-sm text-on-surface-variant/80 mb-2">Today • 10:45 AM</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">eco</span>
+<span class="text-[12px] font-medium text-on-surface-variant">High Fiber • No Added Sugar</span>
+</div>
+</div>
+</div>
+<!-- Scan Item: Avoid -->
+<div class="group bg-surface-container-low hover:bg-surface-container transition-all duration-300 rounded-[20px] p-4 flex gap-5 active:scale-98">
+<div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container-high">
+<img alt="Product Image" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Stylized studio shot of a dark soda can with water droplets, dramatic red rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUJLRwMxZoxTHnvp0mPrB220xDHELqnpLstQTDjewEzETVcpBkNdDh62maGOQexfxMbi5ArG1Mk3NIipy4568G3il5j41IAu5ri9iHjUrPk6ovNhG6SPfpH1APZdRftpwI5WmInhzl6DE4E6NXhXr4hLIiX7dqqfUa4D8a50Iafcs32HbzS4r823wk44BzbSFi1P8QwnxzDKjiW0PiCOjvsxbqaLizTN8he1-z1vi3GDUQwRCJVj_ZaTm0DzNrM1Pl2OXzCI_OQa1K"/>
+</div>
+<div class="flex flex-col justify-center flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-title-md font-bold text-on-surface">Sparkling Cola Classic</h3>
+<span class="bg-primary-container/20 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Avoid</span>
+</div>
+<p class="text-label-sm text-on-surface-variant/80 mb-2">Yesterday • 4:20 PM</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">warning</span>
+<span class="text-[12px] font-medium text-on-surface-variant">Excessive Sugar • Artificial Color</span>
+</div>
+</div>
+</div>
+<!-- Scan Item: Caution -->
+<div class="group bg-surface-container-low hover:bg-surface-container transition-all duration-300 rounded-[20px] p-4 flex gap-5 active:scale-98">
+<div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container-high">
+<img alt="Product Image" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Top down view of Greek yogurt with a single almond on top, elegant dark stone background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaFZ76f59TvkSGDBsT42JCrkRcfLRZCGV6Rl81oJ0M-S6O4DGs7c-ql9FDOG6ER8bHwaI92AUWb4OSZ1V9QsJx60BwHdmADSLsUlWW3n5N5J0Lw2Y-Clt6aQTxLyWIo59LVhfDFug6Bm-YYrObl5CRNxDxj_7PmbQAysmZnsS0cmxPnPtvyNfL7ZVNSsvaFbdkJ73QskTMZvGawHIa_81dqXR37UlmtmyK5fl62vsXxs_bTXEbM0AhHOFErLm_fpmBqqAJXTYLRxGR"/>
+</div>
+<div class="flex flex-col justify-center flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-title-md font-bold text-on-surface">Low-Fat Greek Yogurt</h3>
+<span class="bg-tertiary-container/20 text-tertiary-fixed-dim px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Caution</span>
+</div>
+<p class="text-label-sm text-on-surface-variant/80 mb-2">Oct 24 • 9:15 AM</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary">info</span>
+<span class="text-[12px] font-medium text-on-surface-variant">Contains Thickener (E415)</span>
+</div>
+</div>
+</div>
+<!-- Scan Item: Safe -->
+<div class="group bg-surface-container-low hover:bg-surface-container transition-all duration-300 rounded-[20px] p-4 flex gap-5 active:scale-98">
+<div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container-high">
+<img alt="Product Image" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Close up of raw organic almonds scattered on a textured dark wood surface, warm side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByHni1l_nmgjncT3f-_idtdrkfbVigDHRnuyoq1LnTgHgUgWbtOJpBI04okEXlGR62Thb-J3BbO8AVy7Mxg_TNIsH9cjc4qcoL7GaFy_uCa2PnAB6oIwSjcbgoTKFMp6kvf9wuGaSAgCE4eHM0BPge5A6CADmfKht64bW9vk2YaOdY4uP1uy9_TJexMajoc3NsCes0LxTbBRlKNi7m4zSlTGQxeRt0nAvbI4mwnxTHQGAN9ZJsWIG5WNTh__o-4ffb3poRYbLDT_93"/>
+</div>
+<div class="flex flex-col justify-center flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-title-md font-bold text-on-surface">Raw Roasted Almonds</h3>
+<span class="bg-secondary-container/20 text-secondary-fixed-dim px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Safe</span>
+</div>
+<p class="text-label-sm text-on-surface-variant/80 mb-2">Oct 23 • 2:30 PM</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">thumb_up</span>
+<span class="text-[12px] font-medium text-on-surface-variant">Clean Label • 100% Natural</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center pb-6 pt-3 px-4 bg-[#1C1B1B]/90 backdrop-blur-xl shadow-[0px_-8px_24px_rgba(0,0,0,0.2)] rounded-t-3xl">
+<div class="flex flex-col items-center justify-center text-neutral-500 hover:text-neutral-200 transition-colors">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#FF385C] bg-[#FF385C]/10 rounded-2xl px-4 py-2">
+<span class="material-symbols-outlined">history</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">History</span>
+</div>
+<div class="flex flex-col items-center justify-center text-neutral-500 hover:text-neutral-200 transition-colors">
+<div class="bg-[#FF385C] p-3 rounded-full -mt-12 shadow-[0px_8px_24px_rgba(255,56,92,0.4)] transition-transform active:scale-95">
+<span class="material-symbols-outlined text-white text-3xl">center_focus_strong</span>
+</div>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Scan</span>
+</div>
+<div class="flex flex-col items-center justify-center text-neutral-500 hover:text-neutral-200 transition-colors">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

@@ -50,19 +50,19 @@ class ResultDetailActivity : AppCompatActivity() {
         // ── Header card: status icon + label + colour ────────────────
         when (status) {
             "HIGH_RISK", "HIGH RISK" -> {
-                binding.cardDetailHeader.setCardBackgroundColor(0xFFB71C1C.toInt())
+                binding.cardDetailHeader.setBackgroundColor(0xFFB71C1C.toInt())
                 binding.tvDetailIcon.text   = "❌"
                 binding.tvDetailStatus.text = "High Risk"
                 binding.tvDetailStatus.setTextColor(0xFFFFCDD2.toInt())
             }
             "MODERATE" -> {
-                binding.cardDetailHeader.setCardBackgroundColor(0xFFE65100.toInt())
+                binding.cardDetailHeader.setBackgroundColor(0xFFE65100.toInt())
                 binding.tvDetailIcon.text   = "⚠️"
                 binding.tvDetailStatus.text = "Moderate Risk"
                 binding.tvDetailStatus.setTextColor(0xFFFFE0B2.toInt())
             }
             else -> {
-                binding.cardDetailHeader.setCardBackgroundColor(0xFF1B5E20.toInt())
+                binding.cardDetailHeader.setBackgroundColor(0xFF1B5E20.toInt())
                 binding.tvDetailIcon.text   = "✅"
                 binding.tvDetailStatus.text = "Safe"
                 binding.tvDetailStatus.setTextColor(0xFFA5D6A7.toInt())

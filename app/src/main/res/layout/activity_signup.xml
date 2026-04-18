@@ -4,50 +4,51 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_dark"
+    android:background="@color/background"
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="32dp"
-        android:paddingTop="64dp"
-        android:paddingBottom="40dp">
+        android:paddingHorizontal="28dp"
+        android:paddingTop="72dp"
+        android:paddingBottom="48dp">
 
-        <!-- App name -->
+        <!-- App name header -->
         <TextView
             android:id="@+id/tv_signup_app_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/app_name"
-            android:textColor="@color/accent_green"
-            android:textSize="36sp"
+            android:textColor="@color/brand_red"
+            android:textSize="44sp"
             android:textStyle="bold"
-            android:letterSpacing="0.08"
-            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="-0.04"
+            android:fontFamily="@font/plus_jakarta_sans"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Dynamic tagline (changes per step) -->
+        <!-- Tagline -->
         <TextView
             android:id="@+id/tv_signup_tagline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Create your account"
-            android:textColor="@color/text_secondary"
-            android:textSize="16sp"
+            android:layout_marginTop="6dp"
+            android:text="Your Digital Sommelier for Healthy Living"
+            android:textColor="@color/on_surface_variant"
+            android:fontFamily="@font/plus_jakarta_sans"
+            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_signup_app_name" />
 
-        <!-- ── Step indicator ──────────────────────────────────────────── -->
+        <!-- Step indicator -->
         <LinearLayout
             android:id="@+id/ll_step_indicator"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="24dp"
             android:orientation="horizontal"
             android:gravity="center"
             app:layout_constraintStart_toStartOf="parent"
@@ -56,136 +57,266 @@
 
             <View
                 android:id="@+id/view_step1_dot"
-                android:layout_width="10dp"
-                android:layout_height="10dp"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
                 android:background="@drawable/step_dot_active" />
 
             <View
                 android:layout_width="48dp"
                 android:layout_height="2dp"
-                android:layout_marginHorizontal="6dp"
-                android:background="@color/surface_elevated" />
+                android:layout_marginHorizontal="8dp"
+                android:background="@color/surface_container_highest" />
 
             <View
                 android:id="@+id/view_step2_dot"
-                android:layout_width="10dp"
-                android:layout_height="10dp"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
                 android:background="@drawable/step_dot_inactive" />
-
         </LinearLayout>
 
-        <!-- Card container -->
-        <com.google.android.material.card.MaterialCardView
+        <!-- Glass panel card -->
+        <LinearLayout
             android:id="@+id/card_signup"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:cardBackgroundColor="@color/surface_dark"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="0dp"
-            app:strokeColor="@color/surface_elevated"
-            app:strokeWidth="1dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/bg_glass_panel"
+            android:orientation="vertical"
+            android:padding="28dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ll_step_indicator">
 
+            <!-- Create Account heading -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Account"
+                android:textColor="@color/on_surface"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:letterSpacing="-0.03"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Join for personalized nutrition insights."
+                android:textColor="@color/on_surface_variant"
+                android:textSize="13sp"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Social sign-in row -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="24dp">
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
 
-                <!-- ══════════════════════════════════════════════════════ -->
-                <!-- STEP 1: User Details                                   -->
-                <!-- ══════════════════════════════════════════════════════ -->
                 <LinearLayout
-                    android:id="@+id/layout_step1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="visible">
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/bg_surface_card">
 
-                    <!-- Name -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Full Name"
-                        android:textColor="@color/text_secondary"
-                        android:textSize="13sp"
-                        android:layout_marginBottom="6dp" />
+                        android:text="G"
+                        android:textColor="#EA4335"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:layout_marginEnd="8dp" />
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/til_name"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Google"
+                        android:textColor="@color/on_surface"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/plus_jakarta_sans" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/bg_surface_card">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/on_surface"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Apple"
+                        android:textColor="@color/on_surface"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/plus_jakarta_sans" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Divider "or" -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="20dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:alpha="0.2"
+                    android:background="@color/outline_variant" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="or"
+                    android:textColor="@color/outline"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.2"
+                    android:paddingHorizontal="12dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:alpha="0.2"
+                    android:background="@color/outline_variant" />
+            </LinearLayout>
+
+            <!-- ════════════════════════ STEP 1 ════════════════════════ -->
+            <LinearLayout
+                android:id="@+id/layout_step1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <!-- Full Name Field -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:boxBackgroundColor="@color/surface_elevated"
-                        app:boxStrokeColor="@color/surface_elevated"
-                        app:hintEnabled="false">
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_field_filled">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="FULL NAME"
+                            android:textColor="@color/on_surface_variant"
+                            android:fontFamily="@font/plus_jakarta_sans"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.12"
+                            android:paddingStart="16dp"
+                            android:paddingTop="10dp" />
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/et_name"
                             android:layout_width="match_parent"
                             android:layout_height="52dp"
-                            android:hint="Jane Doe"
+                            android:hint="Alex Sommelier"
                             android:inputType="textPersonName|textCapWords"
-                            android:textColor="@color/text_primary"
-                            android:textColorHint="@color/text_secondary"
+                            android:textColor="@color/on_surface"
+                            android:fontFamily="@font/plus_jakarta_sans"
+                            android:textColorHint="@color/outline"
                             android:textSize="15sp"
+                            android:background="@null"
+                            android:paddingHorizontal="16dp"
                             android:imeOptions="actionNext" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </FrameLayout>
 
-                    <!-- Email -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Email"
-                        android:textColor="@color/text_secondary"
-                        android:textSize="13sp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginBottom="6dp" />
+                <!-- Email Field -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/til_email"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:boxBackgroundColor="@color/surface_elevated"
-                        app:boxStrokeColor="@color/surface_elevated"
-                        app:hintEnabled="false">
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_field_filled">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="EMAIL OR PHONE"
+                            android:textColor="@color/on_surface_variant"
+                            android:fontFamily="@font/plus_jakarta_sans"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.12"
+                            android:paddingStart="16dp"
+                            android:paddingTop="10dp" />
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/et_email"
                             android:layout_width="match_parent"
                             android:layout_height="52dp"
-                            android:hint="you@example.com"
+                            android:hint="alex@sommelier.com"
                             android:inputType="textEmailAddress"
-                            android:textColor="@color/text_primary"
-                            android:textColorHint="@color/text_secondary"
+                            android:textColor="@color/on_surface"
+                            android:fontFamily="@font/plus_jakarta_sans"
+                            android:textColorHint="@color/outline"
                             android:textSize="15sp"
+                            android:background="@null"
+                            android:paddingHorizontal="16dp"
                             android:imeOptions="actionNext" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </FrameLayout>
 
-                    <!-- Password -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Password"
-                        android:textColor="@color/text_secondary"
-                        android:textSize="13sp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginBottom="6dp" />
+                <!-- Password Field -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/til_password"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:boxBackgroundColor="@color/surface_elevated"
-                        app:boxStrokeColor="@color/surface_elevated"
-                        app:hintEnabled="false"
-                        app:endIconMode="password_toggle"
-                        app:endIconTint="@color/text_secondary">
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_field_filled">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PASSWORD"
+                            android:textColor="@color/on_surface_variant"
+                            android:fontFamily="@font/plus_jakarta_sans"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.12"
+                            android:paddingStart="16dp"
+                            android:paddingTop="10dp" />
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/et_password"
@@ -193,459 +324,464 @@
                             android:layout_height="52dp"
                             android:hint="Min. 6 characters"
                             android:inputType="textPassword"
-                            android:textColor="@color/text_primary"
-                            android:textColorHint="@color/text_secondary"
+                            android:textColor="@color/on_surface"
+                            android:fontFamily="@font/plus_jakarta_sans"
+                            android:textColorHint="@color/outline"
                             android:textSize="15sp"
+                            android:background="@null"
+                            android:paddingHorizontal="16dp"
                             android:imeOptions="actionDone" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </FrameLayout>
 
-                    <!-- Step 1 error -->
-                    <TextView
-                        android:id="@+id/tv_step1_error"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text=""
-                        android:textColor="@color/error"
-                        android:textSize="13sp"
-                        android:visibility="gone" />
-
-                    <!-- Next button -->
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btn_next"
-                        android:layout_width="match_parent"
-                        android:layout_height="52dp"
-                        android:layout_marginTop="24dp"
-                        android:text="Next →"
-                        android:textSize="15sp"
-                        android:textColor="@color/background_dark"
-                        android:textStyle="bold"
-                        app:backgroundTint="@color/accent_green"
-                        app:cornerRadius="26dp" />
-
-                </LinearLayout>
-
-                <!-- ══════════════════════════════════════════════════════ -->
-                <!-- STEP 2: Preferences                                    -->
-                <!-- ══════════════════════════════════════════════════════ -->
-                <LinearLayout
-                    android:id="@+id/layout_step2"
+                <!-- Step 1 error -->
+                <TextView
+                    android:id="@+id/tv_step1_error"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="gone">
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:textColor="@color/error"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
 
-                    <!-- ── Section: Dietary flags ─────────────────────── -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="DIETARY FLAGS"
-                        android:textColor="@color/accent_green"
-                        android:textSize="11sp"
-                        android:textStyle="bold"
-                        android:letterSpacing="0.12"
-                        android:layout_marginBottom="12dp" />
-
-                    <!-- Diabetic toggle -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:layout_marginBottom="8dp">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="🩸  Diabetic"
-                            android:textColor="@color/text_primary"
-                            android:textSize="15sp" />
-
-                        <com.google.android.material.switchmaterial.SwitchMaterial
-                            android:id="@+id/switch_diabetic"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:checked="false"
-                            app:thumbTint="@color/accent_green"
-                            app:trackTint="@color/surface_elevated" />
-                    </LinearLayout>
-
-                    <!-- Vegan toggle -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:layout_marginBottom="8dp">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="🌿  Vegan"
-                            android:textColor="@color/text_primary"
-                            android:textSize="15sp" />
-
-                        <com.google.android.material.switchmaterial.SwitchMaterial
-                            android:id="@+id/switch_vegan"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:checked="false"
-                            app:thumbTint="@color/accent_green"
-                            app:trackTint="@color/surface_elevated" />
-                    </LinearLayout>
-
-                    <!-- Nut Allergy toggle -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:layout_marginBottom="20dp">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="🥜  Nut Allergy"
-                            android:textColor="@color/text_primary"
-                            android:textSize="15sp" />
-
-                        <com.google.android.material.switchmaterial.SwitchMaterial
-                            android:id="@+id/switch_nut_allergy"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:checked="false"
-                            app:thumbTint="@color/accent_green"
-                            app:trackTint="@color/surface_elevated" />
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@color/surface_elevated"
-                        android:layout_marginBottom="20dp" />
-
-                    <!-- ── Section: Health Conditions (chips) ────────── -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="HEALTH CONDITIONS"
-                        android:textColor="@color/accent_green"
-                        android:textSize="11sp"
-                        android:textStyle="bold"
-                        android:letterSpacing="0.12"
-                        android:layout_marginBottom="10dp" />
-
-                    <com.google.android.material.chip.ChipGroup
-                        android:id="@+id/chip_group_conditions"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp"
-                        app:singleSelection="false">
-
-                        <com.google.android.material.chip.Chip
-                            android:id="@+id/chip_condition_diabetes"
-                            style="@style/Widget.MaterialComponents.Chip.Filter"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Diabetes"
-                            android:textColor="@color/text_primary"
-                            android:textSize="13sp"
-                            app:chipBackgroundColor="@color/surface_elevated"
-                            app:checkedIconTint="@color/accent_green"
-                            app:chipStrokeColor="@color/surface_elevated"
-                            app:chipStrokeWidth="1dp" />
-
-                        <com.google.android.material.chip.Chip
-                            android:id="@+id/chip_condition_heart"
-                            style="@style/Widget.MaterialComponents.Chip.Filter"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Heart Disease"
-                            android:textColor="@color/text_primary"
-                            android:textSize="13sp"
-                            app:chipBackgroundColor="@color/surface_elevated"
-                            app:checkedIconTint="@color/accent_green"
-                            app:chipStrokeColor="@color/surface_elevated"
-                            app:chipStrokeWidth="1dp" />
-
-                        <com.google.android.material.chip.Chip
-                            android:id="@+id/chip_condition_hypertension"
-                            style="@style/Widget.MaterialComponents.Chip.Filter"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Hypertension"
-                            android:textColor="@color/text_primary"
-                            android:textSize="13sp"
-                            app:chipBackgroundColor="@color/surface_elevated"
-                            app:checkedIconTint="@color/accent_green"
-                            app:chipStrokeColor="@color/surface_elevated"
-                            app:chipStrokeWidth="1dp" />
-
-                        <com.google.android.material.chip.Chip
-                            android:id="@+id/chip_condition_thyroid"
-                            style="@style/Widget.MaterialComponents.Chip.Filter"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Thyroid"
-                            android:textColor="@color/text_primary"
-                            android:textSize="13sp"
-                            app:chipBackgroundColor="@color/surface_elevated"
-                            app:checkedIconTint="@color/accent_green"
-                            app:chipStrokeColor="@color/surface_elevated"
-                            app:chipStrokeWidth="1dp" />
-
-                    </com.google.android.material.chip.ChipGroup>
-
-                    <!-- ── Section: Allergies (chips) ─────────────────── -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ALLERGIES"
-                        android:textColor="@color/accent_green"
-                        android:textSize="11sp"
-                        android:textStyle="bold"
-                        android:letterSpacing="0.12"
-                        android:layout_marginBottom="10dp" />
-
-                    <com.google.android.material.chip.ChipGroup
-                        android:id="@+id/chip_group_allergies"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp"
-                        app:singleSelection="false">
-
-                        <com.google.android.material.chip.Chip
-                            android:id="@+id/chip_allergy_nuts"
-                            style="@style/Widget.MaterialComponents.Chip.Filter"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Nuts"
-                            android:textColor="@color/text_primary"
-                            android:textSize="13sp"
-                            app:chipBackgroundColor="@color/surface_elevated"
-                            app:checkedIconTint="@color/accent_green"
-                            app:chipStrokeColor="@color/surface_elevated"
-                            app:chipStrokeWidth="1dp" />
-
-                        <com.google.android.material.chip.Chip
-                            android:id="@+id/chip_allergy_gluten"
-                            style="@style/Widget.MaterialComponents.Chip.Filter"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Gluten"
-                            android:textColor="@color/text_primary"
-                            android:textSize="13sp"
-                            app:chipBackgroundColor="@color/surface_elevated"
-                            app:checkedIconTint="@color/accent_green"
-                            app:chipStrokeColor="@color/surface_elevated"
-                            app:chipStrokeWidth="1dp" />
-
-                        <com.google.android.material.chip.Chip
-                            android:id="@+id/chip_allergy_dairy"
-                            style="@style/Widget.MaterialComponents.Chip.Filter"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Dairy"
-                            android:textColor="@color/text_primary"
-                            android:textSize="13sp"
-                            app:chipBackgroundColor="@color/surface_elevated"
-                            app:checkedIconTint="@color/accent_green"
-                            app:chipStrokeColor="@color/surface_elevated"
-                            app:chipStrokeWidth="1dp" />
-
-                        <com.google.android.material.chip.Chip
-                            android:id="@+id/chip_allergy_shellfish"
-                            style="@style/Widget.MaterialComponents.Chip.Filter"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Shellfish"
-                            android:textColor="@color/text_primary"
-                            android:textSize="13sp"
-                            app:chipBackgroundColor="@color/surface_elevated"
-                            app:checkedIconTint="@color/accent_green"
-                            app:chipStrokeColor="@color/surface_elevated"
-                            app:chipStrokeWidth="1dp" />
-
-                        <com.google.android.material.chip.Chip
-                            android:id="@+id/chip_allergy_soy"
-                            style="@style/Widget.MaterialComponents.Chip.Filter"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Soy"
-                            android:textColor="@color/text_primary"
-                            android:textSize="13sp"
-                            app:chipBackgroundColor="@color/surface_elevated"
-                            app:checkedIconTint="@color/accent_green"
-                            app:chipStrokeColor="@color/surface_elevated"
-                            app:chipStrokeWidth="1dp" />
-
-                    </com.google.android.material.chip.ChipGroup>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@color/surface_elevated"
-                        android:layout_marginBottom="20dp" />
-
-                    <!-- ── Section: Diet Goal (dropdown) ─────────────── -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="DIET GOAL"
-                        android:textColor="@color/accent_green"
-                        android:textSize="11sp"
-                        android:textStyle="bold"
-                        android:letterSpacing="0.12"
-                        android:layout_marginBottom="8dp" />
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/til_diet_goal"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:boxBackgroundColor="@color/surface_elevated"
-                        app:boxStrokeColor="@color/surface_elevated"
-                        android:hint="Select goal"
-                        app:hintTextColor="@color/text_secondary"
-                        android:layout_marginBottom="16dp">
-
-                        <AutoCompleteTextView
-                            android:id="@+id/actv_diet_goal"
-                            android:layout_width="match_parent"
-                            android:layout_height="52dp"
-                            android:inputType="none"
-                            android:textColor="@color/text_primary"
-                            android:textColorHint="@color/text_secondary"
-                            android:textSize="15sp"
-                            android:paddingHorizontal="12dp" />
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <!-- ── Section: Lifestyle (dropdown) ─────────────── -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="LIFESTYLE"
-                        android:textColor="@color/accent_green"
-                        android:textSize="11sp"
-                        android:textStyle="bold"
-                        android:letterSpacing="0.12"
-                        android:layout_marginBottom="8dp" />
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/til_lifestyle"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:boxBackgroundColor="@color/surface_elevated"
-                        app:boxStrokeColor="@color/surface_elevated"
-                        android:hint="Select lifestyle"
-                        app:hintTextColor="@color/text_secondary"
-                        android:layout_marginBottom="20dp">
-
-                        <AutoCompleteTextView
-                            android:id="@+id/actv_lifestyle"
-                            android:layout_width="match_parent"
-                            android:layout_height="52dp"
-                            android:inputType="none"
-                            android:textColor="@color/text_primary"
-                            android:textColorHint="@color/text_secondary"
-                            android:textSize="15sp"
-                            android:paddingHorizontal="12dp" />
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@color/surface_elevated"
-                        android:layout_marginBottom="20dp" />
-
-                    <!-- ── Section: Custom Note (optional free text) ──── -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ANYTHING ELSE? (optional)"
-                        android:textColor="@color/accent_green"
-                        android:textSize="11sp"
-                        android:textStyle="bold"
-                        android:letterSpacing="0.12"
-                        android:layout_marginBottom="8dp" />
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/til_custom_note"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:boxBackgroundColor="@color/surface_elevated"
-                        app:boxStrokeColor="@color/surface_elevated"
-                        app:hintEnabled="false"
-                        android:layout_marginBottom="12dp">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/et_custom_note"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="e.g. I avoid processed sugar"
-                            android:minLines="2"
-                            android:maxLines="4"
-                            android:inputType="textMultiLine"
-                            android:textColor="@color/text_primary"
-                            android:textColorHint="@color/text_secondary"
-                            android:textSize="15sp" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <!-- Step 2 error -->
-                    <TextView
-                        android:id="@+id/tv_signup_error"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text=""
-                        android:textColor="@color/error"
-                        android:textSize="13sp"
-                        android:visibility="gone" />
-
-                    <!-- Create Account button -->
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btn_signup"
-                        android:layout_width="match_parent"
-                        android:layout_height="52dp"
-                        android:layout_marginTop="20dp"
-                        android:text="Create Account"
-                        android:textSize="15sp"
-                        android:textColor="@color/background_dark"
-                        android:textStyle="bold"
-                        app:backgroundTint="@color/accent_green"
-                        app:cornerRadius="26dp" />
-
-                    <!-- Back to Step 1 -->
-                    <TextView
-                        android:id="@+id/tv_back_to_step1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="12dp"
-                        android:text="← Back"
-                        android:textColor="@color/text_secondary"
-                        android:textSize="14sp"
-                        android:background="?attr/selectableItemBackground"
-                        android:paddingHorizontal="4dp" />
-
-                </LinearLayout>
+                <!-- Next button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Next →"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:background="@drawable/bg_button_primary"
+                    app:backgroundTint="@null"
+                    app:cornerRadius="16dp" />
 
             </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
+
+            <!-- ════════════════════════ STEP 2 ════════════════════════ -->
+            <LinearLayout
+                android:id="@+id/layout_step2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- Dietary Flags section label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DIETARY FLAGS"
+                    android:textColor="@color/brand_red"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Diabetic toggle -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🩸  Diabetic"
+                        android:textColor="@color/on_surface"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:textSize="16sp" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switch_diabetic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        app:thumbTint="@color/brand_red"
+                        app:trackTint="@color/surface_container_highest" />
+                </LinearLayout>
+
+                <!-- Vegan toggle -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🌿  Vegan"
+                        android:textColor="@color/on_surface"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:textSize="16sp" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switch_vegan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        app:thumbTint="@color/brand_red"
+                        app:trackTint="@color/surface_container_highest" />
+                </LinearLayout>
+
+                <!-- Nut Allergy toggle -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="24dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🥜  Nut Allergy"
+                        android:textColor="@color/on_surface"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:textSize="16sp" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switch_nut_allergy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        app:thumbTint="@color/brand_red"
+                        app:trackTint="@color/surface_container_highest" />
+                </LinearLayout>
+
+                <!-- Health Conditions label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HEALTH CONDITIONS"
+                    android:textColor="@color/brand_red"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="12dp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chip_group_conditions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    app:singleSelection="false">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_condition_diabetes"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Diabetes"
+                        android:textColor="@color/on_surface"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:textSize="14sp"
+                        app:chipBackgroundColor="@color/surface_container_low"
+                        app:checkedIconTint="@color/brand_red"
+                        app:chipStrokeColor="@color/outline_variant"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_condition_heart"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Heart Disease"
+                        android:textColor="@color/on_surface"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:textSize="14sp"
+                        app:chipBackgroundColor="@color/surface_container_low"
+                        app:checkedIconTint="@color/brand_red"
+                        app:chipStrokeColor="@color/outline_variant"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_condition_hypertension"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hypertension"
+                        android:textColor="@color/on_surface"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:textSize="14sp"
+                        app:chipBackgroundColor="@color/surface_container_low"
+                        app:checkedIconTint="@color/brand_red"
+                        app:chipStrokeColor="@color/outline_variant"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_condition_thyroid"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thyroid"
+                        android:textColor="@color/on_surface"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:textSize="14sp"
+                        app:chipBackgroundColor="@color/surface_container_low"
+                        app:checkedIconTint="@color/brand_red"
+                        app:chipStrokeColor="@color/outline_variant"
+                        app:chipStrokeWidth="1dp" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <!-- Allergies label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ALLERGIES"
+                    android:textColor="@color/brand_red"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="12dp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chip_group_allergies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    app:singleSelection="false">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_allergy_nuts"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nuts"
+                        android:textColor="@color/on_surface"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:textSize="14sp"
+                        app:chipBackgroundColor="@color/surface_container_low"
+                        app:checkedIconTint="@color/brand_red"
+                        app:chipStrokeColor="@color/outline_variant"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_allergy_gluten"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gluten"
+                        android:textColor="@color/on_surface"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:textSize="14sp"
+                        app:chipBackgroundColor="@color/surface_container_low"
+                        app:checkedIconTint="@color/brand_red"
+                        app:chipStrokeColor="@color/outline_variant"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_allergy_dairy"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dairy"
+                        android:textColor="@color/on_surface"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:textSize="14sp"
+                        app:chipBackgroundColor="@color/surface_container_low"
+                        app:checkedIconTint="@color/brand_red"
+                        app:chipStrokeColor="@color/outline_variant"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_allergy_shellfish"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shellfish"
+                        android:textColor="@color/on_surface"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:textSize="14sp"
+                        app:chipBackgroundColor="@color/surface_container_low"
+                        app:checkedIconTint="@color/brand_red"
+                        app:chipStrokeColor="@color/outline_variant"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_allergy_soy"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Soy"
+                        android:textColor="@color/on_surface"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:textSize="14sp"
+                        app:chipBackgroundColor="@color/surface_container_low"
+                        app:checkedIconTint="@color/brand_red"
+                        app:chipStrokeColor="@color/outline_variant"
+                        app:chipStrokeWidth="1dp" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <!-- Diet Goal -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DIET GOAL"
+                    android:textColor="@color/brand_red"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="12dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_diet_goal"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/outline_variant"
+                    android:hint="Select goal"
+                    app:hintTextColor="@color/on_surface_variant"
+                    android:layout_marginBottom="20dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/actv_diet_goal"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:inputType="none"
+                        android:textColor="@color/on_surface"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:textColorHint="@color/on_surface_variant"
+                        android:textSize="16sp"
+                        android:paddingHorizontal="16dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Lifestyle -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LIFESTYLE"
+                    android:textColor="@color/brand_red"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="12dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_lifestyle"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/outline_variant"
+                    android:hint="Select lifestyle"
+                    app:hintTextColor="@color/on_surface_variant"
+                    android:layout_marginBottom="24dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/actv_lifestyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:inputType="none"
+                        android:textColor="@color/on_surface"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:textColorHint="@color/on_surface_variant"
+                        android:textSize="16sp"
+                        android:paddingHorizontal="16dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Custom note -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ANYTHING ELSE? (optional)"
+                    android:textColor="@color/brand_red"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="12dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_custom_note"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/outline_variant"
+                    app:hintEnabled="false"
+                    android:layout_marginBottom="16dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_custom_note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="e.g. I avoid processed sugar"
+                        android:minLines="2"
+                        android:maxLines="4"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/on_surface"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:textColorHint="@color/on_surface_variant"
+                        android:textSize="15sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Step 2 error -->
+                <TextView
+                    android:id="@+id/tv_signup_error"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:textColor="@color/error"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <!-- Create Account CTA -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Create Account"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textStyle="bold"
+                    android:background="@drawable/bg_button_primary"
+                    app:backgroundTint="@null"
+                    app:cornerRadius="16dp" />
+
+                <!-- Back to Step 1 -->
+                <TextView
+                    android:id="@+id/tv_back_to_step1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:text="← Back"
+                    android:textColor="@color/on_surface_variant"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textSize="14sp"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
 
         <!-- Login redirect -->
         <LinearLayout
             android:id="@+id/ll_login_redirect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="28dp"
             android:orientation="horizontal"
             android:gravity="center"
             app:layout_constraintStart_toStartOf="parent"
@@ -656,7 +792,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Already have an account? "
-                android:textColor="@color/text_secondary"
+                android:textColor="@color/on_surface_variant"
+                android:fontFamily="@font/plus_jakarta_sans"
                 android:textSize="14sp" />
 
             <TextView
@@ -664,7 +801,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Log in"
-                android:textColor="@color/accent_green"
+                android:textColor="@color/brand_red"
+                android:fontFamily="@font/plus_jakarta_sans"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:background="?attr/selectableItemBackground"

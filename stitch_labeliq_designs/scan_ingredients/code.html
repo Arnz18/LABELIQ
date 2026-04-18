@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html class="dark"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#40000d",
+                    "error-container": "#93000a",
+                    "secondary-fixed-dim": "#5bdacc",
+                    "surface-variant": "#353534",
+                    "on-background": "#e5e2e1",
+                    "on-surface-variant": "#e5bdbe",
+                    "on-secondary": "#003732",
+                    "surface-container": "#201f1f",
+                    "tertiary": "#ffba35",
+                    "secondary-container": "#00a598",
+                    "on-tertiary-fixed": "#281900",
+                    "on-secondary-fixed-variant": "#005049",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-container-low": "#1c1b1b",
+                    "primary": "#ffb2b6",
+                    "on-tertiary": "#422c00",
+                    "on-tertiary-container": "#3a2600",
+                    "on-surface": "#e5e2e1",
+                    "surface-dim": "#131313",
+                    "tertiary-container": "#bf8600",
+                    "tertiary-fixed-dim": "#ffba35",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-secondary-fixed": "#00201d",
+                    "surface-tint": "#ffb2b6",
+                    "error": "#ffb4ab",
+                    "background": "#131313",
+                    "secondary-fixed": "#7af7e8",
+                    "outline-variant": "#5c3f41",
+                    "primary-container": "#ff5169",
+                    "outline": "#ac8889",
+                    "surface-container-highest": "#353534",
+                    "secondary": "#5bdacc",
+                    "surface-bright": "#393939",
+                    "tertiary-fixed": "#ffdeac",
+                    "surface-container-high": "#2a2a2a",
+                    "on-secondary-container": "#00332e",
+                    "on-primary-fixed-variant": "#920029",
+                    "on-error-container": "#ffdad6",
+                    "primary-fixed-dim": "#ffb2b6",
+                    "inverse-primary": "#be0038",
+                    "on-error": "#690005",
+                    "on-primary-container": "#5b0016",
+                    "surface": "#131313",
+                    "inverse-on-surface": "#313030",
+                    "on-tertiary-fixed-variant": "#5f4100",
+                    "primary-fixed": "#ffdada",
+                    "on-primary": "#68001a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .camera-vignette {
+            background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.8) 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased overflow-hidden h-screen w-screen">
+<!-- Live Camera Feed Simulation Container -->
+<div class="relative h-screen w-full bg-neutral-900 flex items-center justify-center overflow-hidden">
+<!-- Camera Background Image -->
+<img alt="Close-up of a food product nutrition label with clear text against a blurred grocery store background" class="absolute inset-0 w-full h-full object-cover" data-alt="close-up view of a product ingredient list and nutritional facts label on a textured package with soft ambient grocery store lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_77RytZom20_rDcSASuu7i6vvtGhMBdDGkU1dLjPTTuSadihLMGqeBCh7ZBNA2_v6dKun2dixx_J1PIUjlYzfqeFYdnlZVEhO7DLITAJ2YeLF0jUalzV1T2jhwJl2D4VkzTA1J7FU_jkco6hnHndMNa0WaBK1tbh7ODSwrr4prvfHE2pLQy-SGRN56MXDtIv8h8cRPzUokDNaOGG-cdSjMwav40Naonvd9vQKowClTyG6CCy37x91gHWVPkVHx6lAl3wFaNNVTI16"/>
+<!-- Darkened Edges Overlay -->
+<div class="absolute inset-0 camera-vignette pointer-events-none"></div>
+<!-- UI Shell: Top Navigation (Not part of global nav because it's a focused task) -->
+<header class="absolute top-0 left-0 w-full px-6 py-12 z-20 flex justify-between items-start">
+<button class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-container/40 backdrop-blur-xl text-on-surface active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<div class="flex flex-col items-end gap-4">
+<button class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-container/40 backdrop-blur-xl text-on-surface active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="flash_on">flash_on</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-container/40 backdrop-blur-xl text-on-surface active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+</header>
+<!-- Signature Scanner Interface: The Reticle -->
+<div class="relative w-72 h-96 md:w-[400px] md:h-[500px] z-10">
+<!-- Corner Brackets (Secondary Color #5BDACC) -->
+<div class="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-secondary rounded-tl-2xl"></div>
+<div class="absolute top-0 right-0 w-12 h-12 border-t-4 border-r-4 border-secondary rounded-tr-2xl"></div>
+<div class="absolute bottom-0 left-0 w-12 h-12 border-b-4 border-l-4 border-secondary rounded-bl-2xl"></div>
+<div class="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-secondary rounded-br-2xl"></div>
+<!-- Scanning Line (Implicit Glow) -->
+<div class="absolute top-1/2 left-0 w-full h-[2px] bg-secondary/50 shadow-[0_0_15px_rgba(91,218,204,0.8)]"></div>
+</div>
+<!-- Instruction Text -->
+<div class="absolute bottom-48 w-full text-center z-20 px-8">
+<p class="text-on-background font-headline font-bold text-lg tracking-tight drop-shadow-lg">
+                Scan the ingredients list
+            </p>
+<p class="text-on-surface-variant/80 text-sm mt-1">
+                Hold still for a high-quality scan
+            </p>
+</div>
+<!-- Capture Controls -->
+<div class="absolute bottom-0 left-0 w-full pb-12 pt-8 flex items-center justify-center gap-12 z-20 px-6">
+<!-- Gallery Shortcut -->
+<button class="flex flex-col items-center gap-1 text-on-surface-variant opacity-60">
+<div class="w-10 h-10 rounded-lg overflow-hidden border border-on-surface-variant/20">
+<img alt="Last photo taken preview" class="w-full h-full object-cover" data-alt="blurred preview of a food item gallery thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvj-nGu1Mrn_fns32EajpPliSPUiQUnfG4ZyrAVCPvMDLruddR3QtcLzRvCjB-ZCsg6LyIkxv3yRUNlZ4-sgiUa45QOWme3o2UYBA9krAWcYam99QZ8T-tKk4H1-2PgeBrwHOuG5p8dw6ydUF3NMSrQg4sjABK1OmE-u4v_aVR5ZO4CPoOCdBvrwhZ7fp8GSzzsXDzmT2cYNe3OPPgnZoRUfmDo1fe9Fqp6Sdc_afp4C2MrSb8s51HUwNeIxv7VMK5mynZFSkV94S9"/>
+</div>
+</button>
+<!-- Main Capture Button (Rausch Red - primary-container) -->
+<div class="relative flex items-center justify-center">
+<!-- Ambient Glow behind button -->
+<div class="absolute w-24 h-24 bg-primary/20 blur-2xl rounded-full"></div>
+<!-- Inner Capture Trigger -->
+<button class="relative w-20 h-20 rounded-full bg-primary-container p-1 border-4 border-on-primary-fixed/20 active:scale-90 transition-transform shadow-[0px_8px_24px_rgba(255,81,105,0.4)]">
+<div class="w-full h-full rounded-full border-2 border-on-primary-container/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container text-3xl" data-icon="center_focus_strong" style="font-variation-settings: 'FILL' 1;">center_focus_strong</span>
+</div>
+</button>
+</div>
+<!-- Mode Toggle -->
+<button class="flex flex-col items-center gap-1 text-on-surface-variant opacity-60">
+<span class="material-symbols-outlined text-2xl" data-icon="sync">sync</span>
+</button>
+</div>
+</div>
+<!-- Hidden Navigation Shell Logic: 
+         Transactional page (Camera) = Navigation suppressed to prioritize focused canvas.
+    -->
+</body></html>

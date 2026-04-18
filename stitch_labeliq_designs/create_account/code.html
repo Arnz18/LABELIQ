@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Create Account - LabelIQ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#40000d",
+                        "error-container": "#93000a",
+                        "secondary-fixed-dim": "#5bdacc",
+                        "surface-variant": "#353534",
+                        "on-background": "#e5e2e1",
+                        "on-surface-variant": "#e5bdbe",
+                        "on-secondary": "#003732",
+                        "surface-container": "#201f1f",
+                        "tertiary": "#ffba35",
+                        "secondary-container": "#00a598",
+                        "on-tertiary-fixed": "#281900",
+                        "on-secondary-fixed-variant": "#005049",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "primary": "#ffb2b6",
+                        "on-tertiary": "#422c00",
+                        "on-tertiary-container": "#3a2600",
+                        "on-surface": "#e5e2e1",
+                        "surface-dim": "#131313",
+                        "tertiary-container": "#bf8600",
+                        "tertiary-fixed-dim": "#ffba35",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-fixed": "#00201d",
+                        "surface-tint": "#ffb2b6",
+                        "error": "#ffb4ab",
+                        "background": "#131313",
+                        "secondary-fixed": "#7af7e8",
+                        "outline-variant": "#5c3f41",
+                        "primary-container": "#ff5169",
+                        "outline": "#ac8889",
+                        "surface-container-highest": "#353534",
+                        "secondary": "#5bdacc",
+                        "surface-bright": "#393939",
+                        "tertiary-fixed": "#ffdeac",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-container": "#00332e",
+                        "on-primary-fixed-variant": "#920029",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#ffb2b6",
+                        "inverse-primary": "#be0038",
+                        "on-error": "#690005",
+                        "on-primary-container": "#5b0016",
+                        "surface": "#131313",
+                        "inverse-on-surface": "#313030",
+                        "on-tertiary-fixed-variant": "#5f4100",
+                        "primary-fixed": "#ffdada",
+                        "on-primary": "#68001a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #131313;
+            color: #e5e2e1;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(28, 27, 27, 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .primary-gradient-btn {
+            background: linear-gradient(135deg, #FF385C 0%, #FF5169 100%);
+        }
+        .input-focus-ring:focus-within {
+            box-shadow: 0 0 0 2px #FF385C;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex items-center justify-center min-h-screen">
+<!-- Background Layer -->
+<div class="fixed inset-0 z-0">
+<img class="w-full h-full object-cover opacity-30 grayscale-[20%]" data-alt="close-up of fresh organic vegetables and greens on a dark kitchen counter with moody cinematic lighting and soft bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIts28yQbi0sJD8IVA6V11Hkrt5xmlcEl3YccFoj5LVEx156sBb9k16k_qO7buqlvNYv-l7qLV-GMiRHZs07unIWU3okzJa_HprGfyVwKgkaffE-yMNoRK4sTdRliwfm5z-m5VJY6h8CgaWUcxooRVOYLsEJuj5E4isfWVh7aACzUyjie3q3r9GGhCInmF96MqHojlo1xKswJqcsJvQcmWiVLD0N0ryK0Zn-xe8_vRwuaSONP6Sj8sC4XeAAvogG-sTrEyhQGm2I4o"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-transparent"></div>
+</div>
+<!-- Main Content Canvas -->
+<main class="relative z-10 w-full max-w-md px-6 py-12">
+<!-- Header Branding (Editorial Voice) -->
+<header class="mb-10 text-center">
+<h1 class="text-5xl font-extrabold tracking-tighter text-[#FF385C] mb-2">LabelIQ</h1>
+<p class="text-on-surface-variant font-medium tracking-tight">Your Digital Sommelier for Healthy Living</p>
+</header>
+<!-- Creation Form Container (Surface Hierarchy) -->
+<div class="glass-panel p-8 rounded-[2rem] shadow-[0px_16px_48px_rgba(0,0,0,0.4)]">
+<div class="mb-8">
+<h2 class="text-3xl font-bold tracking-tight text-on-surface">Create Account</h2>
+<p class="text-on-surface-variant text-sm mt-1">Join the community for personalized nutrition insights.</p>
+</div>
+<!-- Social Sign-in Cluster (Asymmetric / Glassmorphism) -->
+<div class="grid grid-cols-2 gap-4 mb-8">
+<button class="flex items-center justify-center gap-3 py-3 px-4 rounded-xl bg-surface-container-high hover:bg-surface-container-highest transition-all active:scale-95 border border-outline-variant/10">
+<img alt="Google" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb5btodmo7IrGzZWvQ8XG8HAyHir5G_QpB1H0YTvKs9ockCO48pNaeHaul6nLLo0uI-5WL_GeFVM8k7YOjOE_RGmsNfu8P2wyDCzCxemo4OrT5nIkna-aCKGd0S7LvbXvWUATHIQ3nbY--rHQJpTmF07KkTj9GZpqS12bL1p8VlQt3nmWc085gSSw1Z49GvotNEU9U7mcYQM_1ifmvGI9LGJ-e5s1YShLOVBVuXQU3owszL_Fr-Fb7jYMOJ07Zkfw4p7I6OyVD0dBc"/>
+<span class="text-sm font-bold tracking-tight">Google</span>
+</button>
+<button class="flex items-center justify-center gap-3 py-3 px-4 rounded-xl bg-surface-container-high hover:bg-surface-container-highest transition-all active:scale-95 border border-outline-variant/10">
+<svg class="w-5 h-5 fill-on-surface" viewbox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg>
+<span class="text-sm font-bold tracking-tight">Apple</span>
+</button>
+</div>
+<div class="relative flex items-center mb-8">
+<div class="flex-grow border-t border-outline-variant/20"></div>
+<span class="flex-shrink mx-4 text-xs font-bold uppercase tracking-[0.2em] text-outline">or</span>
+<div class="flex-grow border-t border-outline-variant/20"></div>
+</div>
+<!-- Inputs (Airbnb Aesthetic: Stacked, Minimalist) -->
+<form class="space-y-4">
+<div class="group relative">
+<label class="absolute left-4 top-2 text-[10px] font-bold uppercase tracking-wider text-on-surface-variant transition-all">Full Name</label>
+<input class="w-full pt-6 pb-2 px-4 bg-surface-container-low border-none rounded-xl text-on-surface placeholder:text-neutral-700 focus:ring-2 focus:ring-[#FF385C] transition-all" placeholder="Alex Sommelier" type="text"/>
+</div>
+<div class="group relative">
+<label class="absolute left-4 top-2 text-[10px] font-bold uppercase tracking-wider text-on-surface-variant transition-all">Email or Phone</label>
+<input class="w-full pt-6 pb-2 px-4 bg-surface-container-low border-none rounded-xl text-on-surface placeholder:text-neutral-700 focus:ring-2 focus:ring-[#FF385C] transition-all" placeholder="alex@sommelier.com" type="email"/>
+</div>
+<div class="group relative">
+<label class="absolute left-4 top-2 text-[10px] font-bold uppercase tracking-wider text-on-surface-variant transition-all">Password</label>
+<div class="relative">
+<input class="w-full pt-6 pb-2 px-4 bg-surface-container-low border-none rounded-xl text-on-surface placeholder:text-neutral-700 focus:ring-2 focus:ring-[#FF385C] transition-all" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-500 mt-2" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+</div>
+</div>
+<!-- Primary CTA (Execution of style_bg_color and primary requirement) -->
+<button class="w-full primary-gradient-btn text-white font-bold py-4 rounded-xl mt-6 shadow-[0px_4px_12px_rgba(255,56,92,0.3)] active:scale-95 transition-transform" type="submit">
+                    Create Account
+                </button>
+</form>
+<div class="mt-8 text-center">
+<p class="text-sm text-on-surface-variant">
+                    Already have an account? 
+                    <a class="text-[#FF385C] font-bold hover:underline ml-1" href="#">Log in</a>
+</p>
+</div>
+</div>
+<!-- Meta Footer -->
+<footer class="mt-12 text-center">
+<p class="text-[10px] text-neutral-600 font-bold uppercase tracking-widest leading-relaxed max-w-xs mx-auto">
+                By creating an account, you agree to our Terms of Service and Privacy Policy.
+            </p>
+</footer>
+</main>
+<!-- Suppress Navigation Shell as per task-focused journey rules -->
+<!-- (No SideNav or BottomNavBar rendered for transactional screen) -->
+</body></html>

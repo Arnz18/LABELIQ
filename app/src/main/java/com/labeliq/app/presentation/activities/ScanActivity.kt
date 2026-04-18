@@ -27,6 +27,7 @@ import com.labeliq.app.data.local.loadScanHistory
 import com.labeliq.app.data.local.UserProfile
 import com.labeliq.app.data.local.getCurrentUser
 import com.labeliq.app.data.local.saveScanResult
+import com.labeliq.app.data.local.loadUserProfile
 import com.labeliq.app.data.repository.IngredientRepository
 import com.labeliq.app.databinding.ActivityScanBinding
 import com.labeliq.app.domain.usecase.IngredientTextProcessor
@@ -200,19 +201,9 @@ class ScanActivity : AppCompatActivity() {
                 Log.d("OCR_INGREDIENTS_EXTRACTED", extractedIngredients.toString())
                 Log.d("OCR_INGREDIENTS_MATCHED", matchedIngredientList.toString())
 
-                // ── Load current user and map to UserProfile ───────────────
-                val user = getCurrentUser(this@ScanActivity)
-                val profile = UserProfile(
-                    name          = user?.name.orEmpty(),
-                    conditions    = if (user?.isDiabetic == true) listOf("diabetes") else emptyList(),
-                    allergies     = if (user?.hasNutAllergy == true) listOf("nuts") else emptyList(),
-                    preferences   = if (user?.isVegan == true) listOf("vegan") else emptyList(),
-                    avoidTags     = emptyList(),
-                    dietGoal      = "balanced",
-                    lifestyle     = "normal",
-                    customNote    = ""
-                )
-                Log.d("PROFILE", "Using user: ${user?.name}, profile: $profile")
+                // ── Load persisted UserProfile for full dietary context ──────
+                val profile = loadUserProfile(this@ScanActivity)
+                Log.d("PROFILE", "Using profile: $profile")
 
                 // ── Evaluate risk using local knowledge base ──────────────
                 val report = riskEngine.evaluate(extractedIngredients, profile)
@@ -290,10 +281,17 @@ class ScanActivity : AppCompatActivity() {
 
     // ── Error feedback ────────────────────────────────────────────────────────
     private fun showError(message: String) {
-        binding.layoutError.visibility   = View.VISIBLE
+        binding.layoutError.visibility = View.VISIBLE
 
-        binding.tvErrorTitle.text    = "No ingredients detected"
-        binding.tvErrorSubtitle.text = "Try scanning a food label or packaged product"
+        // Split message if possible, or just set it to subtitle
+        if (message.contains("\n")) {
+            val parts = message.split("\n", limit = 2)
+            binding.tvErrorTitle.text = parts[0]
+            binding.tvErrorSubtitle.text = parts[1]
+        } else {
+            binding.tvErrorTitle.text = "Analysis Error"
+            binding.tvErrorSubtitle.text = message
+        }
 
         binding.btnConfirm.visibility = View.GONE
         binding.btnRetake.visibility  = View.VISIBLE

@@ -2,9 +2,24 @@
 <resources>
     <string name="app_name">LABELIQ</string>
     <string name="subtitle">Smart Ingredient Scanner</string>
-    <string name="btn_scan">Scan Ingredients</string>
-    <string name="btn_history">View History</string>
-    <string name="btn_profile">My Profile</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_greeting_prefix">Hello, </string>
+    <string name="dashboard_tagline">Know what you eat.</string>
+    <string name="btn_scan">📸  Scan Ingredients</string>
+    <string name="dashboard_scan_hint">Point your camera at any food label</string>
+    <string name="label_insights">Insights</string>
+    <string name="insights_danger_count">3</string>
+    <string name="insights_caution_count">2</string>
+    <string name="insights_safe_count">5</string>
+    <string name="label_last_scan">Last Scan</string>
+    <string name="last_scan_status">❌ High Risk</string>
+    <string name="last_scan_time">2 min ago</string>
+    <string name="label_quick_actions">Quick Actions</string>
+    <string name="btn_history">History</string>
+    <string name="btn_profile">Profile</string>
+
+    <!-- Scan screen -->
     <string name="title_scan">Scan</string>
     <string name="scan_placeholder">Camera preview coming soon…</string>
     <string name="camera_permission_denied">Camera permission is required.\nPlease grant it in Settings.</string>

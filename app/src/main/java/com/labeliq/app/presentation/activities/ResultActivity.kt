@@ -59,17 +59,17 @@ class ResultActivity : AppCompatActivity() {
         // ── Populate summary card ────────────────────────────────────
         when (report.verdict) {
             "HIGH RISK" -> {
-                binding.cardResult.setCardBackgroundColor(0xFFB71C1C.toInt())
+                binding.cardResult.setBackgroundColor(0xFFB71C1C.toInt())
                 binding.tvResultIcon.text = "❌"
                 binding.tvResultTitle.setTextColor(0xFFFFCDD2.toInt())
             }
             "MODERATE" -> {
-                binding.cardResult.setCardBackgroundColor(0xFFE65100.toInt())
+                binding.cardResult.setBackgroundColor(0xFFE65100.toInt())
                 binding.tvResultIcon.text = "⚠️"
                 binding.tvResultTitle.setTextColor(0xFFFFE0B2.toInt())
             }
             else -> {
-                binding.cardResult.setCardBackgroundColor(0xFF1B5E20.toInt())
+                binding.cardResult.setBackgroundColor(0xFF1B5E20.toInt())
                 binding.tvResultIcon.text = "✅"
                 binding.tvResultTitle.setTextColor(0xFFA5D6A7.toInt())
             }
